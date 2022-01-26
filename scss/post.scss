@@ -1,0 +1,33 @@
+#page-header .card {
+  background-size: auto 50%;
+  color: #0052cc;
+  background-color: #e1eaf9 !important;
+  padding: 1.5rem;
+  border-radius: 30px;
+  font-size: 1.8rem;
+  font-family: "Rubik", Sans-Serif;
+  //background-image: url("../images/custom-1.svg");
+}
+
+.userfirstname {
+  font-weight: bold;
+}
+.pageheader-image {
+  height: 30%;
+  width: 30%;
+  float: right;
+}
+
+.btn-secondary {
+  //color: red;
+  background-image: linear-gradient(45deg, #04a08b, #00baff);
+  color: #fff;
+}
+.btn-secondary:hover {
+  box-shadow:  inset 0 0 100px rgb(0 0 0 / 20%);
+  color: #fff;
+}
+
+.margin-top {
+  margin-top: 3rem;
+}
