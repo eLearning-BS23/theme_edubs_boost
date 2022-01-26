@@ -17,7 +17,7 @@
 // This line protects the file from being accessed by a URL directly.
 defined('MOODLE_INTERNAL') || die();
 
-$ccnFontList = include($CFG->dirroot . '/theme/edubs/ccn/font_handler/ccn_font_select.php');
+//$ccnFontList = include($CFG->dirroot . '/theme/edubs/ccn/font_handler/ccn_font_select.php');
 
 // This is used for performance, we don't need to know about these settings on every page in Moodle, only when
 // we are looking at the admin settings pages.
