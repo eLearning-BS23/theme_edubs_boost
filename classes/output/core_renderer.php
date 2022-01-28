@@ -66,7 +66,7 @@ class core_renderer extends \core_renderer {
     public function full_header() {
         global $CFG;
         $userfirstname = $this->getuserfirstname();
-//        var_dump($userfirstname); die();
+        //var_dump($userfirstname); die();
         if ($this->page->include_region_main_settings_in_header_actions() &&
             !$this->page->blocks->is_block_present('settings')) {
             // Only include the region main settings if the page has requested it and it doesn't already have
@@ -90,7 +90,7 @@ class core_renderer extends \core_renderer {
         $header->courseheader = $this->course_header();
         $header->imageurl = $CFG->wwwroot."/theme/edubs/images/custom-1.svg";
         $header->headeractions = $this->page->get_header_actions();
-
+        //var_dump($header);die();
 
         return $this->render_from_template('theme_edubs/full_header', $header);
     }
@@ -99,7 +99,7 @@ class core_renderer extends \core_renderer {
 //     * Uses bootstrap compatible html.
 //     */
 //    public function navbar() {
-//        return $this->render_from_template('theme_edubs/navbar', $this->page->navbar);
-//    }
+//    return $this->render_from_template('theme_edubs/navbar', $this->page->navbar);
+//   }
 
 }

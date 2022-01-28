@@ -31,3 +31,29 @@
 .margin-top {
   margin-top: 3rem;
 }
+.dashboard-card{
+  max-height: 19rem;
+  max-width: 19rem;
+}
+.dashboard-card img{
+  max-height: 10rem;
+}
+.card-img-overlay{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+}
+.card-img-overlay:hover {
+  transition: all .4s ease-in-out;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 1;
+}
+.card-img-overlay .btn{
+  background-color: tomato;
+  color: white;
+  border-radius: 5px;
+}
+.card-img-overlay .btn:hover {
+  background-color: red;
+}
