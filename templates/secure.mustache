@@ -15,9 +15,9 @@
     along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 }}
 {{!
-    @template theme_edubs/secure
+    @template theme_boost/secure
 
-    edubs secure layout template.
+    Boost secure layout template.
 
     Context variables required for this template:
     * sitename - The name of the site
@@ -34,7 +34,7 @@
          }
     }
 }}
-{{> theme_edubs/head }}
+{{> theme_boost/head }}
 
 <body {{{ bodyattributes }}}>
 {{> core/local/toast/wrapper}}
@@ -43,7 +43,7 @@
 
     {{{ output.standard_top_of_body_html }}}
 
-    {{>theme_edubs/navbar-secure}}
+    {{>theme_boost/navbar-secure}}
 
     <div id="page" class="container-fluid">
         {{! Secured full header }}
@@ -88,8 +88,8 @@
 </body>
 </html>
 {{#js}}
-M.util.js_pending('theme_edubs/loader');
-require(['theme_edubs/loader'], function() {
-    M.util.js_complete('theme_edubs/loader');
+M.util.js_pending('theme_boost/loader');
+require(['theme_boost/loader'], function() {
+    M.util.js_complete('theme_boost/loader');
 });
 {{/js}}
