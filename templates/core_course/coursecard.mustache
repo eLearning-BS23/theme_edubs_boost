@@ -46,7 +46,7 @@
     <div class="card-body pr-1 course-info-container" id="course-info-container-{{id}}-{{uniqid}}">
         <div class="d-flex align-items-start">
             <div class="w-100 text-truncate">
-                <div class="text-muted muted d-flex mb-1 flex-wrap">
+                <div class="text-muted muted mb-1 flex-wrap">
                     {{$coursecategory}}{{/coursecategory}}
                     {{#showshortname}}
                     {{$divider}}{{/divider}}
@@ -66,7 +66,7 @@
                     {{$coursename}}{{/coursename}}
                 </a>
                 {{^visible}}
-                    <div class="d-flex flex-wrap">
+                    <div class="flex-wrap">
                         <span class="badge badge-info">{{#str}} hiddenfromstudents {{/str}}</span>
                     </div>
                 {{/visible}}
@@ -74,5 +74,5 @@
             {{$menu}}{{/menu}}
         </div>
     </div>
-    {{$progress}}{{/progress}}
+       {{$progress}}{{/progress}}
 </div>
