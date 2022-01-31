@@ -3,7 +3,7 @@
   color: #0052cc;
   background-color: #e1eaf9 !important;
   padding: 1.5rem;
-  border-radius: 30px;
+  border-radius: 10px;
   font-size: 1.8rem;
   font-family: "Rubik", Sans-Serif;
   //background-image: url("../images/custom-1.svg");
@@ -120,3 +120,45 @@
   color : white;
 }
 
+.dashboard-card-deck .dashboard-card {
+  border-radius: 10px;
+}
+.dashboard-card img{
+  max-height: 14rem;
+  border-radius: 10px 10px 0px 0px;
+}
+.card-img-overlay{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+}
+.card-img-overlay:hover {
+  transition: all .3s ease-in-out;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 1;
+}
+.card-img-overlay .btn{
+  background-color: tomato;
+  color: white;
+  border-radius: 5px;
+}
+.card-img-overlay .btn:hover {
+  background-color: red;
+}
+.align-items-start {
+  text-align: center;
+}
+.card-footer {
+  border-radius: 10px;
+}
+.progress {
+  border-radius: 10px;
+  width: 100%;
+}
+
+.block_recentlyaccessedcourses,
+.block_myoverview {
+  border-radius: 10px;
+}
