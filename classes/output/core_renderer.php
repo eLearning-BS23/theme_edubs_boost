@@ -66,7 +66,7 @@ class core_renderer extends \core_renderer {
     public function full_header() {
         global $CFG;
         $userfirstname = $this->getuserfirstname();
-        //var_dump($userfirstname); die();
+//        var_dump($userfirstname); die();
         if ($this->page->include_region_main_settings_in_header_actions() &&
             !$this->page->blocks->is_block_present('settings')) {
             // Only include the region main settings if the page has requested it and it doesn't already have
@@ -90,16 +90,40 @@ class core_renderer extends \core_renderer {
         $header->courseheader = $this->course_header();
         $header->imageurl = $CFG->wwwroot."/theme/edubs/images/custom-1.svg";
         $header->headeractions = $this->page->get_header_actions();
-        //var_dump($header);die();
+
 
         return $this->render_from_template('theme_edubs/full_header', $header);
     }
+
 //    /**
 //     * This renders the navbar.
 //     * Uses bootstrap compatible html.
 //     */
-//    public function navbar() {
-//    return $this->render_from_template('theme_edubs/navbar', $this->page->navbar);
-//   }
+//    public function navdrawer() {
+//        return $this->render_from_template('theme_edubs/nav-drawer', $this->page->navbar);
+//    }
+//    public function navdrawer() {
+//        global $CFG;
+//        $data = new stdClass();
+//        $data->imageurl = $CFG->wwwroot."/theme/edubs/images/custom-1.svg";
+//
+//
+//        return $this->render_from_template('theme_edubs/nav-drawer', $data);
+//    }
 
+
+
+//    /**
+//     * Whether we should display the logo in the navbar.
+//     *
+//     * We will when there are no main logos, and we have compact logo.
+//     *
+//     * @return bool
+//     */
+//    public function should_display_navbar_logo() {
+////        global $CFG;
+////        $url = $CFG->wwwroot."/theme/edubs/images/custom-1.svg";
+//        $logo = $this->get_compact_logo_url();
+//        return !empty($logo) && !$this->should_display_main_logo();
+//    }
 }
