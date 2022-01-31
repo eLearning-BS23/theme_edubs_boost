@@ -16,7 +16,7 @@
 }}
 {{!
     @template core/full_header
-
+    @template core/full_header
     This template renders the header.
 
     Example context (json):
@@ -28,7 +28,10 @@
         "courseheader": "course_header_html"
     }
 }}
+
+
 <header id="page-header" class="row">
+    {{> theme_edubs/nav-drawer }}
     <div class="col-12 pt-3 pb-3">
         <div class="card {{^contextheader}}border-0 bg-transparent{{/contextheader}}">
             <div class="card-body {{^contextheader}}p-2{{/contextheader}}">
@@ -69,4 +72,6 @@
             </div>
         </div>
     </div>
+    {{{ output.standard_after_main_region_html }}}
+    {{> theme_edubs/nav-drawer }}
 </header>
