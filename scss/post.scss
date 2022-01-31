@@ -119,43 +119,4 @@
   background-color: black;
   color : white;
 }
-.dashboard-card-deck .dashboard-card {
-  border-radius: 10px;
-}
-.dashboard-card img {
-  max-height: 14rem;
-  border-radius: 10px 10px 0px 0px;
-}
-.card-img-overlay {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-}
-.card-img-overlay:hover {
-  transition: all .3s ease-in-out;
-  border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.7);
-  opacity: 1;
-}
-.card-img-overlay .btn {
-  background-color: tomato;
-  color: white;
-  border-radius: 5px;
-}
-.card-img-overlay .btn:hover {
-  background-color: red;
-}
-.align-items-start {
-  text-align: center;
-}
-.card-footer {
-  border-radius: 10px;
-}
-.progress {
-  width: 100%;
-}
-.block_recentlyaccessedcourses,
-.block_myoverview {
-  border-radius: 10px;
-}
+
