@@ -3,9 +3,10 @@
   color: #0052cc;
   background-color: #e1eaf9 !important;
   padding: 1.5rem;
-  border-radius: 10px;
+  border-radius: 30px;
   font-size: 1.8rem;
   font-family: "Rubik", Sans-Serif;
+  //background-image: url("../images/custom-1.svg");
 }
 
 .userfirstname {
@@ -17,6 +18,15 @@
   float: right;
 }
 
+.btn-primary {
+  //color: red;
+  background-image: linear-gradient(45deg, #0052cc, #00baff);
+  color: #fff;
+}
+.btn-primary:hover {
+  box-shadow:  inset 0 0 100px rgb(0 0 0 / 20%);
+  color: #fff;
+}
 .btn-secondary {
   //color: red;
   background-image: linear-gradient(45deg, #04a08b, #00baff);
@@ -30,45 +40,82 @@
 .margin-top {
   margin-top: 3rem;
 }
-.dashboard-card-deck .dashboard-card {
-  border-radius: 10px;
-}
-.dashboard-card img{
-  max-height: 14rem;
-  border-radius: 10px 10px 0px 0px;
-}
-.card-img-overlay{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-}
-.card-img-overlay:hover {
-  transition: all .3s ease-in-out;
-  border-radius: 10px;
-  background-color: rgba(0, 0, 0, 0.7);
-  opacity: 1;
-}
-.card-img-overlay .btn{
-  background-color: tomato;
-  color: white;
-  border-radius: 5px;
-}
-.card-img-overlay .btn:hover {
-  background-color: red;
-}
-.align-items-start {
-  text-align: center;
-}
-.card-footer {
-  border-radius: 10px;
-}
-.progress {
-  border-radius: 10px;
-  width: 100%;
+
+//NAV-DRAWER
+#nav-drawer {
+  background-color: #fff;
 }
 
-.block_recentlyaccessedcourses,
-.block_myoverview {
+.list-group {
+  background-color: #fff;
+}
+.list-group .list-group-item {
+  overflow: hidden;
+  height: 100%;
+  white-space: nowrap;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 40px;
+  border: none;
+}
+
+.list-group .list-group-item::before {
+  box-sizing: border-box;
+}
+
+.list-group .list-group-item::after {
+  box-sizing: border-box;
+}
+
+
+//active navbar
+.list-group-item .list-group-item-action .active_tree_node  .activestyle{
+  color: black;
+}
+
+
+#nav-drawer .list-group-item-action:hover {
+  color: #0052cc;
+  border: none;
+}
+#nav-drawer .list-group-item-action.active {
+  background-color: #fff;
+  color: #0052cc;
+  border: none;
+}
+
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #BABABA;
   border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #BABABA;
+  border-radius: 10px;
+}
+
+
+::-webkit-scrollbar-track:hover {
+  box-shadow: inset 0 0 5px #808080;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #808080;
+
+}
+
+// footer
+#page-footer {
+  background-color: black;
+  color : white;
 }
