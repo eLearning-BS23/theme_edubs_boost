@@ -114,18 +114,14 @@
 
 }
 
-// footer
-#page-footer {
-  background-color: black;
-  color : white;
-}
+
 
 .dashboard-card-deck .dashboard-card {
   max-width: 19rem;
   border-radius: 10px;
 }
 .dashboard-card img{
-  max-height: 14rem;
+  max-height: 12rem;
   border-radius: 10px 10px 0px 0px;
 }
 .card-img-overlay{
@@ -163,3 +159,118 @@
 .block_myoverview {
   border-radius: 10px;
 }
+//footer in course singlesection
+
+#page-course-view-singlesection #page-footer {
+  display: block;
+}
+
+/* * * * * * * * * * * *
+/*
+/* FOOTER
+/*
+/* * * * * * * * * * * */
+
+#page-footer {
+  background-color: #e1eaf9 !important;
+  color : black;
+  text-align: center;
+}
+#page-footer a{
+  text-decoration: none;
+}
+.s-footer {
+  margin-top: 40px;
+  border-radius: 10px;
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+#theme_switch_link a,
+.usertour a,
+.tool_dataprivacy a,
+.purgecaches a,
+.s-footer .helplink a,
+.chart-table-expand a,
+.moreless-actions a,
+.continuebutton a,
+.addtagcoll a,
+#siteconfiglink a {
+  display: inline-block;
+  border-radius: 5px;
+  margin: 0 0 10px 0;
+  padding: 0.8rem 1.5rem;
+  text-decoration: none;
+  background-image: linear-gradient(45deg, #04a08b, #00baff);
+  color: #fff;
+  border: 1px solid #E4E8F0;
+  box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.05);
+  transition: all 350ms ease;
+}
+
+#theme_switch_link a:hover,
+.usertour a:hover,
+.tool_dataprivacy a:hover,
+.purgecaches a:hover,
+.s-footer .helplink a:hover,
+.chart-table-expand a:hover,
+.moreless-actions a:hover,
+.continuebutton a:hover,
+.addtagcoll a:hover,
+#siteconfiglink a:hover {
+  box-shadow:  inset 0 0 100px rgb(0 0 0 / 20%);
+  border-color: #E4E8F0;
+}
+
+#theme_switch_link a:before,
+.usertour a:before,
+.tool_dataprivacy a:before,
+.purgecaches a:before,
+.s-footer .helplink a:before,
+.chart-table-expand a:before,
+.moreless-actions a:before,
+.continuebutton a:before,
+.addtagcoll a:before,
+#siteconfiglink a:before {
+  display: none;
+}
+
+.helplink svg, .helplink img {
+  position: relative;
+  margin: -3px 20px 0 0;
+}
+
+#page-admin-grade-edit-letter-index #region-main .mdl-align a {
+  display: table;
+  margin-bottom: 2rem;
+}
+
+.moreless-actions {
+  display: inline-flex;
+  left: 25%;
+  position: relative;
+}
+@media (min-width: 320px) and (max-width: 1199.98px) {
+  .moreless-actions {
+    left: 0;
+  }
+}
+
+
+@media (min-width: 320px) and (max-width: 1199.98px) {
+  .s-footer {
+    padding: 40px 30px !important;
+  }
+}
+@media (min-width: 320px) and (max-width: 767.98px) {
+  .s-footer {
+    text-align: center;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 1199.98px) {
+  .s-footer .l-container {
+    padding: 0 20px;
+  }
+}
+

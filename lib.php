@@ -120,3 +120,124 @@ function theme_edubs_update_settings_images($settingname) {
     // Reset theme caches.
     theme_reset_all_caches();
 }
+/**
+ * Get theme setting
+ *
+ * @param string $setting
+ * @param bool $format
+ * @return string
+ */
+function theme_edubs_get_setting($setting, $format = false) {
+    $theme = theme_config::load('edubs');
+
+    if (empty($theme->settings->$setting)) {
+        return false;
+    } else if (!$format) {
+        return $theme->settings->$setting;
+    } else if ($format === 'format_text') {
+        return format_text($theme->settings->$setting, FORMAT_PLAIN);
+    } else if ($format === 'format_html') {
+        return format_text($theme->settings->$setting, FORMAT_HTML, array('trusted' => true, 'noclean' => true));
+    } else {
+        return format_string($theme->settings->$setting);
+    }
+}
+
+/**
+ * Extend theme navigation
+ * https://moodle.org/plugins/theme_moove
+ * @param flat_navigation $flatnav
+ */
+function theme_edubs_extend_flat_navigation(\flat_navigation $flatnav) {
+    theme_edubs_rebuildcoursesections($flatnav);
+    theme_edubs_delete_menuitems($flatnav);
+}
+
+/**
+ * Remove items from navigation
+ * Author: Willian Mano Araújo
+ * https://moodle.org/plugins/theme_moove
+ * @param flat_navigation $flatnav
+ */
+function theme_edubs_delete_menuitems(\flat_navigation $flatnav) {
+
+    foreach ($flatnav as $item) {
+
+        $itemstodelete = [];
+
+        if (in_array($item->key, $itemstodelete)) {
+            $flatnav->remove($item->key);
+
+            continue;
+        }
+
+        // modified
+        if (is_numeric($item->key)) {
+
+            $flatnav->remove($item->key);
+
+            continue;
+        }
+        // end of modification
+
+        if (isset($item->parent->key) && $item->parent->key == 'mycourses' &&
+            isset($item->type) && $item->type == \navigation_node::TYPE_COURSE) {
+
+            $flatnav->remove($item->key);
+
+            continue;
+        }
+
+    }
+}
+
+
+
+/**
+ * Improve flat navigation menu
+ *
+ * @param flat_navigation $flatnav
+ */
+function theme_edubs_rebuildcoursesections(\flat_navigation $flatnav) {
+    global $PAGE;
+
+    if (!isguestuser() ) {
+
+        $participantsitem = $flatnav->find('participants', \navigation_node::TYPE_CONTAINER);
+
+        if (!$participantsitem) {
+            return;
+        }
+
+        if ($PAGE->course->format != 'singleactivity') {
+            $coursesectionsoptions = [
+                'text' => get_string('coursesections', 'theme_edubs'),
+                'shorttext' => get_string('coursesections', 'theme_edubs'),
+                'icon' => new pix_icon('t/viewdetails', ''),
+                'type' => \navigation_node::COURSE_CURRENT,
+                'key' => 'course-sections',
+                'parent' => $participantsitem->parent
+            ];
+
+            $coursesections = new \flat_navigation_node($coursesectionsoptions, 0);
+
+            foreach ($flatnav as $item) {
+                if ($item->type == \navigation_node::TYPE_SECTION) {
+                    $coursesections->add_node(new \navigation_node([
+                        'text' => $item->text,
+                        'shorttext' => $item->shorttext,
+                        'icon' => $item->icon,
+                        'type' => $item->type,
+                        'key' => $item->key,
+                        'parent' => $coursesections,
+                        'action' => $item->action
+                    ]));
+                }
+            }
+
+            $flatnav->add($coursesections, 'myhome');
+
+        }
+
+    }
+}
