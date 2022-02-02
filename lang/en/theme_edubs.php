@@ -562,6 +562,9 @@ $string['add_comment'] = 'Add a Comment & Review';
 $string['speaks'] = 'Speaks:';
 $string['scroll_down'] = 'Scroll Down';
 $string['to_discover_more'] = 'to discover more';
+$string['coursesections'] = 'Course sections';
+$string['showhintcourseguestaccesslink'] = 'To have full access to the course, you can <a href="{$a->url}">self enrol into this course</a>.';
+
 
 
 $string['welcome'] = 'Welcome Back, ';
