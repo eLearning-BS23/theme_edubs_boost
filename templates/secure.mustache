@@ -15,9 +15,9 @@
     along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 }}
 {{!
-    @template theme_boost/secure
+    @template theme_edubs/secure
 
-    Boost secure layout template.
+    edubs secure layout template.
 
     Context variables required for this template:
     * sitename - The name of the site
@@ -34,16 +34,15 @@
          }
     }
 }}
-{{> theme_boost/head }}
+{{> theme_edubs/head }}
 
 <body {{{ bodyattributes }}}>
 {{> core/local/toast/wrapper}}
-
 <div id="page-wrapper">
 
     {{{ output.standard_top_of_body_html }}}
 
-    {{>theme_boost/navbar-secure}}
+    {{>theme_edubs/navbar-secure}}
 
     <div id="page" class="container-fluid">
         {{! Secured full header }}
@@ -60,36 +59,35 @@
 
         <div id="page-content" class="row">
             <div id="region-main-box" class="col-12">
-                <section id="region-main" {{#hasblocks}}class="has-blocks"{{/hasblocks}} aria-label="{{#str}}content{{/str}}">
-
-                    {{{ output.course_content_header }}}
-                    {{{ output.main_content }}}
-                    {{{ output.course_content_footer }}}
-
+                <section id="region-main" {{#hasblocks}}class="has-blocks"{{/hasblocks}}>
+                    <div class="card card-block">
+                        {{{ output.course_content_header }}}
+                        {{{ output.main_content }}}
+                        {{{ output.course_content_footer }}}
+                    </div>
                 </section>
                 {{#hasblocks}}
-                <section data-region="blocks-column" aria-label="{{#str}}blocks{{/str}}">
-                    {{{ sidepreblocks }}}
-                </section>
+                    <section data-region="blocks-column">
+                        {{{ sidepreblocks }}}
+                    </section>
                 {{/hasblocks}}
             </div>
         </div>
     </div>
-    <footer id="page-footer" class="py-3 bg-dark text-light">
-        <div class="container">
-            <div id="course-footer">{{{ output.course_footer }}}</div>
-
-            {{{ output.standard_end_of_body_html }}}
-        </div>
-    </footer>
 </div>
+<footer id="page-footer" class="py-3 bg-dark text-light">
+    <div class="container">
+        <div id="course-footer">{{{ output.course_footer }}}</div>
 
+        {{{ output.standard_end_of_body_html }}}
+    </div>
+</footer>
 
 </body>
 </html>
 {{#js}}
-M.util.js_pending('theme_boost/loader');
-require(['theme_boost/loader'], function() {
-    M.util.js_complete('theme_boost/loader');
-});
+    M.util.js_pending('theme_edubs/loader');
+    require(['theme_edubs/loader'], function() {
+    M.util.js_complete('theme_edubs/loader');
+    });
 {{/js}}
