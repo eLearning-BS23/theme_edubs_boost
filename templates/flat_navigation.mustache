@@ -79,12 +79,13 @@
         </li>
       {{/action}}
       {{^action}}
+<!--          need to change here   /home/bs733/Downloads/New folder/wiki.png-->
               <li class="sidebar-accordion list-group-item p-0 my-1" data-key="{{key}}">
                   <button class="accordion btn btn-accordion has-arrow w-100 d-block {{^showmycourses}}collapsed{{/showmycourses}} mt-2" id="accordionNav-{{key}}" data-toggle="collapse" data-target="#accordionNavC-{{key}}" aria-expanded="{{^showmycourses}}false{{/showmycourses}}{{#showmycourses}}true{{/showmycourses}}" aria-controls="accordionNavC">
-
-                      <i class="icon fas fa-align-left"></i>
+                      {{#pix}} i/courseicon, core {{/pix}}
+<!--                      <i class="icon fas fa-align-left"></i>-->
                       <span class="text">{{{text}}}</span>
-                      <i class="accordion-icon fas fa-caret-down"></i>
+<!--                      <i class="accordion-icon fas fa-caret-down"></i>-->
 
                   </button>
 
@@ -92,12 +93,18 @@
                       {{#children}}
                           {{^is_section}}
                               <li class="{{#isactive}}active{{/isactive}}" data-key="{{key}}">
-                                <div class="list-group-item {{#classes}}{{.}} {{/classes}}" data-key="{{key}}" data-isexpandable="{{isexpandable}}" data-indent="{{get_indent}}" data-showdivider="{{showdivider}}" data-type="{{type}}" data-nodetype="{{nodetype}}" data-collapse="{{collapse}}" data-forceopen="{{forceopen}}" data-isactive="{{isactive}}" data-hidden="{{hidden}}" data-preceedwithhr="{{preceedwithhr}}" {{#parent.key}}data-parent-key="{{.}}"{{/parent.key}}>
+                                <div class="list-group-item {{#classes}}{{.}} {{/classes}}"
+                                     data-key="{{key}}" data-isexpandable="{{isexpandable}}"
+                                     data-indent="{{get_indent}}" data-showdivider="{{showdivider}}"
+                                     data-type="{{type}}" data-nodetype="{{nodetype}}"
+                                     data-collapse="{{collapse}}" data-forceopen="{{forceopen}}"
+                                     data-isactive="{{isactive}}" data-hidden="{{hidden}}"
+                                     data-preceedwithhr="{{preceedwithhr}}" {{#parent.key}}data-parent-key="{{.}}"{{/parent.key}}>
                                   <a class="{{#isactive}}active{{/isactive}}" href="{{{action}}}">
                                     <div class="c-nav-item-container">
                                       {{#icon.pix}}
                                       <span class="nav-icon">
-                                          {{#pix}}{{{icon.pix}}}, {{{icon.component}}}, {{{icon.alt}}}{{/pix}}
+                                          {{#pix}} i/courseicon, core {{/pix}}
                                       </span>
                                       {{/icon.pix}}
                                       <span class="text">{{{text}}}</span>
