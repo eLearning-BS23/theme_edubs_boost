@@ -24,7 +24,7 @@
         "isfavourite": true
     }
 }}
-<div class="ml-auto dropdown">
+<div class="ml-auto dropdown fahim">
     <button class="btn btn-link btn-icon icon-size-3 coursemenubtn"
         type="button"
         data-toggle="dropdown"
@@ -56,25 +56,6 @@
                 {{#str}} aria:removefromfavourites, block_myoverview {{/str}} {{{fullname}}}
             </div>
         </a>
-        <a class="dropdown-item {{^hidden}}hidden{{/hidden}}" href="#"
-            data-action="show-course"
-            data-course-id="{{id}}"
-            aria-controls="favorite-icon-{{ id }}-{{ uniqid }}"
-            >
-            {{#str}} show, block_myoverview {{/str}}
-            <div class="sr-only">
-                {{#str}} aria:showcourse, block_myoverview, {{fullname}} {{/str}}
-            </div>
-        </a>
-        <a class="dropdown-item {{#hidden}}hidden{{/hidden}}" href="#"
-            data-action="hide-course"
-            data-course-id="{{id}}"
-            aria-controls="favorite-icon-{{ id }}-{{ uniqid }}"
-            >
-            {{#str}} hidecourse, block_myoverview {{/str}}
-            <div class="sr-only">
-                {{#str}} aria:hidecourse, block_myoverview, {{fullname}} {{/str}}
-            </div>
-        </a>
+
     </div>
 </div>
