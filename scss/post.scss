@@ -46,6 +46,13 @@
   background-color: #fff;
 }
 
+.course-text-align {
+  text-align: left;
+}
+
+.down-arrow-align {
+  padding-left: 15px;
+}
 .list-group {
   background-color: #fff;
 }
@@ -69,12 +76,10 @@
   box-sizing: border-box;
 }
 
-
 //active navbar
 .list-group-item .list-group-item-action .active_tree_node  .activestyle{
   color: black;
 }
-
 
 #nav-drawer .list-group-item-action:hover {
   color: #0052cc;
@@ -170,7 +175,6 @@
   border-radius: 10px;
   padding: 20px;
   margin: 10px;
-
 }
 
 //.activity .quiz .modtype_quiz .hasinfo {
