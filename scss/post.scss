@@ -287,3 +287,39 @@
     padding: 0 20px;
   }
 }
+
+//form
+
+.mform .form-inline .form-control, .mform .form-inline .custom-select {
+  border-radius: 10px;
+}
+
+.editor_atto_toolbar {
+  border-radius: 10px;
+
+}
+
+div.editor_atto_toolbar {
+  background-color: #e1eaf9!important;
+}
+
+div.editor_atto_toolbar button {
+ border-radius: 10px;
+  margin: 2px;
+  border: 1px solid #e1eaf9;
+  background-color: white;
+  padding: 10px;
+}
+
+div.editor_atto_toolbar div.atto_group {
+  background-color: #e1eaf9;
+  border: none;
+}
+
+.availability-inner, .availability-plugincontrols {
+  border-radius: 10px;
+}
+
+.fheader{
+  font-weight: bold;
+}
