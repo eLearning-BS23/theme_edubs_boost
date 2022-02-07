@@ -323,3 +323,31 @@ div.editor_atto_toolbar div.atto_group {
 .fheader{
   font-weight: bold;
 }
+
+
+// activity settings
+#region-main-settings-menu {
+  float: right;
+  margin: 1rem;
+  margin-left: 30rem;
+
+}
+
+.activity-completion-button {
+  float: right;
+}
+
+.activity-completion-done {
+  float: right;
+}
+
+
+.btn-outline-secondary {
+  background-image: linear-gradient(45deg, #b7c1d1, #00baff);
+  color: black;
+  //font-weight: bold;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  border: none;
+  overflow: hidden;
+}
