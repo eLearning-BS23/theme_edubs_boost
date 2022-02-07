@@ -15,9 +15,9 @@
     along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 }}
 {{!
-    @template theme_space/maintenance
+    @template theme_edubs/maintenance
 
-    space maintenance layout template.
+    edubs maintenance layout template.
 
     Context variables required for this template:
     * output - The core renderer for the page
@@ -35,7 +35,7 @@
 {{{ output.doctype }}}
 <html {{{ output.htmlattributes }}}>
 <head>
-  {{> theme_space/head-content }}
+  {{> theme_edubs/head-content }}
 </head>
 
 <body {{{ output.body_attributes }}}>
@@ -69,10 +69,10 @@
 </footer>
 
 
-{{> theme_space/footer-scripts }}
+{{> theme_edubs/footer-scripts }}
 
 </body>
 </html>
 {{#js}}
-require(['theme_space/loader']);
+require(['theme_edubs/loader']);
 {{/js}}
