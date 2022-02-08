@@ -44,16 +44,16 @@ if ($navdraweropen) {
     $extraclasses[] = 'drawer-open-left';
 }
 
-//Top bar style
-$topbarstyle = theme_edubs_get_setting('topbarstyle');
-$pluginsettings = get_config("theme_edubs");
-if( $topbarstyle == "topbarstyle-1") { $topbarstyle1 = $topbarstyle; } else { $topbarstyle1 = false; }
-if( $topbarstyle == "topbarstyle-2") { $topbarstyle2 = $topbarstyle; } else { $topbarstyle2 = false; }
-if( $topbarstyle == "topbarstyle-3") { $topbarstyle3 = $topbarstyle; } else { $topbarstyle3 = false; }
-if( $topbarstyle == "topbarstyle-4") { $topbarstyle4 = $topbarstyle; } else { $topbarstyle4 = false; }
-if( $topbarstyle == "topbarstyle-5") { $topbarstyle5 = $topbarstyle; } else { $topbarstyle5 = false; }
-if( $topbarstyle == "topbarstyle-6") { $topbarstyle6 = $topbarstyle; } else { $topbarstyle6 = false; }
-if( $topbarstyle == "topbarstyle-7") { $topbarstyle7 = $topbarstyle; } else { $topbarstyle7 = false; }
+////Top bar style
+//$topbarstyle = theme_edubs_get_setting('topbarstyle');
+//$pluginsettings = get_config("theme_edubs");
+//if( $topbarstyle == "topbarstyle-1") { $topbarstyle1 = $topbarstyle; } else { $topbarstyle1 = false; }
+//if( $topbarstyle == "topbarstyle-2") { $topbarstyle2 = $topbarstyle; } else { $topbarstyle2 = false; }
+//if( $topbarstyle == "topbarstyle-3") { $topbarstyle3 = $topbarstyle; } else { $topbarstyle3 = false; }
+//if( $topbarstyle == "topbarstyle-4") { $topbarstyle4 = $topbarstyle; } else { $topbarstyle4 = false; }
+//if( $topbarstyle == "topbarstyle-5") { $topbarstyle5 = $topbarstyle; } else { $topbarstyle5 = false; }
+//if( $topbarstyle == "topbarstyle-6") { $topbarstyle6 = $topbarstyle; } else { $topbarstyle6 = false; }
+//if( $topbarstyle == "topbarstyle-7") { $topbarstyle7 = $topbarstyle; } else { $topbarstyle7 = false; }
 //end
 
 $bodyattributes = $OUTPUT->body_attributes($extraclasses);

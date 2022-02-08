@@ -58,17 +58,18 @@
     {{{ output.standard_top_of_body_html }}}
 
     {{>theme_edubs/navbar}}
-
+    {{> theme_edubs/nav-drawer }}
     <div id="page" class="container-fluid">
         {{{ output.full_header }}}
 
         <div id="page-content" class="row no-gutters page-main-content">
             <div id="region-main-box" class="col-12">
                 {{#hasregionmainsettingsmenu}}
-                <div id="region-main-settings-menu" class="region-main-settings-menu d-print-none {{#hasblocks}}has-blocks{{/hasblocks}}">
-                    <div> {{{ output.region_main_settings_menu }}} </div>
-                </div>
+                    <div id="region-main-settings-menu" class="region-main-settings-menu d-print-block {{#hasblocks}}has-blocks{{/hasblocks}}">
+                        <div>{{{ output.region_main_settings_menu }}}</div>
+                    </div>
                 {{/hasregionmainsettingsmenu}}
+
                 <section id="region-main" {{#hasblocks}}class="has-blocks mb-3"{{/hasblocks}}>
                     {{#hasregionmainsettingsmenu}}
                     <div class="region_main_settings_menu_proxy"></div>
@@ -102,7 +103,7 @@
         </div>
     </div>
     {{{ output.standard_after_main_region_html }}}
-    {{> theme_edubs/nav-drawer }}
+
     {{> theme_edubs/footer }}
 
 </div>

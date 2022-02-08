@@ -22,19 +22,23 @@
   //color: red;
   background-image: linear-gradient(45deg, #0052cc, #00baff);
   color: #fff;
+  border-radius: 10px;
 }
 .btn-primary:hover {
   box-shadow:  inset 0 0 100px rgb(0 0 0 / 20%);
   color: #fff;
+  border-radius: 10px;
 }
 .btn-secondary {
   //color: red;
   background-image: linear-gradient(45deg, #04a08b, #00baff);
   color: #fff;
+  border-radius: 10px;
 }
 .btn-secondary:hover {
   box-shadow:  inset 0 0 100px rgb(0 0 0 / 20%);
   color: #fff;
+  border-radius: 10px;
 }
 
 .margin-top {
@@ -46,6 +50,13 @@
   background-color: #fff;
 }
 
+.course-text-align {
+  text-align: left;
+}
+
+.down-arrow-align {
+  padding-left: 15px;
+}
 .list-group {
   background-color: #fff;
 }
@@ -69,12 +80,10 @@
   box-sizing: border-box;
 }
 
-
 //active navbar
 .list-group-item .list-group-item-action .active_tree_node  .activestyle{
   color: black;
 }
-
 
 #nav-drawer .list-group-item-action:hover {
   color: #0052cc;
@@ -194,18 +203,15 @@
   border-radius: 10px;
   padding: 20px;
   margin: 10px;
-
 }
 
 //.activity .quiz .modtype_quiz .hasinfo {
 //  background-color: red;
 //}
 
-/* * * * * * * * * * * *
-/*
-/* FOOTER
-/*
-/* * * * * * * * * * * */
+
+ //FOOTER
+
 
 #page-course-view-singlesection #page-footer {
   display: block;
@@ -246,6 +252,7 @@
   border: 1px solid #E4E8F0;
   box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.05);
   transition: all 350ms ease;
+
 }
 
 #theme_switch_link a:hover,
@@ -312,4 +319,68 @@
   .s-footer .l-container {
     padding: 0 20px;
   }
+}
+
+//form
+
+.mform .form-inline .form-control, .mform .form-inline .custom-select {
+  border-radius: 10px;
+}
+
+.editor_atto_toolbar {
+  border-radius: 10px;
+
+}
+
+div.editor_atto_toolbar {
+  background-color: #e1eaf9!important;
+}
+
+div.editor_atto_toolbar button {
+ border-radius: 10px;
+  margin: 2px;
+  border: 1px solid #e1eaf9;
+  background-color: white;
+  padding: 10px;
+}
+
+div.editor_atto_toolbar div.atto_group {
+  background-color: #e1eaf9;
+  border: none;
+}
+
+.availability-inner, .availability-plugincontrols {
+  border-radius: 10px;
+}
+
+.fheader{
+  font-weight: bold;
+}
+
+
+// activity settings
+#region-main-settings-menu {
+  float: right;
+  margin: 1rem;
+  margin-left: 30rem;
+
+}
+
+.activity-completion-button {
+  float: right;
+}
+
+.activity-completion-done {
+  float: right;
+}
+
+
+.btn-outline-secondary {
+  background-image: linear-gradient(45deg, #b7c1d1, #00baff);
+  color: black;
+  //font-weight: bold;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  border: none;
+  overflow: hidden;
 }
