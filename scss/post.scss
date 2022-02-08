@@ -422,3 +422,1263 @@ div.editor_atto_toolbar div.atto_group {
   background-color: #e1eaf9 ;
   color: #000;
 }
+
+
+/* * * * * * * * * * * *
+/*
+/* TABLE
+/*
+/* * * * * * * * * * * */
+
+
+.table,
+.generaltable,
+.grading-report,
+#defineroletable,
+.rolecap,
+.admintable,
+.gradereport-grader-table,
+.page-report-competency-index .table,
+.flexible,
+.forumheaderlist,
+.formsettingheading table,
+.filemanager .yui3-datatable table,
+#page-report-outline-user [id=region-main] table,
+#page-blocks-completionstatus-details [role=main] table.generalbox,
+.generaltable,
+.userenrolment,
+.mod_index,
+.criteria,
+table.collection,
+#categoryquestions {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 1rem;
+  background-color: #fff;
+  table-layout: auto;
+}
+.accesshide {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
+  border: 0;
+}
+table caption {
+  font-size: 1.35rem;
+  font-weight: 500;
+  text-align: left;
+  caption-side: top;
+}
+.table tr,
+.generaltable tr,
+.grading-report tr,
+#defineroletable tr,
+.rolecap tr,
+.admintable tr,
+.gradereport-grader-table tr,
+.page-report-competency-index .table tr,
+.flexible tr,
+.forumheaderlist tr,
+.formsettingheading table tr,
+.filemanager .yui3-datatable table tr,
+#page-report-outline-user [id=region-main] table tr,
+#page-blocks-completionstatus-details [role=main] table.generalbox tr,
+.generaltable tr,
+.userenrolment tr,
+.mod_index tr,
+.criteria tr,
+table.collection tr,
+#categoryquestions tr {
+  transition: all 350ms ease;
+}
+
+.table th,
+.table td,
+.generaltable th,
+.generaltable td,
+.grading-report th,
+.grading-report td,
+#defineroletable th,
+#defineroletable td,
+.rolecap th,
+.rolecap td,
+.admintable th,
+.admintable td,
+.gradereport-grader-table th,
+.gradereport-grader-table td,
+.page-report-competency-index .table th,
+.page-report-competency-index .table td,
+.flexible th,
+.flexible td,
+.forumheaderlist th,
+.forumheaderlist td,
+.formsettingheading table th,
+.formsettingheading table td,
+.filemanager .yui3-datatable table th,
+.filemanager .yui3-datatable table td,
+#page-report-outline-user [id=region-main] table th,
+#page-report-outline-user [id=region-main] table td,
+#page-blocks-completionstatus-details [role=main] table.generalbox th,
+#page-blocks-completionstatus-details [role=main] table.generalbox td,
+.generaltable th,
+.generaltable td,
+.userenrolment th,
+.userenrolment td,
+.mod_index th,
+.mod_index td,
+.criteria th,
+.criteria td,
+table.collection th,
+table.collection td,
+#categoryquestions th,
+#categoryquestions td {
+  width: auto;
+  padding: 0.65rem 0.75rem !important;
+  vertical-align: middle !important;
+  border-bottom: 1px solid #E8E8E8 !important;
+  font-size: 0.875rem !important;
+  border-radius: 0 !important;
+  text-align: left !important;
+  color: #212121 !important;
+}
+.table thead th, .table th,
+.generaltable thead th,
+.generaltable th,
+.grading-report thead th,
+.grading-report th,
+#defineroletable thead th,
+#defineroletable th,
+.rolecap thead th,
+.rolecap th,
+.admintable thead th,
+.admintable th,
+.gradereport-grader-table thead th,
+.gradereport-grader-table th,
+.page-report-competency-index .table thead th,
+.page-report-competency-index .table th,
+.flexible thead th,
+.flexible th,
+.forumheaderlist thead th,
+.forumheaderlist th,
+.formsettingheading table thead th,
+.formsettingheading table th,
+.filemanager .yui3-datatable table thead th,
+.filemanager .yui3-datatable table th,
+#page-report-outline-user [id=region-main] table thead th,
+#page-report-outline-user [id=region-main] table th,
+#page-blocks-completionstatus-details [role=main] table.generalbox thead th,
+#page-blocks-completionstatus-details [role=main] table.generalbox th,
+.generaltable thead th,
+.generaltable th,
+.userenrolment thead th,
+.userenrolment th,
+.mod_index thead th,
+.mod_index th,
+.criteria thead th,
+.criteria th,
+table.collection thead th,
+table.collection th,
+#categoryquestions thead th,
+#categoryquestions th {
+  background-color: #F8F8F8;
+  border-bottom: 2px solid #E8E8E8;
+  color: #5F5F5F;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+.table th a,
+.generaltable th a,
+.grading-report th a,
+#defineroletable th a,
+.rolecap th a,
+.admintable th a,
+.gradereport-grader-table th a,
+.page-report-competency-index .table th a,
+.flexible th a,
+.forumheaderlist th a,
+.formsettingheading table th a,
+.filemanager .yui3-datatable table th a,
+#page-report-outline-user [id=region-main] table th a,
+#page-blocks-completionstatus-details [role=main] table.generalbox th a,
+.generaltable th a,
+.userenrolment th a,
+.mod_index th a,
+.criteria th a,
+table.collection th a,
+#categoryquestions th a {
+  margin: 0 !important;
+  display: inline-flex;
+  align-items: center;
+  color: inherit;
+}
+.table td a, .table td span,
+.generaltable td a,
+.generaltable td span,
+.grading-report td a,
+.grading-report td span,
+#defineroletable td a,
+#defineroletable td span,
+.rolecap td a,
+.rolecap td span,
+.admintable td a,
+.admintable td span,
+.gradereport-grader-table td a,
+.gradereport-grader-table td span,
+.page-report-competency-index .table td a,
+.page-report-competency-index .table td span,
+.flexible td a,
+.flexible td span,
+.forumheaderlist td a,
+.forumheaderlist td span,
+.formsettingheading table td a,
+.formsettingheading table td span,
+.filemanager .yui3-datatable table td a,
+.filemanager .yui3-datatable table td span,
+#page-report-outline-user [id=region-main] table td a,
+#page-report-outline-user [id=region-main] table td span,
+#page-blocks-completionstatus-details [role=main] table.generalbox td a,
+#page-blocks-completionstatus-details [role=main] table.generalbox td span,
+.generaltable td a,
+.generaltable td span,
+.userenrolment td a,
+.userenrolment td span,
+.mod_index td a,
+.mod_index td span,
+.criteria td a,
+.criteria td span,
+table.collection td a,
+table.collection td span,
+#categoryquestions td a,
+#categoryquestions td span {
+  font-weight: 500;
+}
+
+.table thead th .icon, .table thead th .editor_atto_notification .atto_info img, .editor_atto_notification .atto_info .table thead th img, .table thead th .fdescription img, .fdescription .table thead th img, .table thead th .form-control-static img, .form-control-static .table thead th img, .table th .icon, .table th .editor_atto_notification .atto_info img, .editor_atto_notification .atto_info .table th img, .table th .fdescription img, .fdescription .table th img, .table th .form-control-static img, .form-control-static .table th img,
+.generaltable thead th .icon,
+.generaltable thead th .editor_atto_notification .atto_info img,
+.editor_atto_notification .atto_info .generaltable thead th img,
+.generaltable thead th .fdescription img,
+.fdescription .generaltable thead th img,
+.generaltable thead th .form-control-static img,
+.form-control-static .generaltable thead th img,
+.generaltable th .icon,
+.generaltable th .editor_atto_notification .atto_info img,
+.editor_atto_notification .atto_info .generaltable th img,
+.generaltable th .fdescription img,
+.fdescription .generaltable th img,
+.generaltable th .form-control-static img,
+.form-control-static .generaltable th img,
+.grading-report thead th .icon,
+.grading-report thead th .editor_atto_notification .atto_info img,
+.editor_atto_notification .atto_info .grading-report thead th img,
+.grading-report thead th .fdescription img,
+.fdescription .grading-report thead th img,
+.grading-report thead th .form-control-static img,
+.form-control-static .grading-report thead th img,
+.grading-report th .icon,
+.grading-report th .editor_atto_notification .atto_info img,
+.editor_atto_notification .atto_info .grading-report th img,
+.grading-report th .fdescription img,
+.fdescription .grading-report th img,
+.grading-report th .form-control-static img,
+.form-control-static .grading-report th img,
+#defineroletable thead th .icon,
+#defineroletable thead th .editor_atto_notification .atto_info img,
+.editor_atto_notification .atto_info #defineroletable thead th img,
+#defineroletable thead th .fdescription img,
+.fdescription #defineroletable thead th img,
+#defineroletable thead th .form-control-static img,
+.form-control-static #defineroletable thead th img,
+#defineroletable th .icon,
+#defineroletable th .editor_atto_notification .atto_info img,
+.editor_atto_notification .atto_info #defineroletable th img,
+#defineroletable th .fdescription img,
+.fdescription #defineroletable th img,
+#defineroletable th .form-control-static img,
+.form-control-static #defineroletable th img,
+.rolecap thead th .icon,
+.rolecap thead th .editor_atto_notification .atto_info img,
+.editor_atto_notification .atto_info .rolecap thead th img,
+.rolecap thead th .fdescription img,
+.fdescription .rolecap thead th img,
+.rolecap thead th .form-control-static img,
+.form-control-static .rolecap thead th img,
+.rolecap th .icon,
+.rolecap th .editor_atto_notification .atto_info img,
+.editor_atto_notification .atto_info .rolecap th img,
+.rolecap th .fdescription img,
+.fdescription .rolecap th img,
+.rolecap th .form-control-static img,
+.form-control-static .rolecap th img,
+.admintable thead th .icon,
+.admintable thead th .editor_atto_notification .atto_info img,
+.editor_atto_notification .atto_info .admintable thead th img,
+.admintable thead th .fdescription img,
+.fdescription .admintable thead th img,
+.admintable thead th .form-control-static img,
+.form-control-static .admintable thead th img,
+.admintable th .icon,
+.admintable th .editor_atto_notification .atto_info img,
+.editor_atto_notification .atto_info .admintable th img,
+.admintable th .fdescription img,
+.fdescription .admintable th img,
+.admintable th .form-control-static img,
+.form-control-static .admintable th img,
+.gradereport-grader-table thead th .icon,
+.gradereport-grader-table thead th .editor_atto_notification .atto_info img,
+.editor_atto_notification .atto_info .gradereport-grader-table thead th img,
+.gradereport-grader-table thead th .fdescription img,
+.fdescription .gradereport-grader-table thead th img,
+.gradereport-grader-table thead th .form-control-static img,
+.form-control-static .gradereport-grader-table thead th img,
+.gradereport-grader-table th .icon,
+.gradereport-grader-table th .editor_atto_notification .atto_info img,
+.editor_atto_notification .atto_info .gradereport-grader-table th img,
+.gradereport-grader-table th .fdescription img,
+.fdescription .gradereport-grader-table th img,
+.gradereport-grader-table th .form-control-static img,
+.form-control-static .gradereport-grader-table th img,
+.page-report-competency-index .table thead th .icon,
+.page-report-competency-index .table thead th .editor_atto_notification .atto_info img,
+.editor_atto_notification .atto_info .page-report-competency-index .table thead th img,
+.page-report-competency-index .table thead th .fdescription img,
+.fdescription .page-report-competency-index .table thead th img,
+.page-report-competency-index .table thead th .form-control-static img,
+.form-control-static .page-report-competency-index .table thead th img,
+.page-report-competency-index .table th .icon,
+.page-report-competency-index .table th .editor_atto_notification .atto_info img,
+.editor_atto_notification .atto_info .page-report-competency-index .table th img,
+.page-report-competency-index .table th .fdescription img,
+.fdescription .page-report-competency-index .table th img,
+.page-report-competency-index .table th .form-control-static img,
+.form-control-static .page-report-competency-index .table th img,
+.flexible thead th .icon,
+.flexible thead th .editor_atto_notification .atto_info img,
+.editor_atto_notification .atto_info .flexible thead th img,
+.flexible thead th .fdescription img,
+.fdescription .flexible thead th img,
+.flexible thead th .form-control-static img,
+.form-control-static .flexible thead th img,
+.flexible th .icon,
+.flexible th .editor_atto_notification .atto_info img,
+.editor_atto_notification .atto_info .flexible th img,
+.flexible th .fdescription img,
+.fdescription .flexible th img,
+.flexible th .form-control-static img,
+.form-control-static .flexible th img,
+.forumheaderlist thead th .icon,
+.forumheaderlist thead th .editor_atto_notification .atto_info img,
+.editor_atto_notification .atto_info .forumheaderlist thead th img,
+.forumheaderlist thead th .fdescription img,
+.fdescription .forumheaderlist thead th img,
+.forumheaderlist thead th .form-control-static img,
+.form-control-static .forumheaderlist thead th img,
+.forumheaderlist th .icon,
+.forumheaderlist th .editor_atto_notification .atto_info img,
+.editor_atto_notification .atto_info .forumheaderlist th img,
+.forumheaderlist th .fdescription img,
+.fdescription .forumheaderlist th img,
+.forumheaderlist th .form-control-static img,
+.form-control-static .forumheaderlist th img,
+.formsettingheading table thead th .icon,
+.formsettingheading table thead th .editor_atto_notification .atto_info img,
+.editor_atto_notification .atto_info .formsettingheading table thead th img,
+.formsettingheading table thead th .fdescription img,
+.fdescription .formsettingheading table thead th img,
+.formsettingheading table thead th .form-control-static img,
+.form-control-static .formsettingheading table thead th img,
+.formsettingheading table th .icon,
+.formsettingheading table th .editor_atto_notification .atto_info img,
+.editor_atto_notification .atto_info .formsettingheading table th img,
+.formsettingheading table th .fdescription img,
+.fdescription .formsettingheading table th img,
+.formsettingheading table th .form-control-static img,
+.form-control-static .formsettingheading table th img,
+.filemanager .yui3-datatable table thead th .icon,
+.filemanager .yui3-datatable table thead th .editor_atto_notification .atto_info img,
+.editor_atto_notification .atto_info .filemanager .yui3-datatable table thead th img,
+.filemanager .yui3-datatable table thead th .fdescription img,
+.fdescription .filemanager .yui3-datatable table thead th img,
+.filemanager .yui3-datatable table thead th .form-control-static img,
+.form-control-static .filemanager .yui3-datatable table thead th img,
+.filemanager .yui3-datatable table th .icon,
+.filemanager .yui3-datatable table th .editor_atto_notification .atto_info img,
+.editor_atto_notification .atto_info .filemanager .yui3-datatable table th img,
+.filemanager .yui3-datatable table th .fdescription img,
+.fdescription .filemanager .yui3-datatable table th img,
+.filemanager .yui3-datatable table th .form-control-static img,
+.form-control-static .filemanager .yui3-datatable table th img,
+#page-report-outline-user [id=region-main] table thead th .icon,
+#page-report-outline-user [id=region-main] table thead th .editor_atto_notification .atto_info img,
+.editor_atto_notification .atto_info #page-report-outline-user [id=region-main] table thead th img,
+#page-report-outline-user [id=region-main] table thead th .fdescription img,
+.fdescription #page-report-outline-user [id=region-main] table thead th img,
+#page-report-outline-user [id=region-main] table thead th .form-control-static img,
+.form-control-static #page-report-outline-user [id=region-main] table thead th img,
+#page-report-outline-user [id=region-main] table th .icon,
+#page-report-outline-user [id=region-main] table th .editor_atto_notification .atto_info img,
+.editor_atto_notification .atto_info #page-report-outline-user [id=region-main] table th img,
+#page-report-outline-user [id=region-main] table th .fdescription img,
+.fdescription #page-report-outline-user [id=region-main] table th img,
+#page-report-outline-user [id=region-main] table th .form-control-static img,
+.form-control-static #page-report-outline-user [id=region-main] table th img,
+#page-blocks-completionstatus-details [role=main] table.generalbox thead th .icon,
+#page-blocks-completionstatus-details [role=main] table.generalbox thead th .editor_atto_notification .atto_info img,
+.editor_atto_notification .atto_info #page-blocks-completionstatus-details [role=main] table.generalbox thead th img,
+#page-blocks-completionstatus-details [role=main] table.generalbox thead th .fdescription img,
+.fdescription #page-blocks-completionstatus-details [role=main] table.generalbox thead th img,
+#page-blocks-completionstatus-details [role=main] table.generalbox thead th .form-control-static img,
+.form-control-static #page-blocks-completionstatus-details [role=main] table.generalbox thead th img,
+#page-blocks-completionstatus-details [role=main] table.generalbox th .icon,
+#page-blocks-completionstatus-details [role=main] table.generalbox th .editor_atto_notification .atto_info img,
+.editor_atto_notification .atto_info #page-blocks-completionstatus-details [role=main] table.generalbox th img,
+#page-blocks-completionstatus-details [role=main] table.generalbox th .fdescription img,
+.fdescription #page-blocks-completionstatus-details [role=main] table.generalbox th img,
+#page-blocks-completionstatus-details [role=main] table.generalbox th .form-control-static img,
+.form-control-static #page-blocks-completionstatus-details [role=main] table.generalbox th img,
+.generaltable thead th .icon,
+.generaltable thead th .editor_atto_notification .atto_info img,
+.editor_atto_notification .atto_info .generaltable thead th img,
+.generaltable thead th .fdescription img,
+.fdescription .generaltable thead th img,
+.generaltable thead th .form-control-static img,
+.form-control-static .generaltable thead th img,
+.generaltable th .icon,
+.generaltable th .editor_atto_notification .atto_info img,
+.editor_atto_notification .atto_info .generaltable th img,
+.generaltable th .fdescription img,
+.fdescription .generaltable th img,
+.generaltable th .form-control-static img,
+.form-control-static .generaltable th img,
+.userenrolment thead th .icon,
+.userenrolment thead th .editor_atto_notification .atto_info img,
+.editor_atto_notification .atto_info .userenrolment thead th img,
+.userenrolment thead th .fdescription img,
+.fdescription .userenrolment thead th img,
+.userenrolment thead th .form-control-static img,
+.form-control-static .userenrolment thead th img,
+.userenrolment th .icon,
+.userenrolment th .editor_atto_notification .atto_info img,
+.editor_atto_notification .atto_info .userenrolment th img,
+.userenrolment th .fdescription img,
+.fdescription .userenrolment th img,
+.userenrolment th .form-control-static img,
+.form-control-static .userenrolment th img,
+.mod_index thead th .icon,
+.mod_index thead th .editor_atto_notification .atto_info img,
+.editor_atto_notification .atto_info .mod_index thead th img,
+.mod_index thead th .fdescription img,
+.fdescription .mod_index thead th img,
+.mod_index thead th .form-control-static img,
+.form-control-static .mod_index thead th img,
+.mod_index th .icon,
+.mod_index th .editor_atto_notification .atto_info img,
+.editor_atto_notification .atto_info .mod_index th img,
+.mod_index th .fdescription img,
+.fdescription .mod_index th img,
+.mod_index th .form-control-static img,
+.form-control-static .mod_index th img,
+.criteria thead th .icon,
+.criteria thead th .editor_atto_notification .atto_info img,
+.editor_atto_notification .atto_info .criteria thead th img,
+.criteria thead th .fdescription img,
+.fdescription .criteria thead th img,
+.criteria thead th .form-control-static img,
+.form-control-static .criteria thead th img,
+.criteria th .icon,
+.criteria th .editor_atto_notification .atto_info img,
+.editor_atto_notification .atto_info .criteria th img,
+.criteria th .fdescription img,
+.fdescription .criteria th img,
+.criteria th .form-control-static img,
+.form-control-static .criteria th img,
+table.collection thead th .icon,
+table.collection thead th .editor_atto_notification .atto_info img,
+.editor_atto_notification .atto_info table.collection thead th img,
+table.collection thead th .fdescription img,
+.fdescription table.collection thead th img,
+table.collection thead th .form-control-static img,
+.form-control-static table.collection thead th img,
+table.collection th .icon,
+table.collection th .editor_atto_notification .atto_info img,
+.editor_atto_notification .atto_info table.collection th img,
+table.collection th .fdescription img,
+.fdescription table.collection th img,
+table.collection th .form-control-static img,
+.form-control-static table.collection th img,
+#categoryquestions thead th .icon,
+#categoryquestions thead th .editor_atto_notification .atto_info img,
+.editor_atto_notification .atto_info #categoryquestions thead th img,
+#categoryquestions thead th .fdescription img,
+.fdescription #categoryquestions thead th img,
+#categoryquestions thead th .form-control-static img,
+.form-control-static #categoryquestions thead th img,
+#categoryquestions th .icon,
+#categoryquestions th .editor_atto_notification .atto_info img,
+.editor_atto_notification .atto_info #categoryquestions th img,
+#categoryquestions th .fdescription img,
+.fdescription #categoryquestions th img,
+#categoryquestions th .form-control-static img,
+.form-control-static #categoryquestions th img {
+  margin-right: 16px;
+  font-size: 16px;
+  line-height: 1;
+}
+.table thead th .gradeitemheader, .table th .gradeitemheader,
+.generaltable thead th .gradeitemheader,
+.generaltable th .gradeitemheader,
+.grading-report thead th .gradeitemheader,
+.grading-report th .gradeitemheader,
+#defineroletable thead th .gradeitemheader,
+#defineroletable th .gradeitemheader,
+.rolecap thead th .gradeitemheader,
+.rolecap th .gradeitemheader,
+.admintable thead th .gradeitemheader,
+.admintable th .gradeitemheader,
+.gradereport-grader-table thead th .gradeitemheader,
+.gradereport-grader-table th .gradeitemheader,
+.page-report-competency-index .table thead th .gradeitemheader,
+.page-report-competency-index .table th .gradeitemheader,
+.flexible thead th .gradeitemheader,
+.flexible th .gradeitemheader,
+.forumheaderlist thead th .gradeitemheader,
+.forumheaderlist th .gradeitemheader,
+.formsettingheading table thead th .gradeitemheader,
+.formsettingheading table th .gradeitemheader,
+.filemanager .yui3-datatable table thead th .gradeitemheader,
+.filemanager .yui3-datatable table th .gradeitemheader,
+#page-report-outline-user [id=region-main] table thead th .gradeitemheader,
+#page-report-outline-user [id=region-main] table th .gradeitemheader,
+#page-blocks-completionstatus-details [role=main] table.generalbox thead th .gradeitemheader,
+#page-blocks-completionstatus-details [role=main] table.generalbox th .gradeitemheader,
+.generaltable thead th .gradeitemheader,
+.generaltable th .gradeitemheader,
+.userenrolment thead th .gradeitemheader,
+.userenrolment th .gradeitemheader,
+.mod_index thead th .gradeitemheader,
+.mod_index th .gradeitemheader,
+.criteria thead th .gradeitemheader,
+.criteria th .gradeitemheader,
+table.collection thead th .gradeitemheader,
+table.collection th .gradeitemheader,
+#categoryquestions thead th .gradeitemheader,
+#categoryquestions th .gradeitemheader {
+  margin: 0;
+  padding: 0;
+}
+.table thead th .gradeitemheader .itemicon, .table th .gradeitemheader .itemicon,
+.generaltable thead th .gradeitemheader .itemicon,
+.generaltable th .gradeitemheader .itemicon,
+.grading-report thead th .gradeitemheader .itemicon,
+.grading-report th .gradeitemheader .itemicon,
+#defineroletable thead th .gradeitemheader .itemicon,
+#defineroletable th .gradeitemheader .itemicon,
+.rolecap thead th .gradeitemheader .itemicon,
+.rolecap th .gradeitemheader .itemicon,
+.admintable thead th .gradeitemheader .itemicon,
+.admintable th .gradeitemheader .itemicon,
+.gradereport-grader-table thead th .gradeitemheader .itemicon,
+.gradereport-grader-table th .gradeitemheader .itemicon,
+.page-report-competency-index .table thead th .gradeitemheader .itemicon,
+.page-report-competency-index .table th .gradeitemheader .itemicon,
+.flexible thead th .gradeitemheader .itemicon,
+.flexible th .gradeitemheader .itemicon,
+.forumheaderlist thead th .gradeitemheader .itemicon,
+.forumheaderlist th .gradeitemheader .itemicon,
+.formsettingheading table thead th .gradeitemheader .itemicon,
+.formsettingheading table th .gradeitemheader .itemicon,
+.filemanager .yui3-datatable table thead th .gradeitemheader .itemicon,
+.filemanager .yui3-datatable table th .gradeitemheader .itemicon,
+#page-report-outline-user [id=region-main] table thead th .gradeitemheader .itemicon,
+#page-report-outline-user [id=region-main] table th .gradeitemheader .itemicon,
+#page-blocks-completionstatus-details [role=main] table.generalbox thead th .gradeitemheader .itemicon,
+#page-blocks-completionstatus-details [role=main] table.generalbox th .gradeitemheader .itemicon,
+.generaltable thead th .gradeitemheader .itemicon,
+.generaltable th .gradeitemheader .itemicon,
+.userenrolment thead th .gradeitemheader .itemicon,
+.userenrolment th .gradeitemheader .itemicon,
+.mod_index thead th .gradeitemheader .itemicon,
+.mod_index th .gradeitemheader .itemicon,
+.criteria thead th .gradeitemheader .itemicon,
+.criteria th .gradeitemheader .itemicon,
+table.collection thead th .gradeitemheader .itemicon,
+table.collection th .gradeitemheader .itemicon,
+#categoryquestions thead th .gradeitemheader .itemicon,
+#categoryquestions th .gradeitemheader .itemicon {
+  width: 20px;
+  height: auto;
+  margin-left: 0;
+}
+
+.gradeitemheader .itemicon {
+  width: 20px !important;
+  margin-right: 0.5rem;
+}
+.table td .icon.spacer, .table td .editor_atto_notification .atto_info img.spacer, .editor_atto_notification .atto_info .table td img.spacer, .table td .fdescription img.spacer, .fdescription .table td img.spacer, .table td .form-control-static img.spacer, .form-control-static .table td img.spacer,
+.generaltable td .icon.spacer,
+.generaltable td .editor_atto_notification .atto_info img.spacer,
+.editor_atto_notification .atto_info .generaltable td img.spacer,
+.generaltable td .fdescription img.spacer,
+.fdescription .generaltable td img.spacer,
+.generaltable td .form-control-static img.spacer,
+.form-control-static .generaltable td img.spacer,
+.grading-report td .icon.spacer,
+.grading-report td .editor_atto_notification .atto_info img.spacer,
+.editor_atto_notification .atto_info .grading-report td img.spacer,
+.grading-report td .fdescription img.spacer,
+.fdescription .grading-report td img.spacer,
+.grading-report td .form-control-static img.spacer,
+.form-control-static .grading-report td img.spacer,
+#defineroletable td .icon.spacer,
+#defineroletable td .editor_atto_notification .atto_info img.spacer,
+.editor_atto_notification .atto_info #defineroletable td img.spacer,
+#defineroletable td .fdescription img.spacer,
+.fdescription #defineroletable td img.spacer,
+#defineroletable td .form-control-static img.spacer,
+.form-control-static #defineroletable td img.spacer,
+.rolecap td .icon.spacer,
+.rolecap td .editor_atto_notification .atto_info img.spacer,
+.editor_atto_notification .atto_info .rolecap td img.spacer,
+.rolecap td .fdescription img.spacer,
+.fdescription .rolecap td img.spacer,
+.rolecap td .form-control-static img.spacer,
+.form-control-static .rolecap td img.spacer,
+.admintable td .icon.spacer,
+.admintable td .editor_atto_notification .atto_info img.spacer,
+.editor_atto_notification .atto_info .admintable td img.spacer,
+.admintable td .fdescription img.spacer,
+.fdescription .admintable td img.spacer,
+.admintable td .form-control-static img.spacer,
+.form-control-static .admintable td img.spacer,
+.gradereport-grader-table td .icon.spacer,
+.gradereport-grader-table td .editor_atto_notification .atto_info img.spacer,
+.editor_atto_notification .atto_info .gradereport-grader-table td img.spacer,
+.gradereport-grader-table td .fdescription img.spacer,
+.fdescription .gradereport-grader-table td img.spacer,
+.gradereport-grader-table td .form-control-static img.spacer,
+.form-control-static .gradereport-grader-table td img.spacer,
+.page-report-competency-index .table td .icon.spacer,
+.page-report-competency-index .table td .editor_atto_notification .atto_info img.spacer,
+.editor_atto_notification .atto_info .page-report-competency-index .table td img.spacer,
+.flexible td .icon.spacer,
+.flexible td .editor_atto_notification .atto_info img.spacer,
+.editor_atto_notification .atto_info .flexible td img.spacer,
+.flexible td .fdescription img.spacer,
+.fdescription .flexible td img.spacer,
+.flexible td .form-control-static img.spacer,
+.form-control-static .flexible td img.spacer,
+.forumheaderlist td .icon.spacer,
+.forumheaderlist td .editor_atto_notification .atto_info img.spacer,
+.editor_atto_notification .atto_info .forumheaderlist td img.spacer,
+.forumheaderlist td .fdescription img.spacer,
+.fdescription .forumheaderlist td img.spacer,
+.forumheaderlist td .form-control-static img.spacer,
+.form-control-static .forumheaderlist td img.spacer,
+.formsettingheading table td .icon.spacer,
+.formsettingheading table td .editor_atto_notification .atto_info img.spacer,
+.editor_atto_notification .atto_info .formsettingheading table td img.spacer,
+.formsettingheading table td .fdescription img.spacer,
+.fdescription .formsettingheading table td img.spacer,
+.formsettingheading table td .form-control-static img.spacer,
+.form-control-static .formsettingheading table td img.spacer,
+.filemanager .yui3-datatable table td .icon.spacer,
+.filemanager .yui3-datatable table td .editor_atto_notification .atto_info img.spacer,
+.editor_atto_notification .atto_info .filemanager .yui3-datatable table td img.spacer,
+.filemanager .yui3-datatable table td .fdescription img.spacer,
+.fdescription .filemanager .yui3-datatable table td img.spacer,
+.filemanager .yui3-datatable table td .form-control-static img.spacer,
+.form-control-static .filemanager .yui3-datatable table td img.spacer,
+#page-report-outline-user [id=region-main] table td .icon.spacer,
+#page-report-outline-user [id=region-main] table td .editor_atto_notification .atto_info img.spacer,
+.editor_atto_notification .atto_info #page-report-outline-user [id=region-main] table td img.spacer,
+#page-report-outline-user [id=region-main] table td .fdescription img.spacer,
+.fdescription #page-report-outline-user [id=region-main] table td img.spacer,
+#page-report-outline-user [id=region-main] table td .form-control-static img.spacer,
+.form-control-static #page-report-outline-user [id=region-main] table td img.spacer,
+#page-blocks-completionstatus-details [role=main] table.generalbox td .icon.spacer,
+#page-blocks-completionstatus-details [role=main] table.generalbox td .editor_atto_notification .atto_info img.spacer,
+.editor_atto_notification .atto_info #page-blocks-completionstatus-details [role=main] table.generalbox td img.spacer,
+#page-blocks-completionstatus-details [role=main] table.generalbox td .fdescription img.spacer,
+.fdescription #page-blocks-completionstatus-details [role=main] table.generalbox td img.spacer,
+#page-blocks-completionstatus-details [role=main] table.generalbox td .form-control-static img.spacer,
+.form-control-static #page-blocks-completionstatus-details [role=main] table.generalbox td img.spacer,
+.generaltable td .icon.spacer,
+.generaltable td .editor_atto_notification .atto_info img.spacer,
+.editor_atto_notification .atto_info .generaltable td img.spacer,
+.userenrolment td .icon.spacer,
+.userenrolment td .editor_atto_notification .atto_info img.spacer,
+.editor_atto_notification .atto_info .userenrolment td img.spacer,
+.userenrolment td .fdescription img.spacer,
+.fdescription .userenrolment td img.spacer,
+.userenrolment td .form-control-static img.spacer,
+.form-control-static .userenrolment td img.spacer,
+.mod_index td .icon.spacer,
+.mod_index td .editor_atto_notification .atto_info img.spacer,
+.editor_atto_notification .atto_info .mod_index td img.spacer,
+.mod_index td .fdescription img.spacer,
+.fdescription .mod_index td img.spacer,
+.mod_index td .form-control-static img.spacer,
+.form-control-static .mod_index td img.spacer,
+.criteria td .icon.spacer,
+.criteria td .editor_atto_notification .atto_info img.spacer,
+.editor_atto_notification .atto_info .criteria td img.spacer,
+.criteria td .fdescription img.spacer,
+.fdescription .criteria td img.spacer,
+.criteria td .form-control-static img.spacer,
+.form-control-static .criteria td img.spacer,
+table.collection td .icon.spacer,
+table.collection td .editor_atto_notification .atto_info img.spacer,
+.editor_atto_notification .atto_info table.collection td img.spacer,
+table.collection td .fdescription img.spacer,
+.fdescription table.collection td img.spacer,
+table.collection td .form-control-static img.spacer,
+.form-control-static table.collection td img.spacer,
+#categoryquestions td .icon.spacer,
+#categoryquestions td .editor_atto_notification .atto_info img.spacer,
+.editor_atto_notification .atto_info #categoryquestions td img.spacer,
+#categoryquestions td .fdescription img.spacer,
+.fdescription #categoryquestions td img.spacer,
+#categoryquestions td .form-control-static img.spacer,
+.form-control-static #categoryquestions td img.spacer {
+  display: none;
+}
+.table td a:not(.dropdown-item),
+.generaltable td a:not(.dropdown-item),
+.grading-report td a:not(.dropdown-item),
+#defineroletable td a:not(.dropdown-item),
+.rolecap td a:not(.dropdown-item),
+.admintable td a:not(.dropdown-item),
+.gradereport-grader-table td a:not(.dropdown-item),
+.page-report-competency-index .table td a:not(.dropdown-item),
+.flexible td a:not(.dropdown-item),
+.forumheaderlist td a:not(.dropdown-item),
+.formsettingheading table td a:not(.dropdown-item),
+.filemanager .yui3-datatable table td a:not(.dropdown-item),
+#page-report-outline-user [id=region-main] table td a:not(.dropdown-item),
+#page-blocks-completionstatus-details [role=main] table.generalbox td a:not(.dropdown-item),
+.generaltable td a:not(.dropdown-item),
+.userenrolment td a:not(.dropdown-item),
+.mod_index td a:not(.dropdown-item),
+.criteria td a:not(.dropdown-item),
+table.collection td a:not(.dropdown-item),
+#categoryquestions td a:not(.dropdown-item) {
+  margin: 2px;
+  display: inline-table;
+  color: #0642CD;
+}
+.table td a:not(.dropdown-item):hover,
+.generaltable td a:not(.dropdown-item):hover,
+.grading-report td a:not(.dropdown-item):hover,
+#defineroletable td a:not(.dropdown-item):hover,
+.rolecap td a:not(.dropdown-item):hover,
+.admintable td a:not(.dropdown-item):hover,
+.gradereport-grader-table td a:not(.dropdown-item):hover,
+.page-report-competency-index .table td a:not(.dropdown-item):hover,
+.flexible td a:not(.dropdown-item):hover,
+.forumheaderlist td a:not(.dropdown-item):hover,
+.formsettingheading table td a:not(.dropdown-item):hover,
+.filemanager .yui3-datatable table td a:not(.dropdown-item):hover,
+#page-report-outline-user [id=region-main] table td a:not(.dropdown-item):hover,
+#page-blocks-completionstatus-details [role=main] table.generalbox td a:not(.dropdown-item):hover,
+.generaltable td a:not(.dropdown-item):hover,
+.userenrolment td a:not(.dropdown-item):hover,
+.mod_index td a:not(.dropdown-item):hover,
+.criteria td a:not(.dropdown-item):hover,
+table.collection td a:not(.dropdown-item):hover,
+#categoryquestions td a:not(.dropdown-item):hover {
+  color: #042a83;
+  text-decoration: none;
+}
+.table td > a .icon.fa-fw, .table td > a .editor_atto_notification .atto_info img.fa-fw, .editor_atto_notification .atto_info .table td > a img.fa-fw, .table td > a .fdescription img.fa-fw, .fdescription .table td > a img.fa-fw, .table td > a .form-control-static img.fa-fw, .form-control-static .table td > a img.fa-fw,
+.generaltable td > a .icon.fa-fw,
+.generaltable td > a .editor_atto_notification .atto_info img.fa-fw,
+.editor_atto_notification .atto_info .generaltable td > a img.fa-fw,
+.generaltable td > a .fdescription img.fa-fw,
+.fdescription .generaltable td > a img.fa-fw,
+.generaltable td > a .form-control-static img.fa-fw,
+.form-control-static .generaltable td > a img.fa-fw,
+.grading-report td > a .icon.fa-fw,
+.grading-report td > a .editor_atto_notification .atto_info img.fa-fw,
+.editor_atto_notification .atto_info .grading-report td > a img.fa-fw,
+.grading-report td > a .fdescription img.fa-fw,
+.fdescription .grading-report td > a img.fa-fw,
+.grading-report td > a .form-control-static img.fa-fw,
+.form-control-static .grading-report td > a img.fa-fw,
+#defineroletable td > a .icon.fa-fw,
+#defineroletable td > a .editor_atto_notification .atto_info img.fa-fw,
+.editor_atto_notification .atto_info #defineroletable td > a img.fa-fw,
+#defineroletable td > a .fdescription img.fa-fw,
+.fdescription #defineroletable td > a img.fa-fw,
+#defineroletable td > a .form-control-static img.fa-fw,
+.form-control-static #defineroletable td > a img.fa-fw,
+.rolecap td > a .icon.fa-fw,
+.rolecap td > a .editor_atto_notification .atto_info img.fa-fw,
+.editor_atto_notification .atto_info .rolecap td > a img.fa-fw,
+.rolecap td > a .fdescription img.fa-fw,
+.fdescription .rolecap td > a img.fa-fw,
+.rolecap td > a .form-control-static img.fa-fw,
+.form-control-static .rolecap td > a img.fa-fw,
+.admintable td > a .icon.fa-fw,
+.admintable td > a .editor_atto_notification .atto_info img.fa-fw,
+.editor_atto_notification .atto_info .admintable td > a img.fa-fw,
+.admintable td > a .fdescription img.fa-fw,
+.fdescription .admintable td > a img.fa-fw,
+.admintable td > a .form-control-static img.fa-fw,
+.form-control-static .admintable td > a img.fa-fw,
+.gradereport-grader-table td > a .icon.fa-fw,
+.gradereport-grader-table td > a .editor_atto_notification .atto_info img.fa-fw,
+.editor_atto_notification .atto_info .gradereport-grader-table td > a img.fa-fw,
+.gradereport-grader-table td > a .fdescription img.fa-fw,
+.fdescription .gradereport-grader-table td > a img.fa-fw,
+.gradereport-grader-table td > a .form-control-static img.fa-fw,
+.form-control-static .gradereport-grader-table td > a img.fa-fw,
+.page-report-competency-index .table td > a .icon.fa-fw,
+.page-report-competency-index .table td > a .editor_atto_notification .atto_info img.fa-fw,
+.editor_atto_notification .atto_info .page-report-competency-index .table td > a img.fa-fw,
+.flexible td > a .icon.fa-fw,
+.flexible td > a .editor_atto_notification .atto_info img.fa-fw,
+.editor_atto_notification .atto_info .flexible td > a img.fa-fw,
+.flexible td > a .fdescription img.fa-fw,
+.fdescription .flexible td > a img.fa-fw,
+.flexible td > a .form-control-static img.fa-fw,
+.form-control-static .flexible td > a img.fa-fw,
+.forumheaderlist td > a .icon.fa-fw,
+.forumheaderlist td > a .editor_atto_notification .atto_info img.fa-fw,
+.editor_atto_notification .atto_info .forumheaderlist td > a img.fa-fw,
+.forumheaderlist td > a .fdescription img.fa-fw,
+.fdescription .forumheaderlist td > a img.fa-fw,
+.forumheaderlist td > a .form-control-static img.fa-fw,
+.form-control-static .forumheaderlist td > a img.fa-fw,
+.formsettingheading table td > a .icon.fa-fw,
+.formsettingheading table td > a .editor_atto_notification .atto_info img.fa-fw,
+.editor_atto_notification .atto_info .formsettingheading table td > a img.fa-fw,
+.formsettingheading table td > a .fdescription img.fa-fw,
+.fdescription .formsettingheading table td > a img.fa-fw,
+.formsettingheading table td > a .form-control-static img.fa-fw,
+.form-control-static .formsettingheading table td > a img.fa-fw,
+.filemanager .yui3-datatable table td > a .icon.fa-fw,
+.filemanager .yui3-datatable table td > a .editor_atto_notification .atto_info img.fa-fw,
+.editor_atto_notification .atto_info .filemanager .yui3-datatable table td > a img.fa-fw,
+.filemanager .yui3-datatable table td > a .fdescription img.fa-fw,
+.fdescription .filemanager .yui3-datatable table td > a img.fa-fw,
+.filemanager .yui3-datatable table td > a .form-control-static img.fa-fw,
+.form-control-static .filemanager .yui3-datatable table td > a img.fa-fw,
+#page-report-outline-user [id=region-main] table td > a .icon.fa-fw,
+#page-report-outline-user [id=region-main] table td > a .editor_atto_notification .atto_info img.fa-fw,
+.editor_atto_notification .atto_info #page-report-outline-user [id=region-main] table td > a img.fa-fw,
+#page-report-outline-user [id=region-main] table td > a .fdescription img.fa-fw,
+.fdescription #page-report-outline-user [id=region-main] table td > a img.fa-fw,
+#page-report-outline-user [id=region-main] table td > a .form-control-static img.fa-fw,
+.form-control-static #page-report-outline-user [id=region-main] table td > a img.fa-fw,
+#page-blocks-completionstatus-details [role=main] table.generalbox td > a .icon.fa-fw,
+#page-blocks-completionstatus-details [role=main] table.generalbox td > a .editor_atto_notification .atto_info img.fa-fw,
+.editor_atto_notification .atto_info #page-blocks-completionstatus-details [role=main] table.generalbox td > a img.fa-fw,
+#page-blocks-completionstatus-details [role=main] table.generalbox td > a .fdescription img.fa-fw,
+.fdescription #page-blocks-completionstatus-details [role=main] table.generalbox td > a img.fa-fw,
+#page-blocks-completionstatus-details [role=main] table.generalbox td > a .form-control-static img.fa-fw,
+.form-control-static #page-blocks-completionstatus-details [role=main] table.generalbox td > a img.fa-fw,
+.generaltable td > a .icon.fa-fw,
+.generaltable td > a .editor_atto_notification .atto_info img.fa-fw,
+.editor_atto_notification .atto_info .generaltable td > a img.fa-fw,
+.userenrolment td > a .icon.fa-fw,
+.userenrolment td > a .editor_atto_notification .atto_info img.fa-fw,
+.editor_atto_notification .atto_info .userenrolment td > a img.fa-fw,
+.userenrolment td > a .fdescription img.fa-fw,
+.fdescription .userenrolment td > a img.fa-fw,
+.userenrolment td > a .form-control-static img.fa-fw,
+.form-control-static .userenrolment td > a img.fa-fw,
+.mod_index td > a .icon.fa-fw,
+.mod_index td > a .editor_atto_notification .atto_info img.fa-fw,
+.editor_atto_notification .atto_info .mod_index td > a img.fa-fw,
+.mod_index td > a .fdescription img.fa-fw,
+.fdescription .mod_index td > a img.fa-fw,
+.mod_index td > a .form-control-static img.fa-fw,
+.form-control-static .mod_index td > a img.fa-fw,
+.criteria td > a .icon.fa-fw,
+.criteria td > a .editor_atto_notification .atto_info img.fa-fw,
+.editor_atto_notification .atto_info .criteria td > a img.fa-fw,
+.criteria td > a .fdescription img.fa-fw,
+.fdescription .criteria td > a img.fa-fw,
+.criteria td > a .form-control-static img.fa-fw,
+.form-control-static .criteria td > a img.fa-fw,
+table.collection td > a .icon.fa-fw,
+table.collection td > a .editor_atto_notification .atto_info img.fa-fw,
+.editor_atto_notification .atto_info table.collection td > a img.fa-fw,
+table.collection td > a .fdescription img.fa-fw,
+.fdescription table.collection td > a img.fa-fw,
+table.collection td > a .form-control-static img.fa-fw,
+.form-control-static table.collection td > a img.fa-fw,
+#categoryquestions td > a .icon.fa-fw,
+#categoryquestions td > a .editor_atto_notification .atto_info img.fa-fw,
+.editor_atto_notification .atto_info #categoryquestions td > a img.fa-fw,
+#categoryquestions td > a .fdescription img.fa-fw,
+.fdescription #categoryquestions td > a img.fa-fw,
+#categoryquestions td > a .form-control-static img.fa-fw,
+.form-control-static #categoryquestions td > a img.fa-fw {
+  width: 30px;
+  height: 30px;
+  color: #212121;
+  background-color: #e1eaf9 ;
+  border-radius: 30px;
+  font-size: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 350ms ease;
+}
+.table img.userpicture,
+.generaltable img.userpicture,
+.grading-report img.userpicture,
+#defineroletable img.userpicture,
+.rolecap img.userpicture,
+.admintable img.userpicture,
+.gradereport-grader-table img.userpicture,
+.page-report-competency-index .table img.userpicture,
+.flexible img.userpicture,
+.forumheaderlist img.userpicture,
+.formsettingheading table img.userpicture,
+.filemanager .yui3-datatable table img.userpicture,
+#page-report-outline-user [id=region-main] table img.userpicture,
+#page-blocks-completionstatus-details [role=main] table.generalbox img.userpicture,
+.generaltable img.userpicture,
+.userenrolment img.userpicture,
+.mod_index img.userpicture,
+.criteria img.userpicture,
+table.collection img.userpicture,
+#categoryquestions img.userpicture {
+  width: 25px;
+  height: 25px;
+}
+
+form-control, .comment-area textarea,
+input[type=text],
+input[type=email],
+#add_section_numsections,
+.path-grade-report-grader .gradeparent .text,
+textarea {
+  display: block;
+  width: 100%;
+  padding: 0.8rem 1.25rem;
+  font-size: 0.85rem;
+  line-height: 180%;
+  color: #212121;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #E8E8E8;
+  box-shadow: inset 0px 1px 3px 0 rgba(0, 0, 0, 0.13), inset 0 2px 1px 0 rgba(0, 0, 0, 0.05);
+  cursor: auto !important;
+  border-radius: 5px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.form-control::-ms-expand, .comment-area textarea::-ms-expand,
+input[type=text]::-ms-expand,
+input[type=email]::-ms-expand,
+#add_section_numsections::-ms-expand,
+.path-grade-report-grader .gradeparent .text::-ms-expand,
+textarea::-ms-expand {
+  background-color: transparent;
+  border: 0;
+}
+.form-control:focus,
+input[type=text]:focus,
+input[type=email]:focus,
+#add_section_numsections:focus,
+.path-grade-report-grader .gradeparent .text:focus,
+textarea:focus {
+  color: #212121;
+  background-color: #fff;
+  border-color: #5889fa;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(6, 66, 205, 0.25);
+}
+.form-control::placeholder, .comment-area textarea::placeholder,
+input[type=text]::placeholder,
+input[type=email]::placeholder,
+#add_section_numsections::placeholder,
+.path-grade-report-grader .gradeparent .text::placeholder,
+textarea::placeholder {
+  color: #424242;
+  opacity: 1;
+}
+.form-control:disabled, .form-control[readonly],
+input[type=text]:disabled,
+input[type=text][readonly],
+input[type=email]:disabled,
+input[type=email][readonly],
+#add_section_numsections:disabled,
+#add_section_numsections[readonly],
+.path-grade-report-grader .gradeparent .text:disabled,
+.path-grade-report-grader .gradeparent .text[readonly],
+textarea:disabled,
+textarea[readonly] {
+  background-color: #F8F8F8;
+  opacity: 1;
+  box-shadow: none;
+}
+
+/**
+ * Grader report.
+ */
+.gradeparent tr .cell {
+  background-color: #fff;
+}
+.path-grade-report .gradeparent table,
+.path-grade-report .gradeparent .cell {
+  border: none !important;
+  border-color: #E8E8E8;
+}
+.path-grade-report .gradeparent td, .path-grade-report .gradeparent th {
+  padding: 0.5rem !important;
+}
+.path-grade-report .gradeparent .header.user {
+  text-transform: none;
+}
+.path-grade-report .gradeparent .header.user img.userpicture {
+  width: 30px;
+  height: 30px;
+  margin: 0 0.5rem 0 0;
+}
+.path-grade-report .gradeparent .header.user a {
+  font-weight: 500;
+}
+.path-grade-report .gradeparent tr:nth-of-type(2) .cell,
+.path-grade-report .gradeparent .floater .cell,
+.path-grade-report .gradeparent .avg {
+  background-color: #e1eaf9;
+}
+.path-grade-report .gradeparent .floater {
+  z-index: 99999;
+}
+.path-grade-report .gradeparent .floater a {
+  font-weight: 500;
+  text-decoration: none;
+  color: #212121;
+}
+.path-grade-report .gradeparent .floater a img {
+  margin-right: 0.5rem;
+}
+.path-grade-report .gradeparent .floater .cell {
+  display: flex;
+  align-items: center;
+  padding: 10px 0.5rem;
+  margin: 0;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0.5px 0px, rgba(0, 0, 0, 0.03) 0px 1px 0px 1px, rgba(0, 0, 0, 0.05) 0px 2px 4px;
+  border-radius: 5px;
+}
+.path-grade-report .gradeparent table .clickable {
+  cursor: pointer;
+}
+
+.path-grade-report .gradeparent td,
+.path-grade-report .gradeparent th {
+  padding: 0.5rem;
+}
+.path-grade-report .gradeparent tr .cell {
+  background-color: #fff;
+}
+/**
+ * Grader report end
+ */
+.path-grade-report-grader .gradeitemheader {
+  vertical-align: middle !important;
+}
+
+.path-grade-report-grader .gradeparent .user .cell {
+  width: 300px;
+  align-items: center;
+}
+.path-grade-report-grader .gradeparent .userrow.odd .cell,
+.path-grade-report-grader .gradeparent .floater .cell.odd,
+.path-grade-report-grader .gradeparent .heading .cell,
+.path-grade-report-grader .gradeparent .cell.category,
+.path-grade-report-grader .gradeparent .avg .cell{
+  background-color: #fff;
+}
+a .icon, a .editor_atto_notification .atto_info img, .editor_atto_notification .atto_info a img, a .form-control-static img, .form-control-static a img, a .fdescription img, .fdescription a img {
+  cursor: pointer;
+}
+.path-grade-report-grader .gradeparent .user.cell {
+  width: 300px;
+  align-items: center;
+}
+
+.gradereport-grader-table td a, .gradereport-grader-table th a {
+  margin: 0 0.5rem;
+}
+.gradereport-grader-table td a i, .gradereport-grader-table th a i {
+  margin: 0 !important;
+  line-height: 1.2;
+}
+
+/* grade navigation bar
+*
+*/
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+
+.nav-link {
+  display: block;
+  padding: 1rem 0.6rem;
+  position: relative;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #212121;
+  line-height: 1.5;
+  border-radius: 5px;
+  transition: all 350ms ease;
+}
+.nav-link:hover, .nav-link:focus {
+  text-decoration: none;
+}
+.nav-tabs .nav-link {
+  padding: 1rem;
+}
+.s-top .nav-link:hover {
+  background-color: #F8F8F8;
+}
+.nav-link:hover {
+  color: #212121;
+}
+.c-custom-main-nav .nav-link:hover {
+  background-color: transparent !important;
+  color: #0642CD;
+}
+.c-custom-main-nav .nav-link:hover:before {
+  display: none;
+}
+.nav-link.disabled {
+  color: #7D7D7D;
+}
+
+.dropdown-toggle {
+  padding-right: 1.75rem !important;
+  position: relative;
+}
+.dropdown-toggle:after {
+  content: "";
+  font-size: 12px;
+  color: inherit;
+  opacity: 0.6;
+  position: absolute;
+  top: calc(50% - 6px);
+  right: 10px;
+  transition: all 350ms ease;
+}
+
+.nav-tabs-container {
+  overflow-x: auto;
+}
+
+.nav-tabs {
+  border-bottom: 1px solid #E8E8E8;
+  font-size: 1rem;
+}
+@media (min-width: 320px) and (max-width: 1199.98px) {
+  .nav-tabs {
+    width: max-content;
+    font-size: 0.875rem;
+  }
+}
+.rtl .nav-tabs {
+  text-align: right;
+}
+@media (min-width: 320px) and (max-width: 767.98px) {
+  .nav-tabs .nav-link {
+    padding: 1rem 0;
+  }
+}
+.nav-tabs .nav-item {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: -1px;
+}
+@media (min-width: 320px) and (max-width: 767.98px) {
+  .nav-tabs .nav-item {
+    margin-right: 20px;
+  }
+}
+.nav-tabs .nav-link {
+  font-weight: 400 !important;
+}
+.nav-tabs .nav-link:hover {
+  color: #0642CD;
+  border-radius: 0;
+}
+.nav-tabs .nav-link.disabled {
+  color: #7D7D7D;
+  background-color: transparent;
+  border-color: transparent;
+}
+.nav-tabs .nav-link.active {
+  color: #0642CD !important;
+}
+.nav-tabs .nav-link.active:before {
+  width: 100%;
+}
+.nav-tabs .dropdown-menu {
+  margin-top: -1px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.nav-tabs-sm {
+  font-size: 0.875rem;
+}
+
+.nav-fill .nav-item {
+  flex: 1 1 auto;
+  text-align: center;
+}
+
+.nav-justified .nav-item {
+  flex-basis: 0;
+  flex-grow: 1;
+  text-align: center;
+}
+a:not([href]):not([tabindex]) {
+  color: inherit;
+  text-decoration: none;
+}
+a:not([href]):not([tabindex]):hover, a:not([href]):not([tabindex]):focus {
+  color: inherit;
+  text-decoration: none;
+}
+a:not([href]):not([tabindex]):focus {
+  outline: 0;
+}
+p a:hover, p a.active,
+nav a:hover,
+nav a.active,
+ul a:hover,
+ul a.active,
+ol a:hover,
+ol a.active,
+dt a:hover,
+dt a.active,
+dd a:hover,
+dd a.active,
+.tab-pane .col-3 a:hover,
+.tab-pane .col-xs-3 a:hover,
+.tab-pane .col-3 a.active,
+.tab-pane .col-xs-3 a.active,
+[role=tabpanel] h4 a:hover,
+[role=tabpanel] h4 a.active,
+#page-user-preferences .card-body a:hover,
+#page-user-preferences .card-body a.active,
+.recipename a:hover,
+.recipename a.active {
+  color: #0642CD;
+  text-decoration: none;
+}
