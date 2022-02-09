@@ -23,23 +23,23 @@
   //color: red;
   background-image: linear-gradient(45deg, #0052cc, #00baff);
   color: #fff;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 .btn-primary:hover {
   box-shadow: inset 0 0 100px rgb(0 0 0 / 20%);
   color: #fff;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 .btn-secondary {
   //color: red;
   background-image: linear-gradient(45deg, #04a08b, #00baff);
   color: #fff;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 .btn-secondary:hover {
   box-shadow: inset 0 0 100px rgb(0 0 0 / 20%);
   color: #fff;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .margin-top {
@@ -521,4 +521,42 @@ div.editor_atto_toolbar div.atto_group {
 }
 .editor_atto_content.form-control {
   border: 1px solid black;
+}
+
+/* Calender
+*
+*/
+.path-calendar .maincalendar .heightcontainer {
+  height: auto;
+  position: relative;
+}
+.custom-select {
+  border-radius: 5px;
+  background-color: #e1eaf9 ;
+  color: #000;
+}
+.view-selector .dropdown-menu {
+  border-radius: 5px;
+  background-color: #e1eaf9 ;
+}
+.path-calendar .maincalendar .calendar-controls .previous,
+.path-calendar .maincalendar .calendar-controls .next {
+  width: auto;
+}
+.path-calendar .calendar-controls {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.path-calendar .calendartable th{
+  padding: 1rem 5px;
+  text-align: center;
+}
+.maincalendar .calendarmonth td,.maincalendar .calendarmonth th {
+  border: none;
+}
+.hasevents {
+  background-color: #e1eaf9 ;
+  color: #000;
 }
