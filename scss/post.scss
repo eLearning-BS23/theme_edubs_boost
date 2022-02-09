@@ -33,12 +33,12 @@
   //color: red;
   background-image: linear-gradient(45deg, #04a08b, #00baff);
   color: #fff;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 .btn-secondary:hover {
   box-shadow:  inset 0 0 100px rgb(0 0 0 / 20%);
   color: #fff;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .margin-top {
@@ -123,11 +123,30 @@
 
 }
 
+//course info show in course-card
+.course-details {
+  margin-top: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: initial;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.course-details p{
+  display: contents;
+}
+.course-details p:after {
+  content: "\A";
+  white-space:pre;
+}
 
 
 .dashboard-card-deck .dashboard-card {
   max-width: 19rem;
   border-radius: 10px;
+  margin-right: 1rem;
+  margin-bottom: 1rem;
 }
 .dashboard-card img{
   max-height: 12rem;
@@ -153,15 +172,20 @@
 .card-img-overlay .btn:hover {
   background-color: red;
 }
-.align-items-start {
-  text-align: center;
-}
 .card-footer {
   border-radius: 10px;
 }
 .progress {
   border-radius: 10px;
-  width: 100%;
+}
+
+//coure favourite show
+.card-footer-star{
+  padding-right: 1.8rem;
+  padding-bottom: 1.8rem;
+}
+.card-footer-star .text-primary .icon{
+  font-size: 30px;
 }
 
 .block_recentlyaccessedcourses,
@@ -188,6 +212,10 @@
 
  //FOOTER
 
+
+#page-course-view-singlesection #page-footer {
+  display: block;
+}
 
 #page-footer {
   background-color: #e1eaf9 !important;
@@ -355,4 +383,42 @@ div.editor_atto_toolbar div.atto_group {
   border-radius: 10px;
   border: none;
   overflow: hidden;
+}
+
+/* Calender
+*
+*/
+.path-calendar .maincalendar .heightcontainer {
+  height: auto;
+  position: relative;
+}
+.custom-select {
+  border-radius: 5px;
+  background-color: #e1eaf9 ;
+  color: #000;
+}
+.view-selector .dropdown-menu {
+  border-radius: 5px;
+  background-color: #e1eaf9 ;
+}
+.path-calendar .maincalendar .calendar-controls .previous,
+.path-calendar .maincalendar .calendar-controls .next {
+  width: auto;
+}
+.path-calendar .calendar-controls {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.path-calendar .calendartable th{
+  padding: 1rem 5px;
+  text-align: center;
+}
+.maincalendar .calendarmonth td,.maincalendar .calendarmonth th {
+  border: none;
+}
+.hasevents {
+  background-color: #e1eaf9 ;
+  color: #000;
 }

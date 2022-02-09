@@ -15,26 +15,21 @@
     along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 }}
 {{!
-    @template core_course/favouriteicon
+    @template core_calendar/footer_options
 
-    This template renders the favourite icon for a course.
+    Displays export options on the calendar footer.
 
     Example context (json):
     {
-        "id": 3,
-        "isfavourite": true
+        "exportcalendarbutton": "<button class='btn btn-secondary'>Export calendar</button>",
+        "managesubscriptionbutton": "<button class='btn btn-secondary'>Manage subscriptions</button>"
     }
 }}
-<span id="favorite-icon-{{ id }}-{{ uniqid }}" class="card-footer-star"
-    data-region="favourite-icon"
-    data-course-id="{{id}}"
-    >
-    <span
-        class="text-primary {{^isfavourite}}hidden{{/isfavourite}}"
-        data-region="is-favourite"
-        aria-hidden="{{^isfavourite}}true{{/isfavourite}}{{#isfavourite}}false{{/isfavourite}}"
-        >
-        {{#pix}} i/star, core, {{#str}} favourite, core_course {{/str}} {{/pix}}
-        <span class="sr-only">{{#str}} aria:favourite, core_course {{/str}}</span>
-    </span>
-</span>
+<div class="bottom justify-content-center">
+    {{#exportcalendarbutton}}
+        {{> core/single_button }}
+    {{/exportcalendarbutton}}
+    {{#managesubscriptionbutton}}
+        {{> core/single_button }}
+    {{/managesubscriptionbutton}}
+</div>

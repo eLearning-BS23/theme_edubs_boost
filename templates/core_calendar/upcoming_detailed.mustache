@@ -15,26 +15,28 @@
     along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 }}
 {{!
-    @template core_course/favouriteicon
+    @template calendar/upcoming_detailed
 
-    This template renders the favourite icon for a course.
+    Calendar upcoming detailed.
+
+    The purpose of this template is to render the calendar upcoming detailed view.
+
+    Classes required for JS:
+    * none
+
+    Data attributes required for JS:
+    * none
 
     Example context (json):
     {
-        "id": 3,
-        "isfavourite": true
     }
 }}
-<span id="favorite-icon-{{ id }}-{{ uniqid }}" class="card-footer-star"
-    data-region="favourite-icon"
-    data-course-id="{{id}}"
-    >
-    <span
-        class="text-primary {{^isfavourite}}hidden{{/isfavourite}}"
-        data-region="is-favourite"
-        aria-hidden="{{^isfavourite}}true{{/isfavourite}}{{#isfavourite}}false{{/isfavourite}}"
-        >
-        {{#pix}} i/star, core, {{#str}} favourite, core_course {{/str}} {{/pix}}
-        <span class="sr-only">{{#str}} aria:favourite, core_course {{/str}}</span>
-    </span>
-</span>
+<div class="calendarwrapper" data-view="upcoming" data-context-id="{{defaulteventcontext}}" data-courseid="{{courseid}}">
+    {{> core/overlay_loading}}
+        <h2 class="current text-center font-weight-bold w-100 mx-auto my-5">{{#str}}upcomingevents, core_calendar{{/str}}</h2>
+    {{< core_calendar/event_list }}
+        {{$noeventsmessage}}
+            {{#str}} noupcomingevents, core_calendar {{/str}}
+        {{/noeventsmessage}}
+    {{/core_calendar/event_list}}
+</div>
