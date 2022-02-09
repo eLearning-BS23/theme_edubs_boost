@@ -14,22 +14,11 @@
     You should have received a copy of the GNU General Public License
     along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 }}
-{{!
-    @template core_calendar/footer_options
 
-    Displays export options on the calendar footer.
-
-    Example context (json):
-    {
-        "exportcalendarbutton": "<button class='btn btn-secondary'>Export calendar</button>",
-        "managesubscriptionbutton": "<button class='btn btn-secondary'>Manage subscriptions</button>"
-    }
-}}
-<div class="bottom justify-content-center">
-    {{#exportcalendarbutton}}
-        {{> core/single_button }}
-    {{/exportcalendarbutton}}
-    {{#managesubscriptionbutton}}
-        {{> core/single_button }}
-    {{/managesubscriptionbutton}}
-</div>
+<form action="{{searchurl}}" id="{{id}}" method="get" class="form-inline">
+    <fieldset class="coursesearchbox invisiblefieldset m-b-2">
+        <label for="{{inputid}}">{{#str}}searchcourses{{/str}}</label>
+        <input id="{{inputid}}" name="search" type="text" size="45" value="{{value}}" class="m-sm-l-0 m-md-l-1 my-sm-1 my-md-0 form-control">
+        <button class="btn btn-secondary" type="submit">{{#str}}go{{/str}}</button>
+    </fieldset>
+</form>
