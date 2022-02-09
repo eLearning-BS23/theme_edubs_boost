@@ -374,12 +374,13 @@ div.editor_atto_toolbar div.atto_group {
 
 
 .breadcrumb{
-  display: inline-block;
+  //display: block;
   //padding: 0 5px 0 0;
   margin: 0;
   background: transparent;
   overflow: hidden;
   border-radius: 20px;
+  //padding: 5px;
 }
 .breadcrumb li{
   float: left;
@@ -390,10 +391,16 @@ div.editor_atto_toolbar div.atto_group {
   color: #fff;
   //text-transform: uppercase;
   position: relative;
+  //padding-top: 5px;
 }
-.breadcrumb li:nth-child(even){ background: rgba(0,0,0,0.8); }
+.breadcrumb li:nth-child(even){
+  background: rgba(0,0,0,0.8);
+  padding: 5px 25px;
+  font-size: 14px;
+}
+
 .breadcrumb li:last-child{
-  //padding: 0px 5px;
+  padding: 0px 5px;
   color: #fff;
   z-index: 1;
   position: relative;
