@@ -34,7 +34,7 @@
         ]
     }
 }}
-<div class="card dashboard-card shadow bg-white" role="listitem"
+<div class="card dashboard-card" role="listitem"
     data-region="course-content"
     data-course-id="{{{id}}}" >
      <img class="card-img-top" src="{{{courseimage}}}" alt="Card image cap">
@@ -59,6 +59,7 @@
                     {{/showshortname}}
                 </div>
                 <a href="{{viewurl}}" class="aalink coursename mr-2">
+                    {{> core_course/favouriteicon }}
                     <span class="sr-only">
                             {{#str}}aria:coursename, core_course{{/str}}
                         </span>
@@ -69,15 +70,9 @@
                         <span class="badge badge-info">{{#str}} hiddenfromstudents {{/str}}</span>
                     </div>
                 {{/visible}}
-                <div class="course-details">
-                   {{{summary}}}
-                </div>
             </div>
             {{$menu}}{{/menu}}
         </div>
     </div>
-    <div class= "d-flex justify-content-between">
        {{$progress}}{{/progress}}
-       {{> core_course/favouriteicon }}
-    </div>
 </div>
