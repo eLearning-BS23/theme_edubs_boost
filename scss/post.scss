@@ -624,3 +624,11 @@ div.editor_atto_toolbar div.atto_group {
 .nav-bar-2 .usermenu .action-menu .menubar .action-menu-trigger .dropdown a .userbutton .usertext {
   display :none;
 }
+.nav-tabs li:nth-child(odd) a{
+  background-image: linear-gradient(#e1eaf9, white);
+}
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+  border : 2px solid transparent;
+  border-color: blue;
+  border-bottom-color: white;
+}
