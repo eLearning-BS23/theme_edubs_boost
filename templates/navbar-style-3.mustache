@@ -31,7 +31,7 @@
         "sitename": "Moodle Site"
     }
 }}
-<nav class="fixed-top navbar navbar-light navbar-expand moodle-has-zindex" aria-label="{{#str}}sitemenubar, admin{{/str}}">
+<nav class="fixed-top navbar navbar-light navbar-expand moodle-has-zindex shadow-property" aria-label="{{#str}}sitemenubar, admin{{/str}}">
 
         <div data-region="drawer-toggle" class="d-inline-block mr-3">
             <button aria-expanded="{{#navdraweropen}}true{{/navdraweropen}}{{^navdraweropen}}false{{/navdraweropen}}" aria-controls="nav-drawer" type="button" class="btn nav-link float-sm-left mr-1 btn-light bg-gray" data-action="toggle-drawer" data-side="left" data-preference="drawer-open-nav">{{#pix}}i/menubars{{/pix}}<span class="sr-only">{{#str}}sidepanel, core{{/str}}</span></button>
@@ -59,13 +59,13 @@
         <div class="ml-auto">
             {{{ output.search_box }}}
         </div>
-        <ul class="nav navbar-nav usernav">
+        <ul class="nav navbar-nav usernav bg-white">
             <!-- navbar_plugin_output -->
             <li class="nav-item">
                 {{{ output.navbar_plugin_output }}}
             </li>
             <!-- user_menu -->
-            <li class="nav-item align-items-center pl-2">
+            <li class="nav-item align-items-center font-weight-bold pl-2">
                 {{{ output.user_menu }}}
             </li>
         </ul>
