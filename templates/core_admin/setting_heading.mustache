@@ -15,14 +15,24 @@
     along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 }}
 {{!
-    Page navbar.
+    @template core_admin/setting_heading
+
+    Admin heading setting template.
+
+    Context variables required for this template:
+    * title - Title text
+    * description - Description containing descriptionformatted
+
+    Example context (json):
+    {
+        "title": "Favourite cheeses",
+        "description": true,
+        "descriptionformatted": "Stilton, Cheddar, Edam"
+    }
 }}
-
-{{#topbarstyle1}}{{>theme_edubs/navbar-style-1}}{{/topbarstyle1}}
-{{#topbarstyle2}}{{>theme_edubs/navbar-style-2}}{{/topbarstyle2}}
-{{#topbarstyle3}}{{>theme_edubs/navbar-style-3}}{{/topbarstyle3}}
-{{#topbarstyle4}}{{>theme_edubs/navbar-style-4}}{{/topbarstyle4}}
-{{#topbarstyle5}}{{>theme_edubs/navbar-style-5}}{{/topbarstyle5}}
-{{#topbarstyle6}}{{>theme_edubs/navbar-style-6}}{{/topbarstyle6}}
-
-
+{{#title}}
+    <h3 class="main">{{{title}}}</h3>
+{{/title}}
+{{#description}}
+    <div class="box generalbox formsettingheading">{{{descriptionformatted}}}</div>
+{{/description}}

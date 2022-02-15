@@ -15,28 +15,33 @@
     along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 }}
 {{!
-    @template calendar/upcoming_detailed
+    @template core_admin/setting_configselect
 
-    Calendar upcoming detailed.
+    Admin select setting template.
 
-    The purpose of this template is to render the calendar upcoming detailed view.
-
-    Classes required for JS:
-    * none
-
-    Data attributes required for JS:
-    * none
+    Context variables required for this template:
+    * name - form element name
+    * id - element id
+    * options - list of options containing name, value, selected
 
     Example context (json):
     {
+        "name": "test",
+        "id": "test0",
+        "options": [
+            { "name": "Option 1", "value": "V", "selected": true },
+            { "name": "Option 2", "value": "V", "selected": true }
+        ]
     }
 }}
-<div class="calendarwrapper" data-view="upcoming" data-context-id="{{defaulteventcontext}}" data-courseid="{{courseid}}">
-    {{> core/overlay_loading}}
-        <h2 class="current text-center font-weight-bold w-100 mx-auto my-5">{{#str}}upcomingevents, core_calendar{{/str}}</h2>
-    {{< core_calendar/event_list }}
-        {{$noeventsmessage}}
-            {{#str}} noupcomingevents, core_calendar {{/str}}
-        {{/noeventsmessage}}
-    {{/core_calendar/event_list}}
+{{!
+    Setting configselect.
+}}
+<div class="form-select defaultsnext mr-2">
+    <select id="{{id}}" name="{{name}}" class="custom-select">
+        {{#options}}
+            <option value="{{value}}" {{#selected}}selected{{/selected}}>{{name}}</option>
+        {{/options}}
+    </select>
 </div>
+

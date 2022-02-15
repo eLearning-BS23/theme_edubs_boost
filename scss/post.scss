@@ -23,23 +23,23 @@
   //color: red;
   background-image: linear-gradient(45deg, #0052cc, #00baff);
   color: #fff;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 .btn-primary:hover {
   box-shadow: inset 0 0 100px rgb(0 0 0 / 20%);
   color: #fff;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 .btn-secondary {
   //color: red;
   background-image: linear-gradient(45deg, #04a08b, #00baff);
   color: #fff;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 .btn-secondary:hover {
   box-shadow: inset 0 0 100px rgb(0 0 0 / 20%);
   color: #fff;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
 .margin-top {
@@ -523,40 +523,127 @@ div.editor_atto_toolbar div.atto_group {
   border: 1px solid black;
 }
 
-/* Calender
-*
-*/
-.path-calendar .maincalendar .heightcontainer {
-  height: auto;
-  position: relative;
+
+
+.c-course-box {
+
+  .coursename, .course-box-title {
+
+    .course-box-icons {
+      position: absolute;
+      top: 18px;
+      right: 22px;
+
+      .course-box-icons-list {
+        padding: 0;
+        margin: 0;
+
+        display: inline-flex;
+        list-style: none;
+
+        @include media-breakpoint-only(sm) {
+          top: 50px;
+          left: -3px;
+        }
+
+        li {
+          margin: 0 0 0 3px;
+          width: 32px;
+          height: 32px;
+
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+
+          background-color: rgba(0, 0, 0, 0.45);
+          border-radius: 10px;
+
+          .icon {
+            //font-size: $font-size-xs;
+            color: #fff;
+
+            //&.fa-star {
+            //  color: $yellow-400!important;
+            //}
+          }
+
+          img {
+            width: 11px;
+            height: auto;
+          }
+        }
+      }
+
+    }
+
+  }
 }
-.custom-select {
-  border-radius: 5px;
-  background-color: #e1eaf9 ;
-  color: #000;
+
+
+
+
+.c-course-box .coursename .course-box-icons, .c-course-box .course-box-title .course-box-icons {
+  position: absolute;
+  top: 18px;
+  right: 22px;
 }
-.view-selector .dropdown-menu {
-  border-radius: 5px;
-  background-color: #e1eaf9 ;
+.c-course-box .coursename .course-box-icons .course-box-icons-list, .c-course-box .course-box-title .course-box-icons .course-box-icons-list {
+  padding: 0;
+  margin: 0;
+  display: inline-flex;
+  list-style: none;
 }
-.path-calendar .maincalendar .calendar-controls .previous,
-.path-calendar .maincalendar .calendar-controls .next {
-  width: auto;
+@media (min-width: 320px) and (max-width: 767.98px) {
+  .c-course-box .coursename .course-box-icons .course-box-icons-list, .c-course-box .course-box-title .course-box-icons .course-box-icons-list {
+    top: 50px;
+    left: -3px;
+  }
 }
-.path-calendar .calendar-controls {
+.c-course-box .coursename .course-box-icons .course-box-icons-list li, .c-course-box .course-box-title .course-box-icons .course-box-icons-list li {
+  margin: 0 0 0 3px;
+  width: 32px;
+  height: 32px;
   display: inline-flex;
   align-items: center;
-  justify-content: space-between;
-  width: 100%;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.45);
+  border-radius: 5px;
 }
-.path-calendar .calendartable th{
-  padding: 1rem 5px;
-  text-align: center;
+.c-course-box .coursename .course-box-icons .course-box-icons-list li .icon, .c-course-box .coursename .course-box-icons .course-box-icons-list li .editor_atto_notification .atto_info img, .editor_atto_notification .atto_info .c-course-box .coursename .course-box-icons .course-box-icons-list li img, .c-course-box .coursename .course-box-icons .course-box-icons-list li .fdescription img, .fdescription .c-course-box .coursename .course-box-icons .course-box-icons-list li img, .c-course-box .coursename .course-box-icons .course-box-icons-list li .form-control-static img, .form-control-static .c-course-box .coursename .course-box-icons .course-box-icons-list li img, .c-course-box .course-box-title .course-box-icons .course-box-icons-list li .icon, .c-course-box .course-box-title .course-box-icons .course-box-icons-list li .editor_atto_notification .atto_info img, .editor_atto_notification .atto_info .c-course-box .course-box-title .course-box-icons .course-box-icons-list li img, .c-course-box .course-box-title .course-box-icons .course-box-icons-list li .fdescription img, .fdescription .c-course-box .course-box-title .course-box-icons .course-box-icons-list li img, .c-course-box .course-box-title .course-box-icons .course-box-icons-list li .form-control-static img, .form-control-static .c-course-box .course-box-title .course-box-icons .course-box-icons-list li img {
+  font-size: 0.75rem;
+  color: #fff;
 }
-.maincalendar .calendarmonth td,.maincalendar .calendarmonth th {
-  border: none;
+.c-course-box .coursename .course-box-icons .course-box-icons-list li .icon.fa-star, .c-course-box .coursename .course-box-icons .course-box-icons-list li .editor_atto_notification .atto_info img.fa-star, .editor_atto_notification .atto_info .c-course-box .coursename .course-box-icons .course-box-icons-list li img.fa-star, .c-course-box .coursename .course-box-icons .course-box-icons-list li .fdescription img.fa-star, .fdescription .c-course-box .coursename .course-box-icons .course-box-icons-list li img.fa-star, .c-course-box .coursename .course-box-icons .course-box-icons-list li .form-control-static img.fa-star, .form-control-static .c-course-box .coursename .course-box-icons .course-box-icons-list li img.fa-star, .c-course-box .course-box-title .course-box-icons .course-box-icons-list li .icon.fa-star, .c-course-box .course-box-title .course-box-icons .course-box-icons-list li .editor_atto_notification .atto_info img.fa-star, .editor_atto_notification .atto_info .c-course-box .course-box-title .course-box-icons .course-box-icons-list li img.fa-star, .c-course-box .course-box-title .course-box-icons .course-box-icons-list li .fdescription img.fa-star, .fdescription .c-course-box .course-box-title .course-box-icons .course-box-icons-list li img.fa-star, .c-course-box .course-box-title .course-box-icons .course-box-icons-list li .form-control-static img.fa-star, .form-control-static .c-course-box .course-box-title .course-box-icons .course-box-icons-list li img.fa-star {
+  color: #ffd973 !important;
 }
-.hasevents {
-  background-color: #e1eaf9 ;
-  color: #000;
+.c-course-box .coursename .course-box-icons .course-box-icons-list li img, .c-course-box .course-box-title .course-box-icons .course-box-icons-list li img {
+  width: 11px;
+  height: auto;
+}
+
+.nav-bar-2 .usermenu .action-menu .menubar .action-menu-trigger .dropdown a .userbutton .usertext {
+  display :none;
+}
+.nav-tabs li:nth-child(odd) a{
+  background-image: linear-gradient(#e1eaf9, white);
+}
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+  border : 2px solid transparent;
+  border-color: blue;
+  border-bottom-color: white;
+}
+
+//topbar
+
+.nav-menu-bar {
+  margin-left: 5rem;
+}
+
+.sitename-align {
+margin-left: 40%;
+
+}
+
+.shadow-property {
+  box-shadow: none;
 }
