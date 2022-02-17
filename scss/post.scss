@@ -193,6 +193,14 @@
 #page-footer a {
   text-decoration: none;
   color :black;
+  font-weight: 500;
+}
+#page-footer a:hover {
+  border-radius: 5px;
+  margin: 10px 10px;
+  padding: 0.8rem 1.5rem;
+  background-color: grey;
+  color: white;
 }
 .s-footer {
   margin-top: 40px;
@@ -212,11 +220,7 @@
 .addtagcoll a,
 #siteconfiglink a {
   display: inline-block;
-  border-radius: 5px;
-  margin: 10px 10px;
   padding: 0.8rem 1.5rem;
-  border: 1px solid black;
-
 }
 
 .helplink svg,
