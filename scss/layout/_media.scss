@@ -1,0 +1,44 @@
+@media (min-width: 320px) and (max-width: 1199.98px) {
+    .moreless-actions {
+        left: 0;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 1199.98px) {
+    .s-footer {
+        padding: 40px 30px !important;
+    }
+}
+@media (min-width: 320px) and (max-width: 767.98px) {
+    .s-footer {
+        text-align: center;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 1199.98px) {
+    .s-footer .l-container {
+        padding: 0 20px;
+    }
+}
+
+// for breadcrumb
+@media only screen and (max-width: 767px) {
+    .breadcrumb li a,
+    .breadcrumb li:last-child {
+        font-size: 12px;
+        padding: 4px 10px;
+    }
+}
+@media only screen and (max-width: 480px) {
+    .breadcrumb li a,
+    .breadcrumb li:last-child {
+        padding: 3px 8px;
+    }
+}
+@media only screen and (max-width: 360px) {
+    .breadcrumb li a,
+    .breadcrumb li:last-child {
+        font-size: 10px;
+        padding: 3px 5px;
+    }
+}

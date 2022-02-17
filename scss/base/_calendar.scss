@@ -1,0 +1,38 @@
+/* Calender
+*
+*/
+.path-calendar .maincalendar .heightcontainer {
+    height: auto;
+    position: relative;
+}
+.custom-select {
+    border-radius: 5px;
+    background-color: #e1eaf9;
+    color: #000;
+}
+.view-selector .dropdown-menu {
+    border-radius: 5px;
+    background-color: $primary;
+}
+.path-calendar .maincalendar .calendar-controls .previous,
+.path-calendar .maincalendar .calendar-controls .next {
+    width: auto;
+}
+.path-calendar .calendar-controls {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+.path-calendar .calendartable th {
+    padding: 1rem 5px;
+    text-align: center;
+}
+.maincalendar .calendarmonth td,
+.maincalendar .calendarmonth th {
+    border: none;
+}
+.hasevents {
+    background-color: $primary;
+    color: #000;
+}

@@ -1,0 +1,44 @@
+.dashboard-card-deck .dashboard-card {
+    max-width: 19rem;
+    border-radius: 10px;
+}
+.dashboard-card img {
+    max-height: 12rem;
+    border-radius: 10px 10px 0px 0px;
+}
+.card-img-overlay {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+.card-img-overlay:hover {
+    transition: all 0.3s ease-in-out;
+    border-radius: $border-radius;
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 1;
+}
+.card-img-overlay .btn {
+    background-color: tomato;
+    color: white;
+    border-radius: 5px;
+}
+.card-img-overlay .btn:hover {
+    background-color: red;
+}
+
+.align-items-start {
+    text-align: center;
+}
+.card-footer {
+    border-radius: $border-radius;
+}
+.progress {
+    border-radius: $border-radius;
+    width: 100%;
+}
+
+.block_recentlyaccessedcourses,
+.block_myoverview {
+    border-radius: $border-radius;
+}
