@@ -126,6 +126,8 @@
   border-radius: 10px;
 }
 .dashboard-card img {
+  height: 100%;
+  width: 100%;
   max-height: 12rem;
   border-radius: 10px 10px 0px 0px;
 }
@@ -148,9 +150,6 @@
 }
 .card-img-overlay .btn:hover {
   background-color: red;
-}
-.align-items-start {
-  text-align: center;
 }
 .card-footer {
   border-radius: 10px;
