@@ -126,8 +126,6 @@
   border-radius: 10px;
 }
 .dashboard-card img {
-  height: 100%;
-  width: 100%;
   max-height: 12rem;
   border-radius: 10px 10px 0px 0px;
 }
@@ -151,6 +149,9 @@
 .card-img-overlay .btn:hover {
   background-color: red;
 }
+.align-items-start {
+  text-align: center;
+}
 .card-footer {
   border-radius: 10px;
 }
@@ -167,21 +168,15 @@
 //course page
 #region-main {
   border-radius: 10px;
-  width: 100%;
 }
 
 .section li.activity.hasinfo {
-  border: 1px solid #d9d7d7;
+  border: 1px solid gray;
   border-radius: 10px;
   padding: 30px;
-  //padding-bottom: 50px;
-  box-shadow: 2px 2px #d9d7d7;
-  margin: 16px 8px 5px 5px;
-  display: block;
-}
+  padding-bottom: 50px;
 
-.section li.activity.hasinfo:hover {
-  background-color: #e1eaf9;
+  margin: 16px 8px 5px 5px;
 }
 
 //.activity .quiz .modtype_quiz .hasinfo {
@@ -192,11 +187,12 @@
 
 #page-footer {
   background-color: #e1eaf9 !important;
-  color: black;
+  color : black;
   text-align: center;
 }
 #page-footer a {
   text-decoration: none;
+  color :black;
 }
 .s-footer {
   margin-top: 40px;
@@ -217,41 +213,10 @@
 #siteconfiglink a {
   display: inline-block;
   border-radius: 5px;
-  margin: 0 0 10px 0;
+  margin: 10px 10px;
   padding: 0.8rem 1.5rem;
-  text-decoration: none;
-  background-image: linear-gradient(45deg, #04a08b, #00baff);
-  color: #fff;
-  border: 1px solid #e4e8f0;
-  box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.05);
-  transition: all 350ms ease;
-}
+  border: 1px solid black;
 
-#theme_switch_link a:hover,
-.usertour a:hover,
-.tool_dataprivacy a:hover,
-.purgecaches a:hover,
-.s-footer .helplink a:hover,
-.chart-table-expand a:hover,
-.moreless-actions a:hover,
-.continuebutton a:hover,
-.addtagcoll a:hover,
-#siteconfiglink a:hover {
-  box-shadow: inset 0 0 100px rgb(0 0 0 / 20%);
-  border-color: #e4e8f0;
-}
-
-#theme_switch_link a:before,
-.usertour a:before,
-.tool_dataprivacy a:before,
-.purgecaches a:before,
-.s-footer .helplink a:before,
-.chart-table-expand a:before,
-.moreless-actions a:before,
-.continuebutton a:before,
-.addtagcoll a:before,
-#siteconfiglink a:before {
-  display: none;
 }
 
 .helplink svg,
@@ -339,22 +304,12 @@ div.editor_atto_toolbar div.atto_group {
 
 .activity-completion-button {
   float: right;
-
 }
 
 .activity-completion-done {
   float: right;
-  border-radius: 10px;
-  border: none;
-  background-image: linear-gradient(45deg, white, #bbd5bb);
-  margin-bottom: 18px;
-
 }
 
-.activity-completion-done:hover {
-  box-shadow: inset 0 0 100px rgb(0 0 0 / 10%);
-  color: rgba(12, 12, 12, 0.95);
-}
 .btn-outline-secondary {
   background-image: linear-gradient(45deg, #b7c1d1, #00baff);
   color: black;
@@ -371,10 +326,6 @@ div.editor_atto_toolbar div.atto_group {
   border-radius: 10px;
 }
 
-
-.section li.activity.hasinfo:last-child {
-  padding-bottom: 20px;
-}
 //block
 .card {
   border-radius: 10px;
@@ -466,18 +417,26 @@ div.editor_atto_toolbar div.atto_group {
   }
 }
 
+.activity-completion-button {
+  position: absolute;
+  margin-left: 900px;
+}
 
+.activity-completion-done {
+  position: absolute;
+  margin-left: 510px;
+  margin-top: 100px;
+}
 
-//
-//.btn-outline-secondary {
-//  background-image: linear-gradient(45deg, #b7c1d1, #00baff);
-//  color: black;
-//  //font-weight: bold;
-//  margin-bottom: 1rem;
-//  border-radius: 10px;
-//  border: none;
-//  overflow: hidden;
-//}
+.btn-outline-secondary {
+  background-image: linear-gradient(45deg, #b7c1d1, #00baff);
+  color: black;
+  //font-weight: bold;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  border: none;
+  overflow: hidden;
+}
 // .completion-info {
 //     display: flex;
 //     justify-content: right;
@@ -515,18 +474,16 @@ div.editor_atto_toolbar div.atto_group {
 }
 
 .dropdown-menu-right {
-  background-color: #e1eaf9;
+  background-color: #a4e7fffb;
   color: white;
   transition: all;
-  border-radius: 10px;
 }
 .editing .section .activity:hover,
 .editing .section .activity.action-menu-shown {
   background-color: rgba(183, 230, 241, 0.986);
 }
 .action-menu-toggle-1:hover {
-  background-color: #e1eaf9;
-  border-radius: 10px;
+  background-color: #a4e7fffb;
 }
 
 .editor_atto_toolbar {
@@ -634,29 +591,32 @@ div.editor_atto_toolbar div.atto_group {
   height: auto;
 }
 
-.nav-bar-2 .usermenu .action-menu .menubar .action-menu-trigger .dropdown a .userbutton .usertext {
-  display :none;
-}
-.nav-tabs li:nth-child(odd) a{
-  background-image: linear-gradient(#e1eaf9, white);
-}
-.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
-  border : 2px solid transparent;
-  border-color: blue;
-  border-bottom-color: white;
+
+//form
+
+.form-control {
+  border-radius: 10px;
 }
 
-//topbar
-
-.nav-menu-bar {
-  margin-left: 5rem;
+@media (min-width: 768px) {
+  .card-deck {
+    flex-flow: row wrap;
+  }
+  .card-deck .card {
+    display: flex;
+    flex-direction: column;
+  }
 }
-
-.sitename-align {
-  margin-left: 40%;
-
+.card-deck {
+  display: flex;
 }
-
-.shadow-property {
-  box-shadow: none;
+@media (max-width: 1500px) {
+  .s-courses .card-deck .card {
+    flex-basis: calc(33.333% -20px);
+  }
+}
+.s-courses .card-deck .card {
+  background-color: transparent;
+  flex-shrink: 0;
+  margin: 0 20px 20px 0;
 }
