@@ -1,0 +1,39 @@
+//NAV-DRAWER
+#nav-drawer {
+    background-color: #fff;
+    margin-top: -1rem;
+}
+
+.course-text-align {
+    text-align: left;
+}
+
+.down-arrow-align {
+    padding-left: 15px;
+}
+.list-group {
+    background-color: #fff;
+}
+.list-group .list-group-item {
+    overflow: hidden;
+    height: 100%;
+    white-space: nowrap;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+    border: none;
+}
+
+.list-group .list-group-item::before {
+    box-sizing: border-box;
+}
+
+.list-group .list-group-item::after {
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
