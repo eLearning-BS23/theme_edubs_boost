@@ -1,12 +1,31 @@
 //FOOTER
 
 #page-footer {
-    background-color: $primary !important;
+    background-color: $primary-edubs !important;
     color: black;
     text-align: center;
 }
 #page-footer a {
     text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+// #page-footer a.icon {
+//     background-color: black;
+// }
+
+#page-footer a:hover {
+    font-weight: 700;
+    text-decoration: underline;
+
+    color: white;
+}
+
+.copy {
+    color: black;
+    font-weight: 500;
+    font-size: 18px;
 }
 .s-footer {
     margin-top: 40px;
@@ -26,42 +45,7 @@
 .addtagcoll a,
 #siteconfiglink a {
     display: inline-block;
-    border-radius: 5px;
-    margin: 0 0 10px 0;
     padding: 0.8rem 1.5rem;
-    text-decoration: none;
-    background-image: linear-gradient(45deg, #04a08b, #00baff);
-    color: #fff;
-    border: 1px solid #e4e8f0;
-    box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.05);
-    transition: all 350ms ease;
-}
-
-#theme_switch_link a:hover,
-.usertour a:hover,
-.tool_dataprivacy a:hover,
-.purgecaches a:hover,
-.s-footer .helplink a:hover,
-.chart-table-expand a:hover,
-.moreless-actions a:hover,
-.continuebutton a:hover,
-.addtagcoll a:hover,
-#siteconfiglink a:hover {
-    box-shadow: inset 0 0 100px rgb(0 0 0 / 20%);
-    border-color: #e4e8f0;
-}
-
-#theme_switch_link a:before,
-.usertour a:before,
-.tool_dataprivacy a:before,
-.purgecaches a:before,
-.s-footer .helplink a:before,
-.chart-table-expand a:before,
-.moreless-actions a:before,
-.continuebutton a:before,
-.addtagcoll a:before,
-#siteconfiglink a:before {
-    display: none;
 }
 
 .helplink svg,

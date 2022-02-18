@@ -6,7 +6,7 @@
 
 .section li.activity.hasinfo {
     border: 1px solid #d9d7d7;
-    border-radius: 10px;
+    border-radius: $border-radius;
     padding: 30px;
     //padding-bottom: 50px;
     box-shadow: 2px 2px #d9d7d7;
@@ -15,5 +15,5 @@
 }
 
 .section li.activity.hasinfo:hover {
-    background-color: #e1eaf9;
+    background-color: $primary-edubs;
 }

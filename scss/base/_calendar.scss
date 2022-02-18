@@ -7,12 +7,12 @@
 }
 .custom-select {
     border-radius: 5px;
-    background-color: #e1eaf9;
+    background-color: $primary-edubs;
     color: #000;
 }
 .view-selector .dropdown-menu {
     border-radius: 5px;
-    background-color: $primary;
+    background-color: $primary-edubs;
 }
 .path-calendar .maincalendar .calendar-controls .previous,
 .path-calendar .maincalendar .calendar-controls .next {
@@ -33,6 +33,6 @@
     border: none;
 }
 .hasevents {
-    background-color: $primary;
+    background-color: $primary-edubs;
     color: #000;
 }

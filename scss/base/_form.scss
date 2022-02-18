@@ -10,11 +10,11 @@
 }
 
 div.editor_atto_toolbar {
-    background-color: $primary !important;
+    background-color: $primary-edubs !important;
 }
 
 div.editor_atto_toolbar button {
-    border-radius: 10px;
+    border-radius: $border-radius;
     margin: 2px;
     border: 1px solid #e1eaf9;
     background-color: white;
@@ -22,13 +22,13 @@ div.editor_atto_toolbar button {
 }
 
 div.editor_atto_toolbar div.atto_group {
-    background-color: $primary;
+    background-color: $primary-edubs;
     border: none;
 }
 
 .availability-inner,
 .availability-plugincontrols {
-    border-radius: $border-radius;
+    border-radius: $primary-edubs;
 }
 
 .fheader {
