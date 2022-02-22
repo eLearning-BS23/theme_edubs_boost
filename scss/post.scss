@@ -151,6 +151,12 @@
 .card-img-overlay .btn:hover {
   background-color: red;
 }
+<<<<<<< HEAD
+//.align-items-start {
+//  text-align: center;
+//}
+=======
+>>>>>>> 04730fe5b99887584bd0c801c1fba9aab206dbf2
 .card-footer {
   border-radius: 10px;
 }
@@ -173,7 +179,14 @@
   border: 1px solid gray;
   border-radius: 10px;
   padding: 30px;
+<<<<<<< HEAD
+  box-shadow: 2px 2px #d9d7d7;
+  margin: 16px 8px 5px 5px;
+  display: block;
+}
+=======
   padding-bottom: 50px;
+>>>>>>> 04730fe5b99887584bd0c801c1fba9aab206dbf2
 
   margin: 16px 8px 5px 5px;
 }
@@ -281,12 +294,12 @@ div.editor_atto_toolbar button {
   margin: 2px;
   border: 1px solid #e1eaf9;
   background-color: white;
-  padding: 10px;
 }
 
 div.editor_atto_toolbar div.atto_group {
   background-color: #e1eaf9;
   border: none;
+  margin: 5px 0 0 5px;
 }
 
 .availability-inner,
@@ -425,6 +438,8 @@ div.editor_atto_toolbar div.atto_group {
   margin-left: 900px;
 }
 
+<<<<<<< HEAD
+=======
 .activity-completion-done {
   position: absolute;
   margin-left: 510px;
@@ -446,6 +461,7 @@ div.editor_atto_toolbar div.atto_group {
 //     align-items: center;
 // }
 
+>>>>>>> 04730fe5b99887584bd0c801c1fba9aab206dbf2
 .path-mod div.activity-information {
   border-bottom: 1px solid #dee2e6;
   padding-top: 0.5rem;
@@ -490,7 +506,7 @@ div.editor_atto_toolbar div.atto_group {
 }
 
 .editor_atto_toolbar {
-  margin-bottom: 30px;
+  margin-bottom: 0.5rem;
 }
 .editor_atto_content.form-control {
   border: 1px solid black;
@@ -532,12 +548,7 @@ div.editor_atto_toolbar div.atto_group {
           border-radius: 10px;
 
           .icon {
-            //font-size: $font-size-xs;
             color: #fff;
-
-            //&.fa-star {
-            //  color: $yellow-400!important;
-            //}
           }
 
           img {
@@ -610,6 +621,31 @@ div.editor_atto_toolbar div.atto_group {
     flex-direction: column;
   }
 }
+<<<<<<< HEAD
+
+.shadow-property {
+  box-shadow: none;
+}
+
+
+
+//form
+
+.form-control {
+  border-radius: 10px;
+}
+
+@media (min-width: 768px) {
+  .card-deck {
+    flex-flow: row wrap;
+  }
+  .card-deck .card {
+    display: flex;
+    flex-direction: column;
+  }
+}
+=======
+>>>>>>> 04730fe5b99887584bd0c801c1fba9aab206dbf2
 .card-deck {
   display: flex;
 }
@@ -622,4 +658,51 @@ div.editor_atto_toolbar div.atto_group {
   background-color: transparent;
   flex-shrink: 0;
   margin: 0 20px 20px 0;
+<<<<<<< HEAD
+}
+
+//quiz
+ .info {
+   border-radius: 10px;
+ }
+
+.que .formulation {
+  border-radius: 10px;
+}
+
+#jump-to-activity.custom-select {
+  border-radius: 10px;
+}
+
+.que .outcome, .que .comment {
+  border-radius: 10px;
+}
+
+.que.essay .qtype_essay_response.readonly {
+  border-radius: 10px;
+}
+
+#quiz-timer-wrapper #quiz-timer {
+  border-radius: 10px;
+  border: 1px solid #e1eaf9 !important;
+}
+
+.editor_atto_content.form-control {
+  border-radius: 10px;
+}
+
+// file upload modal
+.file-picker .fp-content {
+  margin-top: 0.5rem;
+  border: 1px solid #d9d7d7;
+}
+
+.file-picker .fp-navbar {
+  box-shadow: 2px 2px #d9d7d7;
+}
+
+.btn {
+  border-radius: 10px;
+=======
+>>>>>>> 04730fe5b99887584bd0c801c1fba9aab206dbf2
 }
