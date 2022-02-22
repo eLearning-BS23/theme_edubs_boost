@@ -40,22 +40,29 @@
     <div>
         <div id="page-content" class="row no-gutters">
             <div id="region-main-box">
-                {{#output.render_lang_menu}}<div class="c-lang-menu c-lang-menu--login">{{{ output.render_lang_menu }}}</div>{{/output.render_lang_menu}}
-                <section id="region-main">
-                    <div class="login-box">
-                        {{{ output.course_content_header }}}
-                        {{{ output.main_content }}}
-                        {{{ output.course_content_footer }}}
-                    </div>
-                </section>
+                    <div id="login-page-block">
+                    {{#output.render_lang_menu}}<div class="c-lang-menu c-lang-menu--login">{{{ output.render_lang_menu }}}</div>{{/output.render_lang_menu}}
+                    <section id="region-main">
+                        <div class="login-box">
+                            {{{ output.course_content_header }}}
+                            {{{ output.main_content }}}
+                            {{{ output.course_content_footer }}}
+                        </div>
+                    </section>
+                </div>
             </div>
         </div>
     </div>
+
+<!---->
+<!--    {{> theme_edubs/footer }}-->
+<!--    {{> theme_edubs/footer-scripts }}-->
 </div>
 
 {{{ output.standard_end_of_body_html }}}
 
 </body>
+
 </html>
 {{#js}}
     M.util.js_pending('theme_edubs/loader');
