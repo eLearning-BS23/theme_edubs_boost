@@ -1,0 +1,63 @@
+//block
+.card {
+    border-radius: $border-radius;
+}
+
+// .completion-info {
+//     display: flex;
+//     justify-content: right;
+//     align-items: center;
+// }
+
+.path-mod div.activity-information {
+    border-bottom: 1px solid #dee2e6;
+    padding-top: 0.5rem;
+    padding-bottom: 4rem;
+    margin-bottom: 4.5rem;
+}
+.tab-content {
+    border-radius: $border-radius;
+}
+.optioninfo:hover {
+    border: 2px solid #00baff;
+    border-radius: $border-radius;
+}
+
+.searchbar {
+    border: 1px solid rgb(168, 165, 165);
+}
+.modal-content {
+    border-radius: $border-radius;
+}
+#all-tab-4 {
+    background-color: #8fd7f1;
+}
+#activity-tab-4 {
+    background-color: #84d6cb;
+}
+#resources-tab-4 {
+    background-color: #8fd7f1;
+}
+
+.dropdown-menu-right {
+    background-color: $primary-edubs;
+    color: white;
+    transition: all;
+    border-radius: $border-radius;
+}
+.editing .section .activity:hover,
+.editing .section .activity.action-menu-shown {
+    background-color: rgba(183, 230, 241, 0.986);
+}
+
+.editor_atto_toolbar {
+    margin-bottom: 30px;
+}
+.editor_atto_content.form-control {
+    border: 1px solid black;
+}
+
+.action-menu-toggle-1:hover {
+    background-color: $primary-edubs;
+    border-radius: $border-radius;
+}

@@ -1,0 +1,24 @@
+#page-header .card {
+    background-size: auto 50%;
+    color: #0052cc;
+    background-color: $primary-edubs !important;
+    padding: 1.5rem;
+    border-radius: $border-radius;
+    font-size: 1.8rem;
+
+    font-family: "Rubik", Sans-Serif;
+    //background-image: url("../images/custom-1.svg");
+}
+
+.userfirstname {
+    font-weight: bold;
+}
+.pageheader-image {
+    height: 30%;
+    width: 30%;
+    float: right;
+}
+
+.margin-top {
+    margin-top: 3rem;
+}
