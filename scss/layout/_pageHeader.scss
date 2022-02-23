@@ -20,5 +20,19 @@
 }
 
 .margin-top {
-    margin-top: 3rem;
+    margin-top: 0.5rem;
+}
+
+.customize-button {
+    float: right;
+    margin-right: 2%;
+}
+
+#settings-icon {
+    margin-top: 1rem;
+
+}
+
+#page, html.yui3-js-enabled {
+    background-color: #fff;
 }
