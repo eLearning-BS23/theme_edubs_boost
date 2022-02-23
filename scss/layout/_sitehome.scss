@@ -1,0 +1,12 @@
+.coursebox .content .courseimage img {
+  max-width: 15rem;
+  max-height: 10rem;
+  height: 100%;
+  width: 100%;
+}
+
+.coursebox .content .teachers, .coursebox .content
+.courseimage, .coursebox .content .coursefile,
+.coursebox .content .customfields-container {
+  width: 20%;
+}

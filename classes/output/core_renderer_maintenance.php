@@ -65,27 +65,27 @@ class core_renderer_maintenance extends core_renderer {
         return '';
     }
 
-    /**
-     * Does nothing. The maintenance renderer cannot produce blocks.
-     *
-     * @param string $region
-     * @param array $classes
-     * @param string $tag
-     * @return string
-     */
-    public function blocks($region, $classes = array(), $tag = 'aside') {
-        return '';
-    }
+//    /**
+//     * Does nothing. The maintenance renderer cannot produce blocks.
+//     *
+//     * @param string $region
+//     * @param array $classes
+//     * @param string $tag
+//     * @return string
+//     */
+//    public function blocks($region, $classes = array(), $tag = 'aside') {
+//        return '';
+//    }
 
-    /**
-     * Does nothing. The maintenance renderer cannot produce blocks.
-     *
-     * @param string $region
-     * @return string
-     */
-    public function blocks_for_region($region) {
-        return '';
-    }
+//    /**
+//     * Does nothing. The maintenance renderer cannot produce blocks.
+//     *
+//     * @param string $region
+//     * @return string
+//     */
+//    public function blocks_for_region($region) {
+//        return '';
+//    }
 
     /**
      * Does nothing. The maintenance renderer cannot produce a course content header.

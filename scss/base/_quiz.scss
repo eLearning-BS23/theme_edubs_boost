@@ -1,0 +1,43 @@
+//quiz
+.info {
+  border-radius: 10px;
+}
+
+.que .formulation {
+  border-radius: 10px;
+}
+
+#jump-to-activity.custom-select {
+  border-radius: 10px;
+}
+
+.que .outcome, .que .comment {
+  border-radius: 10px;
+}
+
+.que.essay .qtype_essay_response.readonly {
+  border-radius: 10px;
+}
+
+#quiz-timer-wrapper #quiz-timer {
+  border-radius: 10px;
+  border: 1px solid #e1eaf9 !important;
+}
+
+.editor_atto_content.form-control {
+  border-radius: 10px;
+}
+
+// file upload modal
+.file-picker .fp-content {
+  margin-top: 0.5rem;
+  border: 1px solid #d9d7d7;
+}
+
+.file-picker .fp-navbar {
+  box-shadow: 2px 2px #d9d7d7;
+}
+
+.btn {
+  border-radius: 10px;
+}
