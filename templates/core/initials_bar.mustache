@@ -76,15 +76,15 @@
 
 <div class="initialbar {{ class }}">
     <span class="initialbarlabel">{{ title }}</span>
-    <ul class="pagination pagination-sm mb-1">
+    <ul class="pagination pagination-sm mb-1 mt-2">
         {{#current}}
-        <li class="initialbarall page-item mb-2">
-            <a class="p-3" href="{{ url }}">{{ all }}</a>
+        <li class="initialbarall page-item mb-1">
+            <a class="all-button-deselect" href="{{ url }}">{{ all }}</a>
         </li>
         {{/current}}
         {{^current}}
-        <li class="initialbarall page-item active all-button mb-2">
-            <a class="p-3">{{ all }}</a>
+        <li class="initialbarall page-item active mb-1">
+            <a class="all-button">{{ all }}</a>
         </li>
         {{/current}}
     </ul>
