@@ -17,3 +17,18 @@
 .section li.activity.hasinfo:hover {
     background-color: $primary-edubs;
 }
+
+
+.section-modchooser-link {
+    width: 90%;
+    margin: 0px 10% 5px 6%;
+    border: 1px solid #d9d7d7;
+    padding: 1rem;
+    box-shadow: 2px 2px #d9d7d7;
+}
+
+.section-modchooser-link:hover {
+    background-color: $primary-edubs;
+    text-decoration: none;
+    font-weight: bold;
+}
