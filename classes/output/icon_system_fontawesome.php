@@ -474,6 +474,7 @@ class icon_system_fontawesome extends \core\output\icon_system_fontawesome {
 
 
 
+
         return $iconmap;
     }
 }
