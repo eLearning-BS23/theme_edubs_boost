@@ -60,13 +60,6 @@ if ($ADMIN->fulltree) {
 
     /***
      *
-     *    Logotypes
-     *
-     ***/
-
-
-    /***
-     *
      *   Top Bar
      *
      ***/
@@ -85,19 +78,6 @@ if ($ADMIN->fulltree) {
     );
     $setting = new admin_setting_configselect($name, $title, $description, 'topbarstyle-1', $choices);
     $page->add($setting);
-
-//    $name = 'theme_edubs/ShowTopBarUserName';
-//    $title = get_string('ShowTopBarUserName', 'theme_edubs');
-//    $description = get_string('ShowTopBarUserName_desc', 'theme_edubs');
-//    $default = '0';
-//    $setting = new admin_setting_configcheckbox($name, $title, $description, $default);
-//    $page->add($setting);
-
-//    //HR
-//    $name = 'theme_edubs/HRTopBar';
-//    $heading = get_string('HRTopBar', 'theme_edubs');
-//    $setting = new admin_setting_heading($name, $heading, format_text(get_string('HRTopBar_desc', 'theme_edubs'), FORMAT_MARKDOWN));
-//    $page->add($setting);
 
     $settings->add($page);
 
@@ -166,6 +146,13 @@ if ($ADMIN->fulltree) {
     $setting = new admin_setting_configtext($name, $title, $description, $default);
     $page->add($setting);
 
+    // Facebook url setting.
+    $name = 'theme_edubs/facebook';
+    $title = get_string('facebook', 'theme_edubs');
+    $description = get_string('facebook_desc', 'theme_edubs');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $page->add($setting);
 
     //HR
 //    $name = 'theme_edubs/HR5';
@@ -182,7 +169,4 @@ if ($ADMIN->fulltree) {
 
 
     $settings->add($page);
-
-
-//
 }
