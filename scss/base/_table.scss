@@ -1,0 +1,42 @@
+table {
+    width: 100%;
+    // border-radius: 10px;
+}
+.path-grade-report-grader .gradeparent .userrow.odd .cell,
+.path-grade-report-grader .gradeparent .floater .cell.odd,
+.path-grade-report-grader .gradeparent .heading .cell,
+.path-grade-report-grader .gradeparent .cell.category,
+.path-grade-report-grader .gradeparent .avg .cell {
+    background-color: #bce4df !important;
+    color: #106d61 !important;
+}
+
+.path-grade-report-grader .gradeparent tr .cell,
+.path-grade-report-grader .gradeparent .floater .cell {
+    background-color: #bce4df !important;
+}
+.path-grade-report-grader .gradeparent table,
+.path-grade-report-grader .gradeparent .cell {
+    border-color: #102724;
+    color: #106d61 !important;
+}
+.path-grade-report-grader .gradeparent .cell {
+    border: 1px solid #102724;
+    border-top-width: 0;
+    border-left-width: 0;
+    padding: 6px 6px;
+    vertical-align: middle;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.generaltable thead {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #106d61 !important;
+    background-color: #bce4df !important;
+}
+.generaltable tbody {
+    color: #106d61 !important;
+    background-color: #bce4df !important;
+}

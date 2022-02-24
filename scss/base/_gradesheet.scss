@@ -4,6 +4,7 @@
     // width: 20%;
 
     border-radius: $border-radius;
+    border: 1px solid #106d61;
     background-color: #5bcfc0;
     //color: #106d61 !important;
     color: white !important;
@@ -25,9 +26,9 @@
 
 }
 
-
 .page-item.active .page-link {
+    z-index: 3;
+    color: #106d61;
     background-color: #5bcfc0;
-    z-index: 1;
-    border: 1px solid #5bcfc0;
+    border-color: #5bcfc0;
 }
