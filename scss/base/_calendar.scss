@@ -1,6 +1,3 @@
-/* Calender
-*
-*/
 .path-calendar .maincalendar .heightcontainer {
     height: auto;
     position: relative;
@@ -19,7 +16,7 @@
     width: auto;
 }
 .path-calendar .calendar-controls {
-    display: inline-flex;
+    //display: inline-flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
@@ -35,4 +32,10 @@
 .hasevents {
     background-color: $primary-edubs;
     color: #000;
+}
+
+.path-calendar .calendar-controls .current {
+    text-align: center;
+    margin-left: 20%;
+    margin-right: 10%;
 }
