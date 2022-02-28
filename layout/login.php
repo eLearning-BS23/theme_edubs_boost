@@ -26,17 +26,17 @@ defined('MOODLE_INTERNAL') || die();
 
 $bodyattributes = $OUTPUT->body_attributes();
 $loginalignment = theme_edubs_get_setting('loginalignment');
-if ($loginalignment == 1) {
-    $extraclasses[] = 'login-left';
-}
-if ($loginalignment == 2) {
-    $extraclasses[] = 'login-center';
-}
-if ($loginalignment == 3) {
-    $extraclasses[] = 'login-right';
-}
+//if ($loginalignment == 1) {
+//    $extraclasses[] = 'login-left';
+//}
+//if ($loginalignment == 2) {
+//    $extraclasses[] = 'login-center';
+//}
+//if ($loginalignment == 3) {
+//    $extraclasses[] = 'login-right';
+//}
 $siteurl = $CFG->wwwroot;
-$bodyattributes = $OUTPUT->body_attributes($extraclasses);
+//$bodyattributes = $OUTPUT->body_attributes($extraclasses);
 $templatecontext = [
     'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
     'output' => $OUTPUT,

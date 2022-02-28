@@ -1931,5 +1931,5 @@ $siteurl = $CFG->wwwroot;
     $string['teachers'] = 'Teachers';
 
 
-    $string['welcome'] = 'Welcome Back, ';
+    $string['welcome'] = 'Welcome Back ';
     $string['sign'] = '!';

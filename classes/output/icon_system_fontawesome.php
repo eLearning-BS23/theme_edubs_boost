@@ -472,9 +472,6 @@ class icon_system_fontawesome extends \core\output\icon_system_fontawesome {
         $iconmap['core:i/risk_xss'] = 'fas fa-exclamation-triangle text-danger';
         $iconmap['core:i/risk_dataloss'] = 'fas fa-exclamation-triangle text-danger';
 
-
-
-
         return $iconmap;
     }
 }
