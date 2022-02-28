@@ -1,6 +1,4 @@
 .breadcrumb {
-    // display: inline-block;
-    // padding: 5px;
     margin: 0;
     background: transparent;
     overflow: hidden;
@@ -8,18 +6,17 @@
 }
 .breadcrumb li {
     float: left;
-    //background: rgba(0,0,0,0.5);
     background: #0052cc;
     border-radius: 0;
     font-size: 10px;
     color: #fff;
-    //text-transform: uppercase;
     position: relative;
 }
 .breadcrumb li:nth-child(even) {
     background: rgba(0, 0, 0, 0.8);
     padding: 3px 14px;
     font-size: 14px;
+    //padding-top: 5px;
 }
 .breadcrumb li:nth-child(odd) {
     background: #0052cc;
@@ -27,7 +24,6 @@
     font-size: 14px;
 }
 .breadcrumb li:last-child {
-    // padding: 5px 14px;
     color: #fff;
     z-index: 1;
     position: relative;
@@ -54,6 +50,14 @@
     font-size: 14px;
     color: #fff;
 }
-// .breadcrumb-item{
-//   padding: 8px 0px 8px 0px ;
-// }
+
+.breadcrumb li a:focus {
+    background-color: transparent;
+    color: #fff;
+}
+
+.breadcrumb li a:focus-within {
+    background-color: transparent;
+    box-shadow: none;
+
+}

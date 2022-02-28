@@ -57,14 +57,14 @@ for ($i = 1; $i <= 6; $i++) {
 
 
 $themesettings = new \theme_edubs\util\theme_settings();
-$templatecontext = array_merge($templatecontext, $themesettings->hero());
-$templatecontext = array_merge($templatecontext, $themesettings->blockcategories());
-$templatecontext = array_merge($templatecontext, $themesettings->block1());
-$templatecontext = array_merge($templatecontext, $themesettings->block2());
-$templatecontext = array_merge($templatecontext, $themesettings->block3());
-$templatecontext = array_merge($templatecontext, $themesettings->block4());
-$templatecontext = array_merge($templatecontext, $themesettings->team());
-$templatecontext = array_merge($templatecontext, $themesettings->logos());
+//$templatecontext = array_merge($templatecontext, $themesettings->hero());
+//$templatecontext = array_merge($templatecontext, $themesettings->blockcategories());
+//$templatecontext = array_merge($templatecontext, $themesettings->block1());
+//$templatecontext = array_merge($templatecontext, $themesettings->block2());
+//$templatecontext = array_merge($templatecontext, $themesettings->block3());
+//$templatecontext = array_merge($templatecontext, $themesettings->block4());
+//$templatecontext = array_merge($templatecontext, $themesettings->team());
+//$templatecontext = array_merge($templatecontext, $themesettings->logos());
 $templatecontext = array_merge($templatecontext, $themesettings->customnav());
 $templatecontext = array_merge($templatecontext, $themesettings->head_elements());
 $templatecontext = array_merge($templatecontext, $themesettings->fonts());

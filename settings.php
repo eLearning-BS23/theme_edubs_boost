@@ -60,13 +60,6 @@ if ($ADMIN->fulltree) {
 
     /***
      *
-     *    Logotypes
-     *
-     ***/
-
-
-    /***
-     *
      *   Top Bar
      *
      ***/
@@ -85,19 +78,6 @@ if ($ADMIN->fulltree) {
     );
     $setting = new admin_setting_configselect($name, $title, $description, 'topbarstyle-1', $choices);
     $page->add($setting);
-
-//    $name = 'theme_edubs/ShowTopBarUserName';
-//    $title = get_string('ShowTopBarUserName', 'theme_edubs');
-//    $description = get_string('ShowTopBarUserName_desc', 'theme_edubs');
-//    $default = '0';
-//    $setting = new admin_setting_configcheckbox($name, $title, $description, $default);
-//    $page->add($setting);
-
-//    //HR
-//    $name = 'theme_edubs/HRTopBar';
-//    $heading = get_string('HRTopBar', 'theme_edubs');
-//    $setting = new admin_setting_heading($name, $heading, format_text(get_string('HRTopBar_desc', 'theme_edubs'), FORMAT_MARKDOWN));
-//    $page->add($setting);
 
     $settings->add($page);
 
@@ -166,23 +146,54 @@ if ($ADMIN->fulltree) {
     $setting = new admin_setting_configtext($name, $title, $description, $default);
     $page->add($setting);
 
+    // Facebook url setting.
+    $name = 'theme_edubs/facebook';
+    $title = get_string('facebook', 'theme_edubs');
+    $description = get_string('facebook_desc', 'theme_edubs');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $page->add($setting);
 
-    //HR
-//    $name = 'theme_edubs/HR5';
-//    $heading = get_string('HR5', 'theme_edubs');
-//    $setting = new admin_setting_heading($name, $heading, format_text(get_string('HR5_desc', 'theme_edubs'), FORMAT_MARKDOWN));
-//    $page->add($setting);
+    // Twitter url setting.
+    $name = 'theme_edubs/twitter';
+    $title = get_string('twitter', 'theme_edubs');
+    $description = get_string('twitter_desc', 'theme_edubs');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $page->add($setting);
 
+    // Googleplus url setting.
+    $name = 'theme_edubs/googleplus';
+    $title = get_string('googleplus', 'theme_edubs');
+    $description = get_string('googleplus_desc', 'theme_edubs');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $page->add($setting);
 
-    //HR
-//    $name = 'theme_edubs/HR38';
-//    $heading = get_string('HR38', 'theme_edubs');
-//    $setting = new admin_setting_heading($name, $heading, format_text(get_string('HR38_desc', 'theme_edubs'), FORMAT_MARKDOWN));
-//    $page->add($setting);
+    // Linkdin url setting.
+    $name = 'theme_edubs/linkedin';
+    $title = get_string('linkedin', 'theme_edubs');
+    $description = get_string('linkedin_desc', 'theme_edubs');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $page->add($setting);
+
+    // Youtube url setting.
+    $name = 'theme_edubs/youtube';
+    $title = get_string('youtube', 'theme_edubs');
+    $description = get_string('youtube_desc', 'theme_edubs');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $page->add($setting);
+
+    // Instagram url setting.
+    $name = 'theme_edubs/instagram';
+    $title = get_string('instagram', 'theme_edubs');
+    $description = get_string('instagram_desc', 'theme_edubs');
+    $default = '';
+    $setting = new admin_setting_configtext($name, $title, $description, $default);
+    $page->add($setting);
 
 
     $settings->add($page);
-
-
-//
 }

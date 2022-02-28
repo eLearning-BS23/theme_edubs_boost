@@ -58,10 +58,10 @@ if( $topbarstyle == "topbarstyle-7") { $topbarstyle7 = $topbarstyle; } else { $t
 
 $bodyattributes = $OUTPUT->body_attributes($extraclasses);
 $blockshtml = $OUTPUT->blocks('side-pre');
-$blockshtml2 = $OUTPUT->blocks('sidebar');
-$blockshtml3 = $OUTPUT->blocks('maintopwidgets');
-$blockshtml4 = $OUTPUT->blocks('mainfwidgets');
-$blockshtml5 = $OUTPUT->blocks('sidebar-top');
+//$blockshtml2 = $OUTPUT->blocks('sidebar');
+//$blockshtml3 = $OUTPUT->blocks('maintopwidgets');
+//$blockshtml4 = $OUTPUT->blocks('mainfwidgets');
+//$blockshtml5 = $OUTPUT->blocks('sidebar-top');
 $hasblocks = strpos($blockshtml, 'data-block=') !== false;
 $siteurl = $CFG->wwwroot;
 
