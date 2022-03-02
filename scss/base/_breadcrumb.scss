@@ -13,26 +13,33 @@
     position: relative;
 }
 .breadcrumb li:nth-child(even) {
-    background: rgba(0, 0, 0, 0.8);
-    padding: 3px 14px;
+    background: #00baff;
+    padding: 4px 28px;
     font-size: 14px;
+
+    display: flex;
+    align-items: center;
     //padding-top: 5px;
 }
 .breadcrumb li:nth-child(odd) {
-    background: #0052cc;
+    background: #0b5190;
     padding: 3px 14px;
     font-size: 14px;
+    display: flex;
+    align-items: center;
 }
 .breadcrumb li:last-child {
     color: #fff;
     z-index: 1;
     position: relative;
+    display: flex;
+    align-items: center;
 }
 .breadcrumb li:last-child:before {
     content: "";
     display: block;
     width: 117%;
-    height: 101%;
+    height: 100%;
     background: #04a08b;
     position: absolute;
     top: 0;
@@ -59,5 +66,4 @@
 .breadcrumb li a:focus-within {
     background-color: transparent;
     box-shadow: none;
-
 }

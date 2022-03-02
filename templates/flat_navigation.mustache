@@ -66,7 +66,7 @@
       {{/showdivider}}
       {{#action}}
         <li>
-            <a class="list-group-item list-group-item-action {{#isactive}}active{{/isactive}} {{#classes}}{{.}} {{/classes}}" href="{{{action}}}" data-key="{{key}}" data-isexpandable="{{isexpandable}}" data-indent="{{get_indent}}" data-showdivider="{{showdivider}}" data-type="{{type}}" data-nodetype="{{nodetype}}" data-collapse="{{collapse}}" data-forceopen="{{forceopen}}" data-isactive="{{isactive}}" data-hidden="{{hidden}}" data-preceedwithhr="{{preceedwithhr}}" {{#parent.key}}data-parent-key="{{.}}"{{/parent.key}}>
+            <a class="list-group-item list-group-item-action course-item-list {{#isactive}}active{{/isactive}} {{#classes}}{{.}} {{/classes}}" href="{{{action}}}" data-key="{{key}}" data-isexpandable="{{isexpandable}}" data-indent="{{get_indent}}" data-showdivider="{{showdivider}}" data-type="{{type}}" data-nodetype="{{nodetype}}" data-collapse="{{collapse}}" data-forceopen="{{forceopen}}" data-isactive="{{isactive}}" data-hidden="{{hidden}}" data-preceedwithhr="{{preceedwithhr}}" {{#parent.key}}data-parent-key="{{.}}"{{/parent.key}}>
                 <div class="c-nav-item-container">
                 {{#icon.pix}}
                 <span class="nav-icon">
@@ -81,14 +81,16 @@
       {{^action}}
 
               <li class="sidebar-accordion list-group-item p-0 my-1" data-key="{{key}}">
-                  <button class="accordion btn btn-accordion has-arrow w-100 d-block {{^showmycourses}}collapsed{{/showmycourses}} mt-2" id="accordionNav-{{key}}" data-toggle="collapse" data-target="#accordionNavC-{{key}}" aria-expanded="{{^showmycourses}}false{{/showmycourses}}{{#showmycourses}}true{{/showmycourses}}" aria-controls="accordionNavC">
-                      <span class="course-text-align">
-                      {{#pix}} i/courseicon, core {{/pix}}
-                      <span class="text">{{{text}}}</span>
-                          <span class="down-arrow-align"></span>
-                          {{#pix}} i/down-arrow, core {{/pix}}
-                      </span>
-                  </button>
+                <div >
+                    <button class="accordion course-button px-5 btn btn-accordion has-arrow  d-block {{^showmycourses}}collapsed{{/showmycourses}} mt-2" id="accordionNav-{{key}}" data-toggle="collapse" data-target="#accordionNavC-{{key}}" aria-expanded="{{^showmycourses}}false{{/showmycourses}}{{#showmycourses}}true{{/showmycourses}}" aria-controls="accordionNavC">
+                        <span class="course-text-align">
+                        {{#pix}} i/courseicon, core {{/pix}}
+                        <span class="text">{{{text}}}</span>
+                            <span class="down-arrow-align"></span>
+                            {{#pix}} i/down-arrow, core {{/pix}}
+                        </span>
+                    </button>
+                </div>
 
                   <ul id="accordionNavC-{{key}}" class="sidebar-accordion-body m-0 p-1 {{^showmycourses}}collapse{{/showmycourses}}{{#showmycourses}}show{{/showmycourses}}" data-parent="#accordionNav-{{key}}">
                       {{#children}}
