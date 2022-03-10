@@ -54,8 +54,7 @@ class core_renderer extends \core_renderer {
     public function getuserfirstname() {
         global $USER;
 
-        $config = $USER->firstname;
-        return $config;
+        return $USER->firstname;
 
     }
     /**
@@ -66,7 +65,7 @@ class core_renderer extends \core_renderer {
     public function full_header() {
         global $CFG;
         $userfirstname = $this->getuserfirstname();
-//        var_dump($userfirstname); die();
+
         if ($this->page->include_region_main_settings_in_header_actions() &&
             !$this->page->blocks->is_block_present('settings')) {
             // Only include the region main settings if the page has requested it and it doesn't already have

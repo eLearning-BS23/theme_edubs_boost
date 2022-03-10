@@ -1,0 +1,34 @@
+// gradeSheet Design
+
+.all-button {
+    // width: 20%;
+
+    border-radius: $border-radius;
+    border: 1px solid #106d61;
+    background-color: #5bcfc0;
+    //color: #106d61 !important;
+    color: white !important;
+    padding: .34rem .8rem;
+    margin-top: 2px;
+}
+
+.all-button-deselect {
+    border: 1px solid #dee2e6;
+    border-radius: $border-radius;
+    color: #106d61 !important;
+    padding: .34rem .8rem;
+    margin-top: 2px;
+}
+.page-link {
+    border-radius: $border-radius;
+    color: #106d61;
+    margin-left: 1px;
+
+}
+
+.page-item.active .page-link {
+    z-index: 3;
+    color: #106d61;
+    background-color: #5bcfc0;
+    border-color: #5bcfc0;
+}

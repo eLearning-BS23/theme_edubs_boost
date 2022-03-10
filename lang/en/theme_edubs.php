@@ -17,555 +17,1919 @@
 // This line protects the file from being accessed by a URL directly.
 defined('MOODLE_INTERNAL') || die();
 
-// CCN Theme Constants
-$string['pluginname'] = 'Edubs';
-$string['configtitle'] = 'Edubs settings';
-$string['choosereadme'] = 'Edubs Premium Moodle Theme, Created by Cocoon.';
-$string['ccn_settings_menu'] = 'Options';
-$string['ccn_page_settings_menu'] = 'Page Settings';
-// CCN Plugin Constants: Backend
-$string['config_title'] = 'Title';
-$string['config_title_desc'] = 'The main title to use for the item.';
-$string['config_title_2'] = 'Title 2';
-$string['config_subtitle'] = 'Subtitle';
-$string['config_subtitle_desc'] = 'The subtitle to use for the item.';
-$string['config_image'] = 'Image';
-$string['config_button_link'] = 'Button link';
-$string['config_button_text'] = 'Button text';
-$string['config_button_target'] = 'Button target';
-$string['config_arrow_link'] = 'Arrow link';
-$string['config_link'] = 'Link (URL)';
-$string['config_link_desc'] = 'The link to use for the item. For absolute URLs, include the http protocol.';
-$string['config_body'] = 'Body';
-$string['config_number'] = 'Number';
-$string['config_text'] = 'Text';
-$string['config_icon_class'] = 'Icon';
-$string['config_icon_class_desc'] = 'Select the icon to use for the item.';
-$string['config_visibility'] = 'Visibility';
-$string['config_visibility_desc'] = 'Configure the visibility for the item.';
-$string['config_feature_1'] = 'Feature 1';
-$string['config_feature_2'] = 'Feature 2';
-$string['config_feature_3'] = 'Feature 3';
-$string['config_feature_4'] = 'Feature 4';
-$string['config_prev_1'] = 'Previous arrow (line 1)';
-$string['config_prev_2'] = 'Previous arrow (line 2)';
-$string['config_next_1'] = 'Next arrow (line 1)';
-$string['config_next_2'] = 'Next arrow (line 2)';
-$string['config_footer_text'] = 'Footer text';
-$string['config_items'] = 'Items';
-$string['config_item'] = 'Item ';
-$string['config_date'] = 'Date';
-$string['config_location'] = 'Location';
-$string['config_time'] = 'Time';
-$string['config_zoom'] = 'Zoom';
-$string['config_size'] = 'Size';
-$string['config_columns'] = 'Columns';
-$string['config_end_date'] = 'End date';
-$string['cocoon_block_settings'] = '[Cocoon] Advanced block settings';
-$string['config_ccn_margin_top'] = 'Margin top';
-$string['config_ccn_margin_bottom'] = 'Margin bottom';
-$string['config_ccn_padding_top'] = 'Padding top';
-$string['config_ccn_padding_bottom'] = 'Padding bottom';
-$string['config_ccn_css_class'] = 'Custom CSS Class';
-$string['config_updated'] = 'Updated';
-$string['config_rating'] = 'Rating';
-$string['config_description'] = 'Description';
-$string['config_enrolments'] = 'Enrolments';
-$string['config_newsitems'] = 'News items';
-$string['config_price'] = 'Price';
-$string['config_enrol_btn'] = 'Enrol button';
-$string['config_enrol_btn_text'] = 'Enrol button text';
-$string['config_autoplay'] = 'Autoplay';
-$string['config_speed'] = 'Speed';
-$string['config_loop'] = 'Loop';
-$string['config_teacher'] = 'Teacher';
-$string['config_style'] = 'Style';
-$string['config_recaptcha'] = 'reCAPTCHA';
-$string['config_yt'] = 'YouTube Video ID';
-$string['config_button_link_or_video'] = 'The URL for the button. Alternatively, enter a YouTube or Vimeo URL to enable video overlay.';
-$string['config_color'] = 'Color';
-$string['config_color_desc'] = 'Select the color to use for the item.';
-$string['config_line_break'] = 'Line break';
-$string['config_overrides'] = 'Override values';
-$string['config_body_type'] = 'Body type';
-$string['config_body_plain'] = 'Body (plain text)';
-$string['config_body_html'] = 'Body (HTML editor)';
-$string['config_prev'] = 'Previous';
-$string['config_next'] = 'Next';
-$string['config_arrow_style'] = 'Arrow style';
-$string['config_hover_text'] = 'Hover text';
-$string['config_hover_accent'] = 'Hover accent';
-$string['select_from_dropdown'] = 'Please select an item from the dropdown below.';
-$string['select_from_dropdown_multiple'] = 'Please select multiple items from the dropdown below.';
-$string['config_featured_text'] = 'Featured text';
-$string['config_features'] = 'Features';
-$string['config_features_help'] = 'The features for the price table. Enter one feature per line.';
-$string['config_group_courses_filter'] = 'Enable filtering';
-$string['config_form'] = 'Form settings';
+$siteurl = $CFG->wwwroot;
 
-// CCN Plugin Constants: Frontend
-$string['search_string'] = 'Search for the software or skills you want to learn';
-$string['updated'] = 'Updated';
-$string['events'] = 'Events';
-$string['rated_by'] ='{$a} student ratings';
-$string['rate_course'] ='Submit rating';
-$string['number_of_courses'] ='Over {$a} courses';
-// CCN Dashboard Constants
-$string['messages_desc'] = 'Communicate';
-$string['messages_title'] = 'Messages';
-$string['profile_desc'] = 'Your Profile';
-$string['profile_title'] = 'Profile';
-$string['preferences_desc'] = 'Preferences';
-$string['preferences_title'] = 'Settings';
-$string['grades_desc'] = 'Performance';
-$string['grades_title'] = 'Grades';
-// CCN Regions
-$string['region-side-pre'] = 'Sidebar right';
-$string['region-left'] = 'Sidebar left';
-$string['region-user-notif'] = 'User notifications';
-$string['region-user-messages'] = 'User messages';
-$string['region-fullwidth-top'] = 'Fullwidth top';
-$string['region-fullwidth-bottom'] = 'Fullwidth bottom';
-$string['region-above-content'] = 'Above content';
-$string['region-below-content'] = 'Below content';
-$string['region-login'] = 'Modal login';
-$string['region-register'] = 'Modal register';
-$string['region-search'] = 'Modal search';
-$string['region-library-list'] = 'Library list';
-$string['region-navbar'] = 'Navbar';
-// CCN Theme Settings
-$string['headerlogo1'] = 'Header logo (Light)';
-$string['headerlogo1_desc'] = 'The light variant of your website logo.';
-$string['headerlogo2'] = 'Header logo (Dark)';
-$string['headerlogo2_desc'] = 'The dark variant of your website logo.';
-$string['headerlogo3'] = 'Header logo (Large)';
-$string['headerlogo3_desc'] = 'The large variant of your website logo.';
-$string['headerlogo_mobile'] = 'Header logo (Mobile)';
-$string['headerlogo_mobile_desc'] = 'The mobile variant of your website logo (optional).';
-$string['footerlogo1'] = 'Footer logo';
-$string['footerlogo1_desc'] = 'The footer logo for your website.';
-$string['cocoon_copyright'] = 'Copyright notice';
-$string['cocoon_copyright_desc'] = 'The copyright notice for your website.';
-$string['social_settings'] = 'Social';
-$string['cocoon_facebook_url'] = 'Facebook URL';
-$string['cocoon_facebook_url_desc'] = 'The link to your company\'s Facebook profile.';
-$string['cocoon_twitter_url'] = 'Twitter URL';
-$string['cocoon_twitter_url_desc'] = 'The link to your company\'s Twitter profile.';
-$string['cocoon_instagram_url'] = 'Instagram URL';
-$string['cocoon_instagram_url_desc'] = 'The link to your company\'s Instagram profile.';
-$string['cocoon_dribbble_url'] = 'Dribbble URL';
-$string['cocoon_dribbble_url_desc'] = 'The link to your company\'s Dribbble profile.';
-$string['cocoon_pinterest_url'] = 'Pinterest URL';
-$string['cocoon_pinterest_url_desc'] = 'The link to your company\'s Pinterest profile.';
-$string['cocoon_google_url'] = 'Google URL';
-$string['cocoon_google_url_desc'] = 'The link to your company\'s Google profile.';
-$string['cocoon_youtube_url'] = 'YouTube URL';
-$string['cocoon_youtube_url_desc'] = 'The link to your company\'s YouTube profile.';
-$string['cocoon_vk_url'] = 'VK URL';
-$string['cocoon_vk_url_desc'] = 'The link to your company\'s VK profile.';
-$string['cocoon_500px_url'] = '500px URL';
-$string['cocoon_500px_url_desc'] = 'The link to your company\'s 500px profile.';
-$string['cocoon_behance_url'] = 'Behance URL';
-$string['cocoon_behance_url_desc'] = 'The link to your company\'s Behance profile.';
-$string['cocoon_digg_url'] = 'Digg URL';
-$string['cocoon_digg_url_desc'] = 'The link to your company\'s Digg profile.';
-$string['cocoon_flickr_url'] = 'Flickr URL';
-$string['cocoon_flickr_url_desc'] = 'The link to your company\'s Flickr profile.';
-$string['cocoon_foursquare_url'] = 'Foursquare URL';
-$string['cocoon_foursquare_url_desc'] = 'The link to your company\'s Foursquare profile.';
-$string['cocoon_linkedin_url'] = 'LinkedIn URL';
-$string['cocoon_linkedin_url_desc'] = 'The link to your company\'s LinkedIn profile.';
-$string['cocoon_medium_url'] = 'Medium URL';
-$string['cocoon_medium_url_desc'] = 'The link to your company\'s Medium profile.';
-$string['cocoon_meetup_url'] = 'Meetup URL';
-$string['cocoon_meetup_url_desc'] = 'The link to your company\'s Meetup profile.';
-$string['cocoon_snapchat_url'] = 'Snapchat URL';
-$string['cocoon_snapchat_url_desc'] = 'The link to your company\'s Snapchat profile.';
-$string['cocoon_tumblr_url'] = 'Tumblr URL';
-$string['cocoon_tumblr_url_desc'] = 'The link to your company\'s Tumblr profile.';
-$string['cocoon_vimeo_url'] = 'Vimeo URL';
-$string['cocoon_vimeo_url_desc'] = 'The link to your company\'s Vimeo profile.';
-$string['cocoon_wechat_url'] = 'WeChat URL';
-$string['cocoon_wechat_url_desc'] = 'The link to your company\'s WeChat profile.';
-$string['cocoon_whatsapp_url'] = 'WhatsApp URL';
-$string['cocoon_whatsapp_url_desc'] = 'The link to your company\'s WhatsApp profile.';
-$string['cocoon_wordpress_url'] = 'WordPress URL';
-$string['cocoon_wordpress_url_desc'] = 'The link to your company\'s WordPress profile.';
-$string['cocoon_weibo_url'] = 'Weibo URL';
-$string['cocoon_weibo_url_desc'] = 'The link to your company\'s Weibo profile.';
-$string['cocoon_telegram_url'] = 'Telegram URL';
-$string['cocoon_telegram_url_desc'] = 'The link to your company\'s Telegram profile.';
-$string['cocoon_moodle_url'] = 'Moodle URL';
-$string['cocoon_moodle_url_desc'] = 'The link to your company\'s Moodle profile.';
-$string['cocoon_amazon_url'] = 'Amazon URL';
-$string['cocoon_amazon_url_desc'] = 'The link to your company\'s Amazon profile.';
-$string['cocoon_slideshare_url'] = 'SlideShare URL';
-$string['cocoon_slideshare_url_desc'] = 'The link to your company\'s SlideShare profile.';
-$string['cocoon_soundcloud_url'] = 'Soundcloud URL';
-$string['cocoon_soundcloud_url_desc'] = 'The link to your company\'s Soundcloud profile.';
-$string['cocoon_leanpub_url'] = 'Leanpub URL';
-$string['cocoon_leanpub_url_desc'] = 'The link to your company\'s Leanpub profile.';
-$string['cocoon_xing_url'] = 'Xing URL';
-$string['cocoon_xing_url_desc'] = 'The link to your company\'s Xing profile.';
-$string['cocoon_bitcoin_url'] = 'Bitcoin URL';
-$string['cocoon_bitcoin_url_desc'] = 'The link to your company\'s Bitcoin profile.';
-$string['cocoon_twitch_url'] = 'Twitch URL';
-$string['cocoon_twitch_url_desc'] = 'The link to your company\'s Twitch profile.';
-$string['cocoon_github_url'] = 'Github URL';
-$string['cocoon_github_url_desc'] = 'The link to your company\'s Github profile.';
-$string['cocoon_gitlab_url'] = 'Gitlab URL';
-$string['cocoon_gitlab_url_desc'] = 'The link to your company\'s Gitlab profile.';
-$string['cocoon_forumbee_url'] = 'Forumbee URL';
-$string['cocoon_forumbee_url_desc'] = 'The link to your company\'s Forumbee profile.';
-$string['cocoon_trello_url'] = 'Trello URL';
-$string['cocoon_trello_url_desc'] = 'The link to your company\'s Trello profile.';
-$string['cocoon_weixin_url'] = 'Weixin URL';
-$string['cocoon_weixin_url_desc'] = 'The link to your company\'s Weixin profile.';
-$string['cocoon_slack_url'] = 'Slack URL';
-$string['cocoon_slack_url_desc'] = 'The link to your company\'s Slack profile.';
-$string['header_settings'] = 'Header';
-$string['headertype'] = 'Header style';
-$string['headertype_desc'] = 'Select the header style for the website. Note that some fields below only apply to certain header styles.';
-$string['email_address'] = 'Email address';
-$string['email_address_desc'] = 'Your company\'s email address.';
-$string['phone'] = 'Telephone';
-$string['phone_desc'] = 'Your company\'s telephone number.';
-$string['cta_text'] = 'Call-to-action text';
-$string['cta_text_desc'] = 'The call-to-action text that should be displayed.';
-$string['cta_link'] = 'Call-to-action link';
-$string['cta_link_desc'] = 'The link for the call-to-action.';
-$string['footer_settings'] = 'Footer';
-$string['footertype'] = 'Footer style';
-$string['footertype_desc'] = 'Select the footer style for the website. Note that some fields below only apply to certain footer styles.';
-$string['footer_col_1'] = 'Footer column 1';
-$string['footer_col_2'] = 'Footer column 2';
-$string['footer_col_3'] = 'Footer column 3';
-$string['footer_col_4'] = 'Footer column 4';
-$string['footer_col_5'] = 'Footer column 5';
-$string['footer_col_title'] = 'Column title';
-$string['footer_col_title_desc'] = 'The title for the footer column.';
-$string['footer_col_body'] = 'Column body';
-$string['footer_col_body_desc'] = 'The body for the footer column. HTML is allowed.';
-$string['footer_menu'] = 'Footer menu';
-$string['footer_menu_desc'] = 'The content for the footer menu. HTML is allowed.';
-$string['general_settings'] = 'General';
-$string['blogstyle'] = 'Blog style';
-$string['blogstyle_desc'] = 'The style for the website blog.';
-$string['courseliststyle'] = 'Course list style';
-$string['courseliststyle_desc'] = 'The style for the course category view.';
-$string['advanced_settings'] = 'Advanced';
-$string['custom_css'] = 'Custom CSS';
-$string['custom_css_desc'] = 'Your custom CSS, loaded only on the front-end.';
-$string['custom_css_dashboard'] = 'Custom CSS (Dashboard)';
-$string['custom_css_dashboard_desc'] = 'Your custom CSS, loaded only on the dashboard.';
-$string['custom_js'] = 'Custom JavaScript';
-$string['custom_js_desc'] = 'Your custom JavaScript, loaded only on the front-end.';
-$string['custom_js_dashboard'] = 'Custom JavaScript (Dashboard)';
-$string['custom_js_dashboard_desc'] = 'Your custom JavaScript, loaded only on the dashboard.';
-$string['user_settings'] = 'Users';
-$string['user_custf_other'] = '"Other fields" placement';
-$string['user_custf_other_desc'] = 'Customize the placement of "Other fields" custom profile fields on user edit pages.';
-$string['heading_bg'] = 'Page heading background';
-$string['heading_bg_desc'] = 'The background image for the page heading/breadcrumb hero.';
-$string['logotype'] = 'Logotype visibility';
-$string['logotype_desc'] = 'Display the logotype beside the logo image?';
-$string['logo_image'] = 'Logo image visibility';
-$string['logo_image_desc'] = 'Display the logo image?';
-$string['logotype_footer'] = 'Footer logotype visibility';
-$string['logotype_footer_desc'] = 'Display the logotype beside the footer logo image?';
-$string['logo_image_footer'] = 'Footer logo image visibility';
-$string['logo_image_footer_desc'] = 'Display the footer logo image?';
-$string['color_settings'] = 'Color';
-$string['color_settings_gradient'] = 'Gradient';
-$string['color_gradient_start'] = 'Gradient start';
-$string['color_gradient_start_desc'] = 'The color for the start of the gradient.';
-$string['color_gradient_end'] = 'Gradient end';
-$string['color_gradient_end_desc'] = 'The color for the end of the gradient.';
-$string['color_settings_main'] = 'Common colors';
-$string['color_primary'] = 'Primary color';
-$string['color_primary_desc'] = 'The primary color used throughout the site.';
-$string['color_primary_alternate'] = 'Primary color (alternate)';
-$string['color_primary_alternate_desc'] = 'The alternate primary color used throughout the site.';
-$string['color_secondary'] = 'Secondary color';
-$string['color_secondary_desc'] = 'The secondary color used throughout the site.';
-$string['color_accent'] = 'Accent color';
-$string['color_accent_desc'] = 'The accent color used to highlight specific elements.';
-$string['color_accent_2'] = 'Second accent color';
-$string['color_accent_2_desc'] = 'The second accent color used to highlight specific elements.';
-$string['color_accent_3'] = 'Third accent color';
-$string['color_accent_3_desc'] = 'The third accent color used to highlight specific elements.';
-$string['color_accent_4'] = 'Fourth accent color';
-$string['color_accent_4_desc'] = 'The fourth accent color used to highlight specific elements.';
-$string['color_settings_header_style_2'] = 'Header colors (style 2)';
-$string['color_settings_header_style_4'] = 'Header colors (style 4)';
-$string['color_settings_header_style_5'] = 'Header colors (style 5)';
-$string['color_settings_header_style_6'] = 'Header colors (style 6)';
-$string['color_header_color'] = 'Header color';
-$string['color_header_color_desc'] = 'The color for the header.';
-$string['color_header_color_top'] = 'Header top';
-$string['color_header_color_top_desc'] = 'The color for the header top.';
-$string['color_header_color_bottom'] = 'Header bottom';
-$string['color_header_color_bottom_desc'] = 'The color for the header bottom.';
-$string['color_settings_footer_style_1'] = 'Footer colors (style 1)';
-$string['color_settings_footer_style_2'] = 'Footer colors (style 2)';
-$string['color_settings_footer_style_3'] = 'Footer colors (style 3)';
-$string['color_settings_footer_style_5'] = 'Footer colors (style 5)';
-$string['color_settings_footer_style_6'] = 'Footer colors (style 6)';
-$string['color_settings_footer_style_7'] = 'Footer colors (style 7)';
-$string['color_footer_color_top'] = 'Footer top';
-$string['color_footer_color_top_desc'] = 'The color for the footer top.';
-$string['color_footer_color_middle'] = 'Footer middle';
-$string['color_footer_color_middle_desc'] = 'The color for the footer middle.';
-$string['color_footer_color_bottom'] = 'Footer bottom';
-$string['color_footer_color_bottom_desc'] = 'The color for the footer bottom.';
-$string['color_footer_color'] = 'Footer color';
-$string['color_footer_color_desc'] = 'The color for the footer.';
-$string['gmaps_key'] = 'Google Maps API Key';
-$string['gmaps_key_desc'] = 'Your Google Maps API Key';
-$string['favicon'] = 'Favicon';
-$string['favicon_desc'] = 'The favicon for the website. Recommended size is 16 x 16px.';
-$string['library_list'] = 'Library list';
-$string['library_list_desc'] = 'Display a library list (list of course categories) in the header.';
-$string['logo_settings'] = 'Logo';
-$string['header_logos'] = 'Header logos';
-$string['footer_logos'] = 'Footer logos';
-$string['header_search'] = 'Header search';
-$string['header_search_desc'] = 'Settings for the search functionality in the header.';
-$string['header_login'] = 'Header login';
-$string['header_login_desc'] = 'Settings for the login functionality in the header.';
-$string['back_to_top'] = 'Back to Top';
-$string['back_to_top_desc'] = 'Show or hide the back-to-top button on the frontend.';
-$string['blog_post_author'] = 'Blog post author';
-$string['blog_post_author_desc'] = 'Show or hide the author name on blog posts. This setting controls the blog listing page, individual blog posts, and all [Cocoon] blocks.';
-$string['blog_post_date'] = 'Blog post date';
-$string['blog_post_date_desc'] = 'Show or hide the date on blog posts. This setting controls the blog listing page, individual blog posts, and all [Cocoon] blocks.';
-$string['headertype_settings'] = 'Header style settings';
-$string['headertype_settings_desc'] = 'Select whether the header style should apply only to the frontpage, or to all pages throughout the site.';
-$string['logo_image_width'] = 'Logo image width';
-$string['logo_image_width_desc'] = 'The width in pixels for the header logo. Enter the numercial value only, and do not include "px".';
-$string['logo_image_height'] = 'Logo image height';
-$string['logo_image_height_desc'] = 'The height in pixels for the header logo. Enter the numercial value only, and do not include "px".';
-$string['logo_image_width_footer'] = 'Footer logo image width';
-$string['logo_image_width_footer_desc'] = 'The width in pixels for the footer logo. Enter the numercial value only, and do not include "px".';
-$string['logo_image_height_footer'] = 'Footer logo image height';
-$string['logo_image_height_footer_desc'] = 'The height in pixels for the footer logo. Enter the numercial value only, and do not include "px".';
-$string['preloader_image'] = 'Preloader image';
-$string['preloader_image_desc'] = 'The image to use for the preloader.';
-$string['dashboard_settings'] = 'Dashboard';
-$string['dashboard_settings_long'] = 'Dashboard settings';
-$string['dashboard_icons'] = 'Dashboard icons';
-$string['dashboard_icons_visibility'] = 'Dashboard icons visibility';
-$string['dashboard_icons_visibility_desc'] = 'Show or hide the icons in the user dashboard.';
-$string['icon_1'] = 'Icon 1';
-$string['icon_2'] = 'Icon 2';
-$string['icon_3'] = 'Icon 3';
-$string['icon_4'] = 'Icon 4';
-$string['dashboard_sticky_header'] = 'Sticky header';
-$string['dashboard_sticky_header_desc'] = 'Settings for the dashboard sticky header.';
-$string['dashboard_left_drawer'] = 'Dashboard left drawer';
-$string['dashboard_left_drawer_desc'] = 'Visibility settings for the left navigation drawer in the Dashboard. Use the default Start menu, or use custom blocks instead. Alternatively, disable the left drawer entirely.';
-$string['dashboard_sticky_drawer'] = 'Sticky left drawer';
-$string['dashboard_sticky_drawer_desc'] = 'Keep the dashboard left drawer stuck to the screen, or scroll with the page.';
-$string['primary_font'] = 'Primary font';
-$string['primary_font_desc'] = 'The primary font used throughout the website.';
-$string['secondary_font'] = 'Secondary font';
-$string['secondary_font_desc'] = 'The secondary font used throughout the website.';
-$string['color_tertiary'] = 'Tertiary color';
-$string['color_tertiary_desc'] = 'The tertiary color used throughout the site.';
-$string['color_parallax'] = 'Parallax color';
-$string['color_parallax_desc'] = 'The parallax color used throughout the website.';
-$string['course_settings'] = 'Course';
-$string['course_settings_topics_format'] = 'Topics format';
-$string['topics_format_collapsible'] = 'Collapsible settings';
-$string['topics_format_collapsible_desc'] = 'Settings for the collapsible topics format.';
-$string['breadcrumb_settings'] = 'Breadcrumb';
-$string['breadcrumb_style'] = 'Breadcrumb style';
-$string['breadcrumb_style_desc'] = 'The style of the inner page breadcrumb.';
-$string['breadcrumb_caps'] = 'Breadcrumb capitalization';
-$string['breadcrumb_caps_desc'] = 'The capitalization of the breadcrumb trail.';
-$string['breadcrumb_clip'] = 'Clip breadcrumb text';
-$string['breadcrumb_clip_desc'] = 'Configure the clipping or reducing of long text in the breadcrumb.';
-$string['breadcrumb_title'] = 'Breadcrumb title';
-$string['breadcrumb_title_desc'] = 'Display the breadcrumb title.';
-$string['breadcrumb_trail'] = 'Breadcrumb navigation trail';
-$string['breadcrumb_trail_desc'] = 'Display the breadcrumb navigation trail.';
-$string['preloader_settings'] = 'Preloader';
-$string['preloader_duration'] = 'Preloader duration';
-$string['preloader_duration_desc'] = 'The length of time to display the preloader. It is highly recommended to leave this as the default. To accelarate loading time, we suggest compressing images prior to uploading.';
-$string['course_content_enroled_only'] = 'Course Content access';
-$string['course_content_enroled_only_desc'] = '(Topics format only) - Choose whether to display course content to all users, or only those enroled in the course. This is helpful you want to allow guest access to course pages, but hide the list of course content, topics, sections, and activity names from unenroled users.';
-$string['social_target'] = 'Social URL window target';
-$string['social_target_desc'] = 'Determine whether social URLs should open on the same page or in a new window.';
-$string['coursecat_modified'] = 'Last updated';
-$string['coursecat_modified_desc'] = 'Show the date that the course/category was last updated.';
-$string['coursecat_enrolments'] = 'Course enrolments';
-$string['coursecat_enrolments_desc'] = 'Show the number of students enroled in a course.';
-$string['coursecat_announcements'] = 'Course news items';
-$string['coursecat_announcements_desc'] = 'Show the number of course announcements in a course.';
-$string['coursecat_settings'] = 'Course category settings';
-$string['single_course_settings'] = 'Single course settings';
-$string['course_single_style'] = 'Single course style';
-$string['course_single_style_desc'] = 'Select the style to use on single courses.';
-$string['course_start_date'] = 'Course start date';
-$string['course_start_date_desc'] = 'Display the start date in single course pages, above the course content.';
-$string['course_category'] = 'Course category';
-$string['course_category_desc'] = 'Display the category in single course pages, above the course content.';
-$string['seo'] = 'SEO';
-$string['meta_description'] = 'Meta description';
-$string['meta_description_desc'] = 'The meta description for your Moodle site.';
-$string['meta_abstract'] = 'Meta abstract';
-$string['meta_abstract_desc'] = 'The meta abstract for your Moodle site (the abstract tag is sometimes used for archiving of web pages or by educational establishments).';
-$string['meta_keywords'] = 'Meta keywords';
-$string['meta_keywords_desc'] = 'The meta keywords for your Moodle site.';
-$string['incourse_layout'] = 'In course layout';
-$string['incourse_layout_desc'] = 'The layout that should be used when a user is within a course (eg accessing individual course activities, resources, or content). Custom blocks may not be displayed when using the Dashboard layout.';
-$string['coursemainpage_layout'] = 'Course main page layout';
-$string['coursemainpage_layout_desc'] = 'The layout that should be used when a user is on a course main page. Custom blocks may not be displayed when using the Dashboard layout.';
-$string['singlecourse_blocks'] = 'Course block visibility';
-$string['singlecourse_blocks_desc'] = 'Choose whether to display blocks added to courses on all pages of the course, or only on the main course page. Use this setting to prevent blocks from appearing on similar course pages (such as the Participants page and User pages). This setting affects all blocks added to courses, not just Cocoon blocks.';
-$string['user_profile_layout'] = 'User profile layout';
-$string['user_profile_layout_desc'] = 'The layout that should be used for user profiles.';
-$string['course_enrolment_payment'] = 'Course enrolment payment';
-$string['course_enrolment_payment_desc'] = 'Settings for course enrolment preferences. Do all courses require payment, or are some free? This setting dictates how course enrolment will work and be displayed.';
-$string['dashboard_tablet_1'] = 'Dashboard tablet 1';
-$string['dashboard_tablet_2'] = 'Dashboard tablet 2';
-$string['dashboard_tablet_3'] = 'Dashboard tablet 3';
-$string['dashboard_tablet_4'] = 'Dashboard tablet 4';
-$string['general_course_settings'] = 'General course settings';
-$string['course_ratings'] = 'Course ratings';
-$string['course_ratings_desc'] = 'Settings for course star ratings.';
-$string['font_settings'] = 'Fonts';
-$string['upload_font_woff'] = 'Font WOFF';
-$string['upload_font_woff_desc'] = 'Upload the WOFF file for the custom font. Optional, but recommended.';
-$string['upload_font_woff2_desc'] = 'Upload the WOFF2 file for the custom font. Optional, but recommended.';
-$string['upload_font_ttf_desc'] = 'Upload the TTF file for the custom font. Optional, but recommended.';
-$string['upload_font_eot_desc'] = 'Upload the EOT file for the custom font. Optional, but recommended.';
-$string['upload_font_svg_desc'] = 'Upload the SVG file for the custom font. Optional, but recommended.';
-$string['upload_font_woff2'] = 'Font WOFF2';
-$string['upload_font_ttf'] = 'Font TTF';
-$string['upload_font_eot'] = 'Font EOT';
-$string['upload_font_svg'] = 'Font SVG';
-$string['google_fonts'] = 'Google fonts';
-$string['custom_font_primary'] = 'Custom font (primary)';
-$string['custom_font_secondary'] = 'Custom font (secondary)';
-$string['dashboard_header'] = 'Dashboard header';
-$string['dashboard_header_desc'] = 'Configure the appearance of the dashboard header.';
-$string['navigation_icon'] = 'Navigation icon';
-$string['notification_icon'] = 'Notification icon';
-$string['messages_icon'] = 'Messages icon';
-$string['dark_mode_icon'] = 'Night Learning icon';
-$string['page_settings_controls'] = 'Page Settings button';
-$string['page_settings_controls_desc'] = 'Moodle sometimes displays the "Page Settings" button for Students and Guests. Here you can prevent it from displaying for these users.';
+    $string['coursesections'] = 'Course sections';
+    $string['access'] = 'Get access';
 
-// CCN Fixes
-$string['allexcepthidden'] = 'All (except hidden)';
+    $string['HR'] = '<div class="d-block text-center"><br /><br />Categories Block</div>';
+    $string['HR_desc'] = 'Categories Block on the front page.<br /><img src="'.$siteurl.'/theme/edubs/doc/fp-block-cat.png" class="img-fluid rounded mt-3" />';
 
-// Theme edubs
-$string['studentsiamteaching'] = 'Students I\'m teaching';
-$string['coursesiamteaching'] = 'Courses I\'m teaching';
-$string['coursesiamtaking'] = 'Courses I\'m taking';
-$string['profileviews'] = 'My profile views';
-$string['socialmedia'] = 'Social media';
-$string['accessed'] = 'Accessed';
-$string['last_accessed'] = 'last accessed';
-$string['last_accessed_courses'] = 'Last Accessed Courses';
-$string['select_no_cat'] = 'Please select number of categories.';
-$string['navigation'] = 'Navigation';
-$string['start'] = 'Start';
-$string['login_welcome'] = 'Login to your account';
-$string['login'] = 'Login';
-$string['login_no_account'] = 'Don\'t have an account?';
-$string['signup'] = 'Sign up!';
-$string['search_courses'] = 'Search courses...';
-$string['forgot_password'] = 'Forgot Password?';
-$string['or'] = 'Or';
-$string['login_register'] = 'Login/Register';
-$string['your_name'] = 'Your name';
-$string['your_name_requirements'] = 'Minimum 3 letters/spaces.';
-$string['email_address'] = 'Email address';
-$string['email_address_requirements'] = 'A real email address.';
-$string['subject'] = 'Subject';
-$string['subject_requirements'] = 'Minimum 5 characters.';
-$string['message'] = 'Message';
-$string['message_requirements'] = 'Minimum 5 characters.';
-$string['send'] = 'Send';
-$string['lectures'] = 'Lectures';
-$string['quizzes'] = 'Quizzes';
-$string['duration'] = 'Duration';
-$string['skill_level'] = 'Skill level';
-$string['language'] = 'Language';
-$string['assessments'] = 'Assessments';
-$string['last_updated'] = 'Last updated';
-$string['share'] = 'Share';
-$string['students_enrolled'] = 'students enrolled';
-$string['topics'] = 'topics';
-$string['see_more'] = 'See more';
-$string['course_enrolment'] = 'Buy & Enrol Now';
-$string['course_enrolment_free'] = 'Join & Enrol Now';
-$string['course_free_access'] = 'Enrolment is Free';
-$string['course_free'] = 'FREE';
-$string['course_free_accent'] = '100%';
-$string['course_free_to_join'] = 'to join';
-$string['course_buy_access'] = 'Paid course entry';
-$string['course_enrolled'] = 'You\'re enrolled';
-$string['course_enrolled_text'] = 'You are currently enrolled in this course.';
-$string['course_error_title'] = 'Enrolment Error';
-$string['course_error_text'] = 'Your administrator has not yet configured PayPal or Stripe Enrolment for this course.';
-$string['course_price'] = 'Price';
-$string['course_currency'] = '$';
-$string['days'] = 'days';
-$string['hours'] = 'Hours';
-$string['minutes'] = 'Minutes';
-$string['seconds'] = 'Seconds';
-$string['username'] = 'Username';
-$string['password'] = 'Password';
-$string['notifications'] = 'Notifications';
-$string['item'] = 'Item';
-$string['your_order'] = 'Thank you for your order.';
-$string['payment_method'] = 'Payment method:';
-$string['receipt'] = 'Receipt';
-$string['date'] = 'Enrolment starts';
-$string['status'] = 'Status';
-$string['total'] = 'Total';
-$string['total_courses'] = 'Courses';
-$string['price'] = 'Price';
-$string['course_id'] = 'Course ID';
-$string['action'] = 'Action';
-$string['customer_id'] = 'Customer ID';
-$string['customer_username'] = 'Customer name';
-$string['customer_email'] = 'Customer email';
-$string['completed'] = 'Paid';
-$string['currency_symbol'] = '$';
-$string['currency'] = 'USD';
-$string['your_profile_views'] = 'Your Profile Views';
-$string['your_profile_views_long'] = 'An overview of your profile visits over the last week';
-$string['your_profile_views_dataset'] = 'Visits';
-$string['instructors'] = 'Instructors';
-$string['last_online'] = 'Last online';
-$string['comments'] = 'comments';
-$string['reviews'] = 'Reviews';
-$string['preview_course'] = 'Preview Course';
-$string['library'] = 'Library';
-$string['have_an_account'] = 'Have an account?';
-$string['course_content'] = 'Course Content';
-$string['end_date'] = 'End date';
-$string['view'] = 'View';
-$string['published'] = 'Published';
-$string['apostrophe_s'] = '\'s';
-$string['stars_5'] = 'Stars 5';
-$string['stars_4'] = 'Stars 4';
-$string['stars_3'] = 'Stars 3';
-$string['stars_2'] = 'Stars 2';
-$string['stars_1'] = 'Stars 1';
-$string['rated_by_none'] = 'No ratings yet';
-$string['add_comment'] = 'Add a Comment & Review';
-$string['speaks'] = 'Speaks:';
-$string['scroll_down'] = 'Scroll Down';
-$string['to_discover_more'] = 'to discover more';
-$string['coursesections'] = 'Course sections';
-$string['showhintcourseguestaccesslink'] = 'To have full access to the course, you can <a href="{$a->url}">self enrol into this course</a>.';
+    $string['HR1'] = '<div class="d-block text-center"><br /><br />Block #1</div>';
+    $string['HR1_desc'] = '3-Column HTML Block on the front page.<br /><img src="'.$siteurl.'/theme/edubs/doc/fp-block1.png" class="img-fluid rounded mt-3" />';
+
+    $string['HR2'] = '<div class="d-block text-center"><br /><br />Block #2</div>';
+    $string['HR2_desc'] = '2-column HTML Block on the front page.<br /><img src="'.$siteurl.'/theme/edubs/doc/fp-block2.png" class="img-fluid rounded mt-3" />';
+
+    $string['HR3'] = '<div class="d-block text-center"><br /><br />Block #3</div>';
+    $string['HR3_desc'] = 'Call to action block on the front page.<br /><img src="'.$siteurl.'/theme/edubs/doc/fp-block6.jpg" class="img-fluid rounded mt-3" /><br /><br />If you want to add some custom CSS just override this class <strong>.s-special-box-bg-gradient</strong>';
+
+    $string['HR4'] = '<div class="d-block text-center"><br /><br />Block #4</div>';
+    $string['HR4_desc'] = 'Single Column HTML Block on the front page.<br /><img src="'.$siteurl.'/theme/edubs/doc/fp-block4.png" class="img-fluid rounded mt-3" />';
+
+    $string['HR5'] = '<div class="d-block text-center"><hr /><br /><br />Custom Alert</div>';
+    $string['HR5_desc'] = '';
+
+    $string['HR6'] = '<div class="d-block text-center"><br /><hr/><br />Custom CSS</div>';
+    $string['HR6_desc'] = '';
+
+    $string['HR7'] = '<div class="d-block text-center"><br /><hr/><br />Google Fonts</div>';
+    $string['HR7_desc'] = 'Google Fonts Properties. <br /><br /> Go to Google Fonts website to check all fonts library.<a href="https://fonts.google.com" target="_blank" class="my-2 mx-2 btn-secondary btn-sm d-inline">Google Fonts</a>';
+
+    $string['HR8'] = '<div class="d-block text-center"><br /><hr/><br />Custom Web Font</div>';
+    $string['HR8_desc'] = 'You can replace Google Fonts any fonts you want.';
+
+    $string['HR9'] = '<div class="d-block text-center"><hr/><br />List of team members</div>';
+    $string['HR9_desc'] = 'You can add up to 60 team members.';
+
+    $string['HR10'] = '<div class="d-block text-center"><br /><hr/><br />List of logotypes</div>';
+    $string['HR10_desc'] = 'You can add up to 30 logotypes.';
+
+    $string['HR11'] = '<div class="d-block text-center"><hr/><br />List of slides</div>';
+    $string['HR11_desc'] = 'You can add up to 10 slides.';
+
+
+    $string['HR12'] = '<div class="d-block text-center"><br /><hr/><br />Custom Navigation</div>';
+    $string['HR12_desc'] = 'Custom Navigation Block on the Sidebar. Custom Text Block on the Sidebar.<br /><img src="'.$siteurl.'/theme/edubs/doc/sidebar-customnav.png" class="img-fluid rounded mt-3" /><br /><br /><hr /><div class="small">You can also add additional navigation using in-build moodle field. <br /><strong><Go to:</strong> Dashboard → Site administration → Appearance → Themes → Theme settings → <strong>Scroll to:</strong> Custom menu items</div><br /><img src="'.$siteurl.'/theme/edubs/doc/sidebar-customnav-2.png" class="img-fluid rounded" />';
+
+    $string['HR13'] = '<div class="d-block text-center"><br /><hr/><br />Custom Text</div>';
+    $string['HR13_desc'] = 'Custom Text Block on the Sidebar.<br /><img src="'.$siteurl.'/theme/edubs/doc/sidebar-custom-html.png" class="img-fluid rounded mt-3" />';
+
+    $string['HR14'] = '<div class="d-block text-center"><br /><br />Categories</div>';
+    $string['HR14_desc'] = 'Single Column HTML Block on the front page.<br /><img src="'.$siteurl.'/theme/edubs/doc/fp-block6.png" class="img-fluid rounded mt-3" />';
+
+    $string['HR15'] = '<div class="d-block text-center"><br /><br />Sidebar</div>';
+    $string['HR15_desc'] = '<div class="small">You can add custom logo below or go to: Dashboard → Site administration → Appearance → Logos.</div><br /><img src="'.$siteurl.'/theme/edubs/doc/fp-block6.png" class="img-fluid rounded mt-3" />';
+
+    $string['HRLogo'] = '<div class="d-block text-center"><br /><br />Logotypes</div>';
+    $string['HRLogo_desc'] = 'You can add up to 30 logotypes on the front page.<br /><img src="'.$siteurl.'/theme/edubs/doc/fp-block-logos.png" class="img-fluid rounded mt-3" />';
+
+    $string['HRTeam'] = '<div class="d-block text-center"><br /><br />Team</div>';
+    $string['HRTeam_desc'] = 'You can add up to 60 team members on the front page. <br /><img src="'.$siteurl.'/theme/edubs/doc/fp-block-team.jpg" class="img-fluid rounded mt-3" />';
+
+    $string['HRTopBar'] = '<div class="d-block text-center"><hr /><br />Top Bar Text</div>';
+    $string['HRTopBar_desc'] = 'Custom text on the top bar.<br /><img src="'.$siteurl.'/theme/edubs/doc/topbar-info.png" class="img-fluid rounded mt-3" />';
+
+    $string['HRCustomNav'] = '<div class="d-block text-center"><br /><hr/><br />Custom Navigation</div>';
+    $string['HRCustomNav_desc'] = '<br />';
+
+    $string['HR16'] = '<div class="d-block text-center"><br /><hr/><br />More<br /></div>';
+    $string['HR16_desc'] = '<div class="small mb-0"><h5>Language menu:</h5><ul class="list-unstyled"><li>Go to: Dashboard → Site administration → Language → Language settings</li><li>Check: Display language menu</li><li>Save</li></ul></div><img src="'.$siteurl.'/theme/edubs/doc/topbar-lang.png" class="img-fluid rounded mt-3" /><br /><br /><div class="small mb-0"><h5>Search box:</h5><ul class="list-unstyled"><li>Go to: Dashboard → Site administration → Advanced features</li><li>Check Enable global search</li> <li>Save</li></ul></div><img src="'.$siteurl.'/theme/edubs/doc/topbar-search.png" class="img-fluid rounded mt-3" />';
+
+    $string['HR17'] = '<div class="d-block text-center"><br /><hr/><br />Fonts - Settings</div>';
+    $string['HR17_desc'] = 'Fonts Properties';
+
+    $string['HR18'] = '<div class="d-block text-center"><br /><hr/><br />Self-hosted Fonts<br /><br /><div class="small">Remember to add <strong>Font Name</strong> in <strong>Fonts - Settings</strong> section</div>';
+    $string['HR18_desc'] = '';
+
+    $string['HR19'] = '<div class="d-block text-center">Light</div>';
+    $string['HR19_desc'] = 'Self-hosted Fonts';
+
+    $string['HR20'] = '<div class="d-block text-center"><br /><hr class="hr-bold" /><br />Regular</div>';
+    $string['HR20_desc'] = 'Self-hosted Fonts';
+
+    $string['HR21'] = '<div class="d-block text-center"><br /><hr class="hr-bold" /><br />Medium</div>';
+    $string['HR21_desc'] = 'Self-hosted Fonts';
+
+    $string['HR22'] = '<div class="d-block text-center"><br /><hr class="hr-bold" /><br />Bold</div>';
+    $string['HR22_desc'] = 'Self-hosted Fonts';
+
+    $string['HR23'] = '<div class="d-block text-center"><hr /><br />Simple Front Page Builder</div>';
+    $string['HR23_desc'] = 'You can change position of each blocks on the front page.<br /><img src="'.$siteurl.'/theme/edubs/doc/simple-front-page-builder.png" class="img-fluid rounded mt-4" />';
+
+    $string['HR24'] = '<div class="d-block text-center"><br /><br />Top Bar Styles</div>';
+    $string['HR24_desc'] = '<br /><img src="'.$siteurl.'/theme/edubs/doc/topbar-styles.png" class="img-fluid rounded mt-3" />';
+
+    $string['HR25'] = '<div class="d-block text-center"><hr /><br />Sidebar Colors</div>';
+    $string['HR25_desc'] = '<br /><img src="'.$siteurl.'/theme/edubs/doc/sidebar-colors.png" class="img-fluid rounded mt-3" />';
+
+    $string['HR26'] = '<div class="d-block text-center"><hr /><br />Theme Colors</div>';
+    $string['HR26_desc'] = '<br /><img src="'.$siteurl.'/theme/edubs/doc/colors-blue-palette.png" class="img-fluid rounded mt-3" />';
+
+    $string['HR27'] = '<div class="d-block text-center"><hr /><br />Yellow - Default Palette</div>';
+    $string['HR27_desc'] = '<br /><img src="'.$siteurl.'/theme/edubs/doc/colors-yellow-palette.png" class="img-fluid rounded mt-3" />';
+
+    $string['HR28'] = '<div class="d-block text-center"><hr /><br />Green - Default Palette</div>';
+    $string['HR28_desc'] = '<br /><img src="'.$siteurl.'/theme/edubs/doc/colors-green-palette.png" class="img-fluid rounded mt-3" />';
+
+    $string['HR29'] = '<div class="d-block text-center"><hr /><br />Purple - Default Palette</div>';
+    $string['HR29_desc'] = '<br /><img src="'.$siteurl.'/theme/edubs/doc/colors-purple-palette.png" class="img-fluid rounded mt-3" />';
+
+    $string['HR30'] = '<div class="d-block text-center"><hr /><br />Red - Default Palette</div>';
+    $string['HR30_desc'] = '<br /><img src="'.$siteurl.'/theme/edubs/doc/colors-red-palette.png" class="img-fluid rounded mt-3" />';
+
+    $string['HR31'] = '<div class="d-block text-center"><hr /><br />Gray - Default Palette</div>';
+    $string['HR31_desc'] = '<br /><img src="'.$siteurl.'/theme/edubs/doc/colors-gray-palette.png" class="img-fluid rounded mt-3" />';
+
+    $string['HR32'] = '<div class="d-block text-center"><div class="d-block text-center"><br />Button Primary</div>';
+    $string['HR32_desc'] = '<br /><img src="'.$siteurl.'/theme/edubs/doc/colors-btn-primary.png" class="img-fluid rounded mt-3" /><br /><br /><small class="mr-2">Your button style (preview):</small> <div class="btn btn-primary">Button Primary</div>';
+
+    $string['HR33'] = '<div class="d-block text-center"><hr /><br />Button Secondary</div>';
+    $string['HR33_desc'] = '<br /><img src="'.$siteurl.'/theme/edubs/doc/colors-btn-secondary.png" class="img-fluid rounded mt-3" /><br /><br /><small class="mr-2">Your button style (preview):</small> <div class="btn btn-secondary">Button Secondary</div>';
+
+    $string['HR34'] = '<div class="d-block text-center"><hr /><br />Button Reset</div>';
+    $string['HR34_desc'] = '<br /><img src="'.$siteurl.'/theme/edubs/doc/colors-btn-reset.png" class="img-fluid rounded mt-3" /><br /><br /><small class="mr-2">Your button style (preview):</small> <div class="btn btn-reset">Button Reset</div>';
+
+    $string['HR35'] = '<div class="d-block text-center"><hr /><br />Button Special</div>';
+    $string['HR35_desc'] = '<br /><img src="'.$siteurl.'/theme/edubs/doc/colors-btn-special.png" class="img-fluid rounded mt-3" /><br /><br /><small class="mr-2">Your button style (preview):</small> <div class="btn btn-special">Button Special</div>';
+
+    $string['HR36'] = '<div class="d-block text-center"><hr /><br />Card</div>';
+    $string['HR36_desc'] = '<br /><img src="'.$siteurl.'/theme/edubs/doc/colors-card.png" class="img-fluid rounded mt-3" /><br /><br />';
+
+    $string['HR37'] = '<div class="d-block text-center"><hr /><br />Buttons - Customization</div><br /></div>';
+    $string['HR37_desc'] = '';
+
+    $string['HR38'] = '<div class="d-block text-center"><hr /><br /><br />Color Customization</div>';
+    $string['HR38_desc'] = '<br /><img src="'.$siteurl.'/theme/edubs/doc/colors-footer.png" class="img-fluid rounded mt-3" /><br /><br />';
+
+    $string['HR39'] = '<div class="d-block text-center"><hr /><br />List of items<br /></div>';
+    $string['HR39_desc'] = '';
+
+    $string['HR40'] = '<div class="d-block text-center"><hr /><br />Course card<br /></div>';
+    $string['HR40_desc'] = '<br /><img src="'.$siteurl.'/theme/edubs/doc/general-course-card.jpg" class="img-fluid rounded mt-3" /><br /><br />';
+
+    $string['HR41'] = '<div class="d-block text-center"><hr /><br />Typography Settings<br /><br /></div>';
+    $string['HR41_desc'] = '';
+
+    $string['HR42'] = '<div class="d-block text-center"><hr /><br /><small>Buttons and UI</small><br />General Settings</div>';
+    $string['HR42_desc'] = '';
+
+    $string['HR43'] = '<div class="d-block text-center"><hr /><br /><small>Theme Styles</small><br />Presets</div>';
+    $string['HR43_desc'] = 'Please contact me via <a href="https://themeforest.net/item/edubs-moodle-template/22579922/support" target="_blank">support page</a> if you need more details.';
+
+    $string['HR44'] = '<div class="d-block text-center">Hero Video</div>';
+    $string['HR44_desc'] = 'Please contact me via <a href="https://themeforest.net/item/edubs-moodle-template/22579922/support" target="_blank">support page</a> if you need help.';
+
+    $string['HR45'] = '<div class="d-block text-center"><hr /><br />Customization<br />Color and Font Size</div><br /><img src="'.$siteurl.'/theme/edubs/doc/hero-customization.jpg" class="img-fluid rounded mt-3" alt="Hero Image"/><br />';
+    $string['HR45_desc'] = '';
+
+    $string['HR46'] = '<br /><div class="d-block text-center">General<br />Front Page Blocks</div><br /><br />';
+    $string['HR46_desc'] = '';
+
+    $string['HR47'] = '<div class="d-block text-center"><hr /><br />Customization<br />Dropdown Menu</div>';
+    $string['HR47_desc'] = '<br /><img src="'.$siteurl.'/theme/edubs/doc/colors-dropdown.png" class="img-fluid rounded mt-3" /><br /><br />';
+
+    $string['HR48'] = '<div class="d-block text-center"><hr /><br />Additional Fonts<br />for different languages</div>';
+    $string['HR48_desc'] = '<br />';
+
+    $string['HR49'] = '<div class="d-block text-center"><hr /><br />Additional Fonts<br />for different languages</div>';
+    $string['HR49_desc'] = '<br />';
+
+    $string['HR50'] = '<div class="d-block text-center"><hr /><br />Custom Modal</div><br /><img src="'.$siteurl.'/theme/edubs/doc/custommodal.png" class="img-fluid rounded mt-3" alt="Custom Modal"/>';
+    $string['HR50_desc'] = '<br />';
+
+    $string['HR51'] = '<div class="d-block text-center"><hr /><br />Calendar Events Color</div><br /><img src="'.$siteurl.'/theme/edubs/doc/calendar.png" class="img-fluid rounded mt-3" alt="Custom Modal"/>';
+    $string['HR51_desc'] = '<br />';
+
+    $string['HR52'] = '<div class="d-block text-center"><hr /><br />Layout Breakpoints<br /><div class="badge badge-danger">Only for developers</div><br /></div>';
+    $string['HR52_desc'] = '';
+
+    $string['HRFooter'] = '<div class="d-block text-center"><hr /><br />Footer</div>';
+    $string['HRFooter_desc'] = '';
+
+    $string['bootswatch'] = 'Bootswatch';
+    $string['bootswatch_desc'] = 'A bootswatch is a set of Bootstrap variables and css to style Bootstrap';
+    $string['choosereadme'] = 'edubs offers you the best Moodle experience ever. Friendly user experience and modern design will take your moodle website to the next level.
+    <br>
+    <div class="alert alert-sm alert-info"><h6><strong>Important! Remember to clean global cache.</strong></h6>
+    <strong>Go to:</strong> Dashboard → Site administration → Development → Purge all cache</div>
+	<a class="btn btn-secondary" href="https://docs.edubs.rosea.io" target="_blank"><i class="fas fa-book mr-2"></i>  Documentation</a> <a class="mx-2 btn btn-secondary" href="https://themeforest.net/item/edubs-moodle-template/22579922/support" target="_blank"><i class="far fa-life-ring mr-2"></i>  Theme Support</a>';
+    $string['currentinparentheses'] = '(current)';
+    $string['configtitle'] = 'Edubs';
+    $string['nobootswatch'] = 'None';
+    $string['pluginname'] = 'Edubs';
+
+
+    $string['block1settings'] = 'Block #1';
+    $string['block2settings'] = 'Block #2';
+    $string['block3settings'] = 'Block #3';
+    $string['block4settings'] = 'Block #4';
+    $string['block5settings'] = 'Categories Block';
+
+    $string['showauthorinfo'] = '✓ Show Theme Author Info';
+    $string['showauthorinfo_desc'] = 'Uncheck if you want to hide theme author info - visible in HTML code.';
+
+    /***
+     *
+     *   Settings - Advanced
+     *
+     ***/
+    $string['privacy:metadata'] = 'The edubs theme does not store any personal data about any user.';
+    $string['rawscss'] = 'Raw SCSS';
+    $string['rawscss_desc'] = 'Use this field to provide SCSS or CSS code which will be injected at the end of the style sheet.';
+    $string['rawscsspre'] = 'Raw initial SCSS';
+    $string['rawscsspre_desc'] = 'In this field you can provide initialising SCSS code, it will be injected before everything else. Most of the time you will use this setting to define variables.';
+    $string['region-side-pre'] = 'Right';
+    $string['region-sidebar'] = 'Sidebar (Bottom)';
+    $string['region-sidebar-top'] = 'Sidebar (Top)';
+    $string['region-maintopwidgets'] = 'Main (top)';
+    $string['region-mainfwidgets'] = 'Main (bottom)';
+
+    $string['blockordersettings'] = 'Front Page Builder';
+
+    $string['loginpagesettings'] = 'Login Page';
+    $string['showlbg'] = '✓ Show Background Image';
+    $string['showlbg_desc'] = 'Turn on to show up background image on the login page';
+    $string['loginbg'] = 'Login Background Image';
+    $string['loginbg_desc'] = '<div class="badge badge-secondary">Recommended size: 1920x1080px</div><div class="badge badge-success"><strong>Remember</strong> to check the fied: <strong>"Show Background Image"</strong>.</div><hr class="hr-bold"/>';
+
+    $string['loginalignment'] = 'Login Box Position';
+    $string['loginalignment_desc'] = 'You can display the login box on the left, right or on the middle.';
+    $string['loginalignment-left'] = 'Left';
+    $string['loginalignment-center'] = 'Center';
+    $string['loginalignment-right'] = 'Right';
+
+    $string['customloginlogo'] = 'Custom Logo<br />on the Login Page';
+    $string['customloginlogo_desc'] = '<strong>Recommendation:</strong> SVG files or png files with transparent background.';
+
+    $string['hideforgotpassword'] = '× Hide Remember password Link';
+    $string['hideforgotpassword_desc'] = '';
+
+    $string['logininfobox'] = '(1) Additional Content<br />under password input field.';
+    $string['logininfobox_desc'] = 'Sample<br /><pre><code>&#x3C;div class=&#x22;mt-3&#x22;&#x3E;
+    &#x3C;p class=&#x22;small&#x22;&#x3E;Sample text&#x3C;/p&#x3E;
+&#x3C;/div&#x3E;</code></pre>';
+
+    $string['logininfobox2'] = '(2) Additional Content<br />bottom of the page.';
+    $string['logininfobox2_desc'] = 'Sample<br /><pre><code>&#x3C;div class=&#x22;mt-3&#x22;&#x3E;
+    &#x3C;p class=&#x22;small&#x22;&#x3E;Sample text&#x3C;/p&#x3E;
+&#x3C;/div&#x3E;</code></pre>';
+
+    $string['ShowLoader'] = 'Page loader';
+    $string['ShowLoader_desc'] = "Turn on page loader. The loader uses default primary color.";
+
+    $string['CustomWebFont'] = 'Use custom Web Font (not Google Fonts)';
+    $string['CustomWebFont_desc'] = "Turn on custom web font instead Google Fonts";
+    $string['CustomWebFontHTML'] = 'Custom Web Font HTML';
+    $string['CustomWebFontHTML_desc'] = "HTML code for custom web fonts.";
+
+    $string['googlefonturl'] = 'Google Font URL';
+    $string['googlefonturl_desc'] = "URL address should include https://<br />e.g with multiple font family:<br />https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:wght@400;500;700&display=swap";
+
+    $string['googlefontname'] = 'Font Name';
+    $string['googlefontname_desc'] = "<strong>Examples:</strong><br><strong>Google Fonts:</strong> 'Poppins', sans-serif<br><strong>Custom Font, Self Hosted Custom Font:</strong> 'Gotham'";
+
+    $string['fontweightlight'] = 'Font weight: Light';
+    $string['fontweightlight_desc'] = 'e.g 100, 200, 300';
+
+    $string['fontweightregular'] = 'Font weight: Regular';
+    $string['fontweightregular_desc'] = 'e.g 400';
+
+    $string['fontweightmedium'] = 'Font weight: Medium';
+    $string['fontweightmedium_desc'] = 'e.g 500, 600';
+
+    $string['fontweightbold'] = 'Font weight: Bold';
+    $string['fontweightbold_desc'] = 'e.g 700, 800, 900';
+
+    $string['fontcount'] = 'Number of Fonts';
+    $string['fontcount_desc'] = "<strong>Examples:</strong><br><strong>Google Fonts:</strong> 'Poppins', sans-serif<br><strong>Custom Font, Self Hosted Custom Font:</strong> 'Gotham'";
+
+    $string['morefonts'] = 'Add more fonts';
+    $string['morefonts_desc'] = '';
+
+    $string['additionalfontname'] = ' | Font family';
+    $string['additionalfontname_desc'] = '';
+
+    $string['langcode'] = ' | Language Code';
+    $string['langcode_desc'] = 'e.g: ru';
+
+    $string['additionalcustomfont'] = 'Additional custom font for language';
+    $string['additionalcustomfont_desc'] = 'If you want to use Google Fonts and additional custom font for e.g RTL language. <br />
+    <pre><code>    &#x3C;link rel=&#x22;stylesheet&#x22; href=&#x22;https://use.typekit.net/rwb4gjx.css&#x22;&#x3E;
+    &#x3C;style type=&#x22;text/css&#x22;&#x3E;
+    [lang=&#x22;ru&#x22;] body {
+        font-family: source-code-pro, monoedubs;
+    }
+    [lang=&#x22;fa&#x22;] body {
+        font-family: quicksand, sans-serif;
+    }
+    &#x3C;/style&#x3E;</code></pre>';
+
+    /***
+     *
+     *   Settings - General
+     *
+     ***/
+    $string['generalsettings'] = 'General';
+    $string['favicon'] = 'Custom favicon';
+    $string['favicon_desc'] = 'Upload your own favicon.  It should be an .ico file.';
+
+    $string['presetfiles'] = 'Additional theme preset files';
+    $string['presetfiles_desc'] = 'Preset files can be used to dramatically alter the appearance of the theme.';
+    $string['preset'] = 'Theme preset';
+    $string['preset_desc'] = 'Pick a preset to broadly change the look of the theme.';
+
+    $string['HVariable'] = '<div class="d-block text-center"><hr/><br />Colors Customization</div>';
+    $string['HVariable_desc'] = 'You can change few theme colors. You can also do this via custom CSS.<br />';
+
+    $string['brandcolorlvl1'] = 'Theme Color #1';
+    $string['brandcolorlvl1_desc'] = '<div class="small">E.g. <ul><li>Gradient (First color): Progress bar, Call to Action section background</li><li>First gradient color (special box on the bottom - on the front page).</li></ul></div>';
+
+    $string['brandcolorlvl2'] = 'Theme Color #2';
+    $string['brandcolorlvl2_desc'] = '<div class="small">E.g. <ul><li>Sidebar links hover.</li><li>First gradient color (special box on the bottom - on the front page).</li></ul></div>';
+
+    $string['brandcolorlvl3'] = 'Theme Color #3<br /><small>Primary Buttons</small>';
+    $string['brandcolorlvl3_desc'] = '<div class="small">E.g. <ul><li>Primary Button</li><li>Links color</li><li>Sidebar Links Hover Color</li><li>Second gradient color (special box on the bottom of front page).</li></ul></div>';
+
+    $string['brandcolorlvl4'] = 'Theme Color #4 <br /><small>Additional color</small>';
+    $string['brandcolorlvl4_desc'] = '<div class="small">E.g. <ul><li>Upload file container border and text color.</li></ul></div>';
+    $string['brandcolorlvl5'] = 'Theme Color #5 <br /><small>Additional color</small>';
+    $string['brandcolorlvl5_desc'] = '<div class="small">E.g. <ul><li>Info Alert - Background Color</li><li>Upload file box border color.</li><li>Info alert background color</li><li>Upload file container background color.</li></ul></div>';
+    $string['brandcolorlvl6'] = 'Theme Color #6<br /><small>Additional color</small>';
+    $string['brandcolorlvl6_desc'] = '<div class="small">Elements like badges, grading badges etc.</div>';
+
+    $string['redcolor'] = 'Red color';
+    $string['redcolor_desc'] = '<div class="small">E.g. <ul><li>Alert error</li><li>Button Reset (red one)</li><li>Label warning</li><li>Calendar - today day label backround</li><li>Notification and Messages Count Container Background</li></ul></div>';
+    $string['orangecolor'] = 'Orange color';
+    $string['orangecolor_desc'] = '<div class="small">E.g. <ul><li>Label warning</li></ul></div>';
+    $string['yellowcolor'] = 'Yellow color';
+    $string['yellowcolor_desc'] = '';
+    $string['greencolor'] = 'Green color';
+    $string['greencolor_desc'] = '<div class="small">E.g. <ul><li>Alert Done</li><li>Messages - Block (Right Sidebar)</li></ul></div>';
+    $string['purplecolor'] = 'Purple color';
+    $string['purplecolor_desc'] = '<div class="small">E.g. <ul><li>Button Special - Create account button color</li></ul></div>';
+
+    $string['sectionpadding'] = '<small>Front Page Blocks</small><br />Section Padding (top, bottom)';
+    $string['sectionpadding_desc'] = 'e.g 120px';
+
+    $string['sectionpaddingsm'] = '<small>Front Page Blocks</small><br />Mobile View<br />Section Padding (top, bottom)';
+    $string['sectionpaddingsm_desc'] = 'e.g 60px';
+
+
+    /***
+     *
+     *   Settings - Advanced settings tab
+     *
+     ***/
+    $string['advancedsettings'] = 'Advanced';
+    $string['googleanalytics'] = 'Google Analytics Code';
+    $string['googleanalytics_desc'] = 'Please enter your Google Analytics code to enable analytics on your website. The code format shold be like [UA-XXXXX-Y]';
 
 
 
-$string['welcome'] = 'Welcome Back, ';
-$string['sign'] = '!';
+    /***
+     *
+     *   Settings - Team on the Front Page
+     *
+     ***/
+    $string['teamsettings'] = 'Team';
+    $string['FPTeam'] = '✓ Turn on';
+    $string['FPTeam_desc'] = '';
+
+  	$string['teammemberno'] = 'Number of team members per row';
+  	$string['teammemberno_desc'] = '<div class="alert alert-sm alert-warning"><strong><a href="#page-footer">Save to apply changes ► </a><br /></strong> Select how many items you want to add then click SAVE to load the form input fields.</div>';
+
+    $string['FPTeamSubHeading'] = 'Section Subheading';
+    $string['FPTeamSubHeading_desc'] = '';
+
+    $string['FPTeamHeading'] = 'Section Title';
+    $string['FPTeamHeading_desc'] = '';
+
+    $string['FPTeamText'] = 'Section Description';
+    $string['FPTeamText_desc'] = '';
+
+    $string['teamcount'] = 'Number of team members';
+    $string['teamcount_desc'] = '<div class="alert alert-sm alert-warning"><strong><a href="#page-footer">Save to apply changes ► </a><br></strong> Select how many team members you want to add then click SAVE to load the form input fields.</div>';
+
+    $string['teamtext'] = ' | Team Member<br><strong>Description</strong>';
+    $string['teamtext_desc'] = '';
+
+    $string['teamimage'] = ' | Team Member<br><strong>Image</strong><br /><small>320x380</small>';
+    $string['teamimage_desc'] = '<div class="badge badge-warning">Team member picture is required</div>';
+
+    $string['teamname'] = ' | Team Member<br><strong>Name</strong>';
+    $string['teamname_desc'] = '';
+
+    $string['teamcustom'] = ' | Team Member<br><strong>Custom HTML</strong>';
+    $string['teamcustom_desc'] = 'Custom HTML Block for Team member.<br />Example: <pre><code>&#x3C;a href=&#x22;&#x22;&#x3E;&#x3C;i class=&#x22;fab fa-linkedin&#x22;&#x3E;&#x3C;/i&#x3E;&#x3C;/a&#x3E; &#x3C;a href=&#x22;&#x22;&#x3E;&#x3C;i class=&#x22;fab fa-twitter&#x22;&#x3E;&#x3C;/i&#x3E;&#x3C;/a&#x3E;</code></pre>';
+
+    $string['teamurl'] = ' | Team Member<br><strong>URL</strong>';
+    $string['teamurl_desc'] = 'Team member URL<br /><br /><br /><hr class="hr-bold" />';
+
+    $string['FPTeamFooterContent'] = '<small>Block Team</small><br />Footer Content';
+    $string['FPTeamFooterContent_desc'] = '';
+
+    $string['FPTeamIntroProperties'] = '<small>Block Team</small><br />Intro Block<br />Properties<br /><small>for developers</small>';
+    $string['FPTeamIntroProperties_desc'] = '<div class="badge badge-danger">Please, don\'t change it if you don\'t know CSS/Bootstrap</div><br />Code snippet: <pre>col-sm-11 col-md-8 col-lg-6 m-auto text-center</pre>';
+
+    $string['FPTeamFooterProperties'] = '<small>Team</small><br />Footer Content Block<br />Properties<br /><small>for developers</small>';
+    $string['FPTeamFooterProperties_desc'] = '<div class="badge badge-danger">Please, don\'t change it if you don\'t know CSS/Bootstrap</div><br />Code snippet: <pre>col-sm-11 col-md-8 col-lg-6 m-auto text-center</pre>';
+
+    $string['teamslider'] = 'Slider view';
+    $string['teamslider_desc'] = '';
+
+    $string['teamslidesperrow'] = 'Slides per row';
+    $string['teamslidesperrow_desc'] = 'Recommended: 1, 2, 3, max: 4.';
+
+    $string['sliderteamtextinterval'] = 'Slider interval';
+    $string['sliderteamtextinterval_desc'] = 'Units: 1000 -> 1s. Enable slider interval must be checked.';
+    $string['sliderteamintervalenabled'] = 'Enable slider interval';
+    $string['sliderteamintervalenabled_desc'] = '';
+    $string['sliderteamloop'] = 'Enable slider loop';
+    $string['sliderteamloop_desc'] = '';
+
+    /***
+     *
+     *   Settings - Slider Tab
+     *
+     ***/
+
+    $string['siemaSlidersettings'] = 'Hero Slider';
+    $string['sliderenabled'] = '✓ Turn on Slider';
+    $string['sliderenabled_desc'] = '';
+    $string['imgslidesonly'] = '✓ Images Only<br />(fully responsive)';
+    $string['imgslidesonly_desc'] = '';
+    $string['sliderfwenabled'] = 'Full width slider';
+    $string['sliderfwenabled_desc'] = 'Slider container will have full width instead of max-width: 1440px';
+    $string['sliderintervalenabled'] = 'Enable slider interval';
+    $string['sliderintervalenabled_desc'] = 'Turn on slider auto play.';
+    $string['sliderloop'] = 'Enable slider loop';
+    $string['sliderloop_desc'] = '';
+    $string['sliderclickable'] = 'Enable clickable slider';
+    $string['sliderclickable_desc'] = 'Each slide will be clickable.';
+    $string['rtlslider'] = 'Enable RTL Slider';
+    $string['rtlslider_desc'] = '';
+    $string['sliderinterval'] = 'Slider interval';
+    $string['sliderinterval_desc'] = 'Units: 1000 -> 1s. Enable slider interval must be checked.';
+    $string['sliderfrontpage'] = 'Show slideshow in frontpage';
+    $string['sliderfrontpage_desc'] = 'If enabled, the slideshow will be showed in the frontpage page replacing the header image.';
+    $string['slidercount'] = 'Slider count';
+    $string['slidercount_desc'] = '<div class="alert alert-sm alert-warning"><strong><a href="#page-footer">Save to apply changes ► </a><br /></strong> Select how many items you want to add then click SAVE to load the input fields.</div>';
+    $string['sliderimage'] = ' | Slider picture<br /><small>1320px x 600px</small>';
+    $string['sliderimage_desc'] = 'Add an image for your slide.';
+    $string['slidertitle'] = ' | Slide Title';
+    $string['slidertitle_desc'] = 'Add the slide\'s title.<br/>If you want to add URL just add <pre>&lt;a href="YOUR URL"&gt;LINK LABEL&lt;/a&gt;</pre>';
+    $string['slidersubtitle'] = ' | Slide Subtitle';
+    $string['slidersubtitle_desc'] = 'Add the slide\'s sub title.<br/>If you want to add URL just add <pre>&lt;a href="YOUR URL"&gt;LINK LABEL&lt;/a&gt;</pre>';
+    $string['slidercaption'] = ' | Slide Description';
+    $string['slidercaption_desc'] = 'Add a description for your slides.<br/>If you want to add buttons below just add this code:<br/><pre>&lt;div class="row mt-5 justify-content-center"&gt;
+    &lt;a href="http://LINK" class="my-2 mr-2 ml-2 btn btn-cta btn-cta--primary"&gt;Sign in&lt;/a&gt;
+    &lt;a href="https://LINK2" class="my-2 mr-2 ml-2 btn btn-cta btn-cta--secondary"&gt;But this theme&lt;/a&gt;
+&lt;/div&gt;</pre><br /><hr class="hr-bold" />';
+    $string['sliderurl'] = ' | Slide URL';
+    $string['sliderurl_desc'] = 'With https:// or http://';
+    $string['showherologo'] = '✓ Show logo on the frontpage';
+    $string['showherologo_desc'] = '<div class="alert alert-warning"><strong>Go to</strong> Dashboard → Site administration → Appearance → Logos. <br /><strong>Recommendation:</strong> Logo height: 120px</div>';
+
+    $string['heroboxshadow'] = 'Show Hero/Slider<br />Box Shadow';
+    $string['heroboxshadow_desc'] = '';
+
+    $string['heroimgonly'] = '✓ Hero Image Only (fully responsive)';
+    $string['heroimgonly_desc'] = '';
+
+    /***
+     *
+     *   Settings - Sidebar Tab
+     *
+     ***/
+    $string['sidebarsettings'] = '▐░ Sidebar';
+
+    $string['customlogosidebar'] = '✓ Custom sidebar logo';
+    $string['customlogosidebar_desc'] = 'Upload custom sidebar logo.<br><strong>Recommendation:</strong> SVG files or png files with transparent background.<br><strong>Logo width:</strong> 216px or double (432px) or triple (648px) of 216px for retina displays.';
+
+    $string['showsidebarlogo'] = '✓ Show logo on the sidebar';
+    $string['showsidebarlogo_desc'] = '';
+
+    $string['hiddensidebar'] = '✓ Hidden sidebar';
+    $string['hiddensidebar_desc'] = 'Force hidden sidebar.';
+
+    $string['showmycourses'] = '✓ Expand "My courses"';
+    $string['showmycourses_desc'] = 'Check this field if you want to have "My courses" menu expanded. <br /> To edit "My courses" menu go to Dashboard → Site administration → Appearance → Navigation';
+
+    $string['SidebarCustomBox'] = '✓ Turn on<br />Sidebar Custom Box';
+    $string['SidebarCustomBox_desc'] = 'Select to turn on Custom Sidebar Custom Box';
+    $string['SidebarCustomHeading'] = 'Sidebar Custom Heading';
+    $string['SidebarCustomHeading_desc'] = 'Sidebar Custom Heading';
+    $string['SidebarCustomText'] = 'Sidebar Custom Text';
+    $string['SidebarCustomText_desc'] = 'You can add whatever you want using HTML';
+
+    $string['SidebarButtonIconOpen'] = 'Sidebar Button Icon';
+    $string['SidebarButtonIconOpen_desc'] = 'Add class <strong>opened</strong>. You can use custom SVG icon or FontAwesome. More icons you can find here: <a href="https://fontawesome.com/icons">FontAwesome</a>';
+
+    $string['SidebarButtonIconClose'] = 'Sidebar Close Button Icon';
+    $string['SidebarButtonIconClose_desc'] = 'Add class <strong>closed</strong>. You can use custom SVG icon or FontAwesome. More icons you can find here: <a href="https://fontawesome.com/icons">FontAwesome</a>';
+
+
+    $string['customrooturl'] = 'Custom Root URL';
+    $string['customrooturl_desc'] = '';
+
+    $string['SidebarCustomNav'] = '✓ Turn on<br />Sidebar Custom Navigation';
+    $string['SidebarCustomNav_desc'] = 'Select to turn on Custom Sidebar Navigation Box';
+    $string['SidebarCustomNavTitle'] = 'Sidebar Custom Navigation Title';
+    $string['SidebarCustomNavTitle_desc'] = 'Heading for Custom Navigation Box';
+    $string['SidebarCustomNavigationLinks'] = 'Sidebar Custom Navigation Links';
+    $string['SidebarCustomNavigationLinks_desc'] = 'You can add custom navigation using HTML
+    <br><strong>Code snippet: </strong> <pre><code>&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;http://limonija.com&quot;&gt;Limonija &lt;i class=&quot;fas fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://rosea.io&quot;&gt;Rosea Themes &lt;i class=&quot;fas fa-external-link-alt&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>';
+
+    $string['SidebarCustomHTML'] = 'Additional HTML Block under sidebar logo';
+    $string['SidebarCustomHTML_desc'] = '';
+
+
+
+    /***
+     *
+     *   Settings - Hero Image
+     *
+     ***/
+    $string['frontpagesettings'] = 'Hero Image';
+    $string['herovideosettings'] = 'Hero Video';
+
+
+    /***
+     *
+     *   Hero
+     *
+     ***/
+    $string['heroimg'] = 'Hero Image<br /><span class="badge badge-secondary mx-0">1320px x 600px</span>';
+    $string['heroimg_desc'] = '';
+
+    $string['heroimgenabled'] = '✓ Turn on <br />Hero Image';
+    $string['heroimgenabled_desc'] = '';
+
+    $string['herofwenabled'] = 'Full width Hero Image';
+    $string['herofwenabled_desc'] = '';
+
+    $string['heroshadow'] = 'Show Solid Shadow<br />Behind Hero Image';
+    $string['heroshadow_desc'] = '';
+
+    $string['heroshadowtype'] = '<small>Shadow Behind</small><br />Hero Image<br />Image or Solid Background';
+    $string['heroshadowtype_desc'] = '';
+
+    $string['gradient'] = 'Gradient (default)';
+    $string['image'] = 'Image';
+
+    $string['heroshadowcolor1'] = '<small>Shadow Behind</small><br />Color #1';
+    $string['heroshadowcolor1_desc'] = '';
+
+    $string['heroshadowcolor2'] = '<small>Shadow Behind<br />Hero Image</small><br />Color #2';
+    $string['heroshadowcolor2_desc'] = '';
+
+    $string['heroshadowgradientdirection'] = '<small>Shadow Behind<br />Hero Image</small><br />Gradient Direction';
+    $string['heroshadowgradientdirection_desc'] = '';
+
+    $string['heroshadowimg'] = '<small>Shadow Behind<br />Hero Image</small><br />Image';
+    $string['heroshadowimg_desc'] = '';
+
+    $string['heroshadowimgproperties'] = '<small>Shadow Behind Hero Image</small><br />Image Properties';
+    $string['heroshadowimgproperties_desc'] = '';
+
+    $string['heroshadowtopmargin'] = '<small>Shadow Behind Hero Image</small><br />Top Margin';
+    $string['heroshadowtopmargin_desc'] = '';
+
+    $string['heroshadowheight'] = '<small>Shadow Behind Hero Image</small><br />Height';
+    $string['heroshadowheight_desc'] = '';
+
+    $string['herovideofwenabled'] = 'Full width Hero Video';
+    $string['herovideofwenabled_desc'] = '';
+
+    $string['herovideoenabled'] = 'Turn on Hero Video';
+    $string['herovideoenabled_desc'] = '<div class="badge badge-danger mb-2"><strong>Important</strong></div> You have to add: <strong>mp4, ogv, webm</strong> and <strong>hero image</strong> which will be a placeholder.';
+
+    $string['herovideomp4'] = '<small>Hero</small><br />Video Background<br />(mp4)';
+    $string['herovideomp4_desc'] = '';
+
+    $string['herovideowebm'] = '<small>Hero</small><br />Video Background<br />(webm)';
+    $string['herovideowebm_desc'] = '';
+
+    $string['herovideocontent'] = '<small>Hero</small><br />Video Content';
+    $string['herovideocontent_desc'] = '';
+
+    $string['HeroHeading'] = '<small>Hero</small><br />Title';
+    $string['HeroHeading_desc'] = 'CSS Class: <br /><div class="badge badge-light">.c-hero .h1, .c-hero-video .h1, .c-heroimg .h1</div>';
+
+    $string['HeroText'] = '<small>Hero</small><br />Description';
+    $string['HeroText_desc'] = 'CSS Class: <br /><div class="badge badge-light">.c-hero .h3, .c-hero-video .h3, .c-heroimg .h3</div>';
+
+    $string['HeroText2'] = '<small>Hero</small><br />Additional Heading';
+    $string['HeroText2_desc'] = 'CSS Class: <br /><div class="badge badge-light">.c-hero .h5, .c-hero-video .h5, .c-heroimg .h5</div>';
+
+    $string['HeroLabel'] = '<small>Hero</small><br />Button #1 <br />Label';
+    $string['HeroLabel_desc'] = '';
+
+    $string['HeroURL'] = '<small>Hero</small><br />Button #1<br />URL';
+    $string['HeroURL_desc'] = '';
+
+    $string['HeroLabel2'] = '<small>Hero</small><br />Button #2<br />Label';
+    $string['HeroLabel2_desc'] = '';
+
+    $string['HeroURL2'] = '<small>Hero</small><br />Button #2<br />URL';
+    $string['HeroURL2_desc'] = '';
+
+    $string['herocolor'] = '<small>Hero/Slider</small><br />Text Color';
+    $string['herocolor_desc'] = '';
+
+    $string['heroh1size'] = '<small>Hero/Slider</small><br />Title Size';
+    $string['heroh1size_desc'] = '';
+
+    $string['heroh3size'] = '<small>Hero/Slider</small><br />Content Size';
+    $string['heroh3size_desc'] = '';
+
+    $string['heroh5size'] = '<small>Hero/Slider</small><br />Subtitle Size';
+    $string['heroh5size_desc'] = '';
+
+    $string['HeroHTML'] = '<small>Hero</small><br />HTML';
+    $string['HeroHTML_desc'] = '';
+
+    $string['heromtop'] = '<small>Hero Image</small><br />Margin Top';
+    $string['heromtop_desc'] = '';
+
+    $string['herombottom'] = '<small>Hero Image</small><br />Margin Bottom';
+    $string['herombottom_desc'] = '';
+
+    $string['heroimageheightlg'] = '<small>Hero Image Height</small><br />Desktop View';
+    $string['heroimageheightlg_desc'] = '';
+
+    $string['heroimageheightmd'] = '<small>Hero Image Height</small><br />Tablet View';
+    $string['heroimageheightmd_desc'] = '';
+
+    $string['heroimageheightsm'] = '<small>Hero Image Height</small><br />Mobile View';
+    $string['heroimageheightsm_desc'] = '';
+
+
+    /***
+     *
+     *   Custom Categories Block
+     *
+     ***/
+    $string['FPHTMLCustomCategoryBlock'] = '✓ Turn on';
+    $string['FPHTMLCustomCategoryBlock_desc'] = '';
+
+    $string['FPHTMLCustomCategoryIcon'] = 'Icon';
+    $string['FPHTMLCustomCategoryIcon_desc'] = 'More icons you can find here: <a href="https://fontawesome.com/icons">FontAwesome</a>.
+    <br><strong>Code snippet:</strong> <pre><code>&lt;i class=&quot;fas fa-align-left m-b-2&quot;&gt;&lt;/i&gt;</code></pre>';
+
+    $string['FPHTMLCustomCategoryHeading'] = 'Heading';
+    $string['FPHTMLCustomCategoryHeading_desc'] = '';
+
+    $string['FPHTMLCustomCategoryContent'] = 'Content';
+    $string['FPHTMLCustomCategoryContent_desc'] = '';
+
+    $string['FPHTMLCustomCategoryBlockHTML1'] = '●○ Content Col #1<br /><sup>(left)</sup>';
+    $string['FPHTMLCustomCategoryBlockHTML1_desc'] = '<strong>First switch to HTML view.</strong><img src="https://moodle-themes.rosea.io/alpha/theme-assets/htmlview.png" class="mt-2 mb-4" width="300" /><br />
+    <br><strong>Code snippet: </strong> <pre><code>&lt;ul class=&quot;c-courses-list&quot;&gt;
+          &lt;li&gt;&lt;a href=&quot;course/view.php?id=9&quot;&gt;Celebrating Cultures&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;course/view.php?id=8&quot;&gt;Introduction to Open Education&lt;/a&gt;&lt;br&gt;&lt;span class=&quot;small&quot;&gt;&lt;i class=&quot;far fa-calendar-alt&quot;&gt;&lt;/i&gt; January - June  &lt;i class=&quot;m-l-1 fas fa-graduation-cap&quot;&gt;&lt;/i&gt; Teacher: Adam Smith&lt;/span&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;course/view.php?id=7&quot;&gt;Digital Literacy&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;course/view.php?id=6&quot;&gt;Celebrating Cultures&lt;/a&gt;&lt;br&gt;&lt;span class=&quot;small&quot;&gt;&lt;i class=&quot;far fa-calendar-alt&quot;&gt;&lt;/i&gt; January - June  &lt;i class=&quot;m-l-1 fas fa-graduation-cap&quot;&gt;&lt;/i&gt; Teacher: Adam Smith&lt;/span&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;course/view.php?id=9&quot;&gt;Celebrating Cultures&lt;/a&gt;&lt;br&gt;&lt;span class=&quot;small&quot;&gt;&lt;i class=&quot;far fa-calendar-alt&quot;&gt;&lt;/i&gt; January - June  &lt;i class=&quot;m-l-1 fas fa-graduation-cap&quot;&gt;&lt;/i&gt; Teacher: Adam Smith&lt;/span&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;course/view.php?id=8&quot;&gt;Introduction to Open Education&lt;/a&gt;&lt;br&gt;&lt;span class=&quot;small&quot;&gt;&lt;i class=&quot;far fa-calendar-alt&quot;&gt;&lt;/i&gt; January - June  &lt;i class=&quot;m-l-1 fas fa-graduation-cap&quot;&gt;&lt;/i&gt; Teacher: Adam Smith&lt;/span&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;course/view.php?id=7&quot;&gt;Digital Literacy&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;course/view.php?id=6&quot;&gt;Celebrating Cultures&lt;/a&gt;&lt;/li&gt;
+ &lt;/ul&gt;</code></pre>';
+
+    $string['FPHTMLCustomCategoryBlockHTML2'] = '○● Content Col #2<br /><sup>(right)</sup>';
+    $string['FPHTMLCustomCategoryBlockHTML2_desc'] = '<strong>First switch to HTML view.</strong><img src="https://moodle-themes.rosea.io/alpha/theme-assets/htmlview.png" class="mt-2 mb-4" width="300" /><br />
+    <br><strong>Code snippet: </strong> <pre><code>&lt;ul class=&quot;c-courses-list&quot;&gt;
+          &lt;li&gt;&lt;a href=&quot;course/view.php?id=9&quot;&gt;Celebrating Cultures&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;course/view.php?id=8&quot;&gt;Introduction to Open Education&lt;/a&gt;&lt;br&gt;&lt;span class=&quot;small&quot;&gt;&lt;i class=&quot;far fa-calendar-alt&quot;&gt;&lt;/i&gt; January - June  &lt;i class=&quot;m-l-1 fas fa-graduation-cap&quot;&gt;&lt;/i&gt; Teacher: Adam Smith&lt;/span&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;course/view.php?id=7&quot;&gt;Digital Literacy&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;course/view.php?id=6&quot;&gt;Celebrating Cultures&lt;/a&gt;&lt;br&gt;&lt;span class=&quot;small&quot;&gt;&lt;i class=&quot;far fa-calendar-alt&quot;&gt;&lt;/i&gt; January - June  &lt;i class=&quot;m-l-1 fas fa-graduation-cap&quot;&gt;&lt;/i&gt; Teacher: Adam Smith&lt;/span&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;course/view.php?id=9&quot;&gt;Celebrating Cultures&lt;/a&gt;&lt;br&gt;&lt;span class=&quot;small&quot;&gt;&lt;i class=&quot;far fa-calendar-alt&quot;&gt;&lt;/i&gt; January - June  &lt;i class=&quot;m-l-1 fas fa-graduation-cap&quot;&gt;&lt;/i&gt; Teacher: Adam Smith&lt;/span&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;course/view.php?id=8&quot;&gt;Introduction to Open Education&lt;/a&gt;&lt;br&gt;&lt;span class=&quot;small&quot;&gt;&lt;i class=&quot;far fa-calendar-alt&quot;&gt;&lt;/i&gt; January - June  &lt;i class=&quot;m-l-1 fas fa-graduation-cap&quot;&gt;&lt;/i&gt; Teacher: Adam Smith&lt;/span&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;course/view.php?id=7&quot;&gt;Digital Literacy&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;course/view.php?id=6&quot;&gt;Celebrating Cultures&lt;/a&gt;&lt;/li&gt;
+ &lt;/ul&gt;</code></pre>';
+
+    $string['FPHTMLCustomCategoryBlockHTML3'] = 'HTML Block<br /><small>Under the left side content</small>';
+    $string['FPHTMLCustomCategoryBlockHTML3_desc'] = 'You can add HTML block here. This block is not translatable.';
+
+
+
+    /***
+     *
+     *   HTML Block 1
+     *
+     ***/
+
+    $string['FPHTMLBlock1'] = '✓ Turn on';
+    $string['FPHTMLBlock1_desc'] = '';
+
+    $string['H2FPHTMLBlock1'] = '<div class="d-block text-center"><hr /><br />List of items</div>';
+    $string['H2FPHTMLBlock1_desc'] = 'up to 60 items. (4 per row)<br /><br /><div class="alert alert-sm alert-light text-left"><h4>Icons color</h4><p>If you want to change icons color you can do it via General Settings or via SASS (Advanced settings tab).</p>
+    <pre><code>.c-special-box-icon { background-color: #d5e7ff; width: 60px; height: 60px; border-radius: 10px; }<br />.c-special-box-icon i { color: #0972ff; }</code></pre>
+    <p>If you want to change color single element just add his ID (#block1-1, #block1-2, etc.) name e.g </p>
+    <pre><code>#block1-1 .c-special-box-icon { background-color: #d5e7ff; width: 60px; height: 60px; border-radius: 10px; }<br />#block1-1 .c-special-box-icon i { color: #0972ff; }</code></pre></div>';
+
+    $string['FPHTMLBlock1Count'] = 'Number of blocks';
+    $string['FPHTMLBlock1Count_desc'] = '<div class="alert alert-sm alert-warning"><strong><a href="#page-footer">Save to apply changes ► </a><br /></strong> Select how many items you want to add then click SAVE to load the input fields.</div>';
+
+    $string['FPHTMLBlock1Icon'] = ' | Icon';
+    $string['FPHTMLBlock1Icon_desc'] = 'Icon for Custom HTML Block.<br />More icons → <a href="https://fontawesome.com/icons?d=gallery&m=free" target="_blank">FontAwesome</a>.
+    <br /><strong>Example:</strong> <pre><code>&lt;i class=&quot;fas fa-bolt&quot;&gt;&lt;/i&gt;</code></pre><br />';
+
+    $string['FPHTMLBlock1IntroProperties'] = '<small>Block #1</small><br />Intro Block<br />Properties<br /><small>for developers</small>';
+    $string['FPHTMLBlock1IntroProperties_desc'] = '<div class="badge badge-danger">Please, don\'t change it if you don\'t know CSS/Bootstrap</div><br />Code snippet: <pre>col-sm-11 col-md-8 col-lg-6 m-auto text-center</pre>';
+
+    $string['FPHTMLBlock1ItemProperties'] = ' | Column Size<br />Properties<br /><small>for developers</small>';
+    $string['FPHTMLBlock1ItemProperties_desc'] = '<div class="badge badge-danger">Please, don\'t change it if you don\'t know CSS/Bootstrap</div><br />Code snippet: <pre>col-sm-11 col-md-6 col-lg-4 py-5 px-sm-3 px-md-5</pre>';
+
+    $string['FPHTMLBlock1ItemBlockProperties'] = ' | Block<br />Properties<br /><small>for developers</small>';
+    $string['FPHTMLBlock1ItemBlockProperties_desc'] = '<div class="badge badge-danger">Please, don\'t change it if you don\'t know CSS/Bootstrap</div><br />Code snippet: <pre>class="m-2 p-3" style="background: #ccc;"</pre>';
+
+
+    $string['FPHTMLBlock1Heading'] = ' | Heading';
+    $string['FPHTMLBlock1Heading_desc'] = '';
+
+    $string['FPHTMLBlock1Text'] = ' | Content';
+    $string['FPHTMLBlock1Text_desc'] = '';
+
+    $string['ShowFPBlock1Intro'] = '<small>Block #1</small><br />✓ Show Intro';
+    $string['ShowFPBlock1Intro_desc'] = '';
+
+    $string['FPBlock1Title'] = '<small>Block #1</small><br />Intro Block Title';
+    $string['FPBlock1Title_desc'] = '';
+
+    $string['FPBlock1Content'] = '<small>Block #1</small><br />Intro Content';
+    $string['FPBlock1Content_desc'] = '.';
+
+    $string['FPBlock1FooterContent'] = '<small>Block #1</small><br />Footer Content';
+    $string['FPBlock1FooterContent_desc'] = '.';
+
+    $string['fpblock1image'] = ' | Image';
+    $string['fpblock1image_desc'] = 'svg, png, jpg, gif';
+
+    /***
+     *
+     *   HTML Block 2
+     *
+     ***/
+    $string['FPHTMLBlock2'] = '✓ Turn on';
+    $string['FPHTMLBlock2_desc'] = '';
+
+    $string['FPHTMLBlock2Count'] = 'Number of blocks';
+    $string['FPHTMLBlock2Count_desc'] = '<div class="alert alert-sm alert-warning"><strong><a href="#page-footer">Save to apply changes ► </a><br /></strong> Select how many items you want to add then click SAVE to load the input fields.</div>';
+
+    $string['FPHTMLBlock2SubHeading'] = ' | Subheading';
+    $string['FPHTMLBlock2SubHeading_desc'] = '';
+
+    $string['FPHTMLBlock2Heading'] = ' | Heading';
+    $string['FPHTMLBlock2Heading_desc'] = '';
+
+    $string['FPHTMLBlock2ShowImage'] = ' | ✓ Show Image';
+    $string['FPHTMLBlock2ShowImage_desc'] = '';
+
+    $string['fpblock2image'] = ' | Image';
+    $string['fpblock2image_desc'] = 'svg, png, jpg, gif';
+
+    $string['FPHTMLBlock2Text'] = ' | Content';
+    $string['FPHTMLBlock2Text_desc'] = '';
+
+    $string['FPHTMLBlock2Label'] = ' | Link Label';
+    $string['FPHTMLBlock2Label_desc'] = '';
+
+    $string['FPHTMLBlock2URL'] = ' | Link URL';
+    $string['FPHTMLBlock2URL_desc'] = 'eg. http://sample.com';
+
+    $string['ShowFPBlock2Intro'] = '<small>Block #2</small><br />✓ Show intro';
+    $string['ShowFPBlock2Intro_desc'] = '';
+
+    $string['FPBlock2Title'] = '<small>Block #2</small><br />Section Title';
+    $string['FPBlock2Title_desc'] = '';
+
+    $string['FPBlock2Content'] = '<small>Block #2</small><br />Content';
+    $string['FPBlock2Content_desc'] = '';
+
+    $string['FPHTMLBlock2IntroProperties'] = '<small>Block #2</small><br />Intro Block<br />Properties<br /><small>for developers</small>';
+    $string['FPHTMLBlock2IntroProperties_desc'] = '<div class="badge badge-danger">Please, don\'t change it if you don\'t know CSS/Bootstrap</div><br />Code snippet: <pre>col-sm-11 col-md-8 col-lg-6 m-auto text-center</pre>';
+
+    $string['FPHTMLBlock2ItemProperties'] = ' | Column Size<br />Properties<br /><small>for developers</small>';
+    $string['FPHTMLBlock2ItemProperties_desc'] = '<div class="badge badge-danger">Please, don\'t change it if you don\'t know CSS/Bootstrap</div><br />Code snippet: <pre>col-sm-12 col-md-6 my-5 p-sm-3 p-md-5</pre>';
+
+    $string['FPHTMLBlock2ItemBlockProperties'] = ' | Block<br />Properties<br /><small>for developers</small>';
+    $string['FPHTMLBlock2ItemBlockProperties_desc'] = '<div class="badge badge-danger">Please, don\'t change it if you don\'t know CSS/Bootstrap</div><br />Code snippet: <pre>class="m-2 p-3" style="background: #ccc;"</pre>';
+
+    $string['FPBlock2FooterContent'] = '<small>Block #2</small><br />Footer Content';
+    $string['FPBlock2FooterContent_desc'] = '.';
+
+
+    /***
+     *
+     *   HTML Block 3
+     *
+     ***/
+
+    $string['FPHTMLBlock3'] = '✓ Turn on';
+    $string['FPHTMLBlock3_desc'] = '';
+
+    $string['FPHTMLBlock3Icon'] = '<small>Block #3</small><br /> Icon';
+    $string['FPHTMLBlock3Icon_desc'] = 'Add Icon #3 for Custom HTML Block on Left.<br>More icons you can find here: <a href="https://fontawesome.com/icons">FontAwesome</a>.
+    <br><strong>Code snippet: </strong> <pre><code>&lt;i class=&quot;fas fa-graduation-cap&quot;&gt;&lt;/i&gt;</code></pre>';
+
+    $string['FPHTMLBlock3Heading'] = '<small>Block #3</small><br /> Heading';
+    $string['FPHTMLBlock3Heading_desc'] = '';
+
+    $string['FPHTMLBlock3Text'] = '<small>Block #3</small><br /> Content';
+    $string['FPHTMLBlock3Text_desc'] = '';
+
+    $string['FPHTMLBlock3Label'] = '<small>Block #3</small><br /> Link Label';
+    $string['FPHTMLBlock3Label_desc'] = '';
+
+    $string['FPHTMLBlock3URL'] = '<small>Block #3</small><br />URL';
+    $string['FPHTMLBlock3URL_desc'] = 'Eg. http://sample.com';
+
+    $string['fphtmlblock3bgimg'] = 'Background';
+    $string['fphtmlblock3bgimg_desc'] = '<strong>Go to:</strong> Advanced → Raw SCSS<br /><br /><h6>Cover</h6><pre class="mb-4"><code>.s-special-box-bg-dark { background-size: cover; }</code></pre><h6>Repeatable background</h6><pre><code>.s-special-box-bg-dark { background-size: 24px; background-repeat: repeat; }</code></pre><br /><a href="https://www.w3schools.com/cssref/pr_background-image.asp"><h6>CSS background-image Property →</h6></a>';
+
+
+
+
+    /***
+     *
+     *   HTML Block 4
+     *
+     ***/
+
+    $string['FPHTMLBlock4'] = '✓ Turn on';
+    $string['FPHTMLBlock4_desc'] = '';
+    $string['FPHTMLBlock4Subheading'] = '<small>Block #4</small><br /> Subheading';
+    $string['FPHTMLBlock4Subheading_desc'] = '';
+
+    $string['FPHTMLBlock4Heading'] = '<small>Block #4</small><br /> Heading';
+    $string['FPHTMLBlock4Heading_desc'] = '';
+
+    $string['FPHTMLBlock4Text'] = '<small>Block #4</small><br /> Content';
+    $string['FPHTMLBlock4Text_desc'] = '';
+
+    $string['FPHTMLBlock4Content'] = '<small>Block #4</small><br /> HTML Content';
+    $string['FPHTMLBlock4Content_desc'] = '';
+
+    $string['FPHTMLBlock4Properties'] = '<small>Block #4</small><br />Intro Block<br />Properties<br /><small>for developers</small>';
+    $string['FPHTMLBlock4Properties_desc'] = '<div class="badge badge-danger">Please, don\'t change it if you don\'t know CSS/Bootstrap</div><br />Code snippet: <pre>col-sm-11 col-md-8 col-lg-6 m-auto text-center</pre>';
+
+
+    /***
+     *
+     *   Settings - Top Bar
+     *
+     ***/
+    $string['topbarsettings'] = 'Top Bar';
+
+    $string['topBarOffsetTop'] = 'Top Bar Offset';
+    $string['topBarOffsetTop_desc'] = '<div class="badge badge-danger">Default: 300, without any px, em etc - only numbers.</div>';
+
+    $string['ShowTopBarUserName'] = '✓ Show Top Bar User Name';
+    $string['ShowTopBarUserName_desc'] = 'Display your user name instead hidden user name inside dropdown.';
+    $string['TopBarText'] = 'Top Bar Text';
+    $string['TopBarText_desc'] = 'You can add custom text or html
+    <br><strong>Code snippet: </strong> <pre><code>&lt;i class=&quot;fas fa-phone&quot;&gt;&lt;/i&gt;&lt;strong&gt;Need help?&lt;/strong&gt; +48 888 932 322</code></pre>';
+    $string['customtopnavhtml'] = 'Custom Top Navigation #1 <br />(on the left)';
+    $string['customtopnavhtml_desc'] = '<img src="'.$siteurl.'/theme/edubs/doc/topbar-custom-nav-1.png" class="img-fluid rounded my-3" /> Example:<br /><pre><code>&#x3C;nav class=&#x22;navbar p-0&#x22;&#x3E;
+      &#x3C;ul class=&#x22;navbar-nav&#x22;&#x3E;
+        &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;YOUR_URL&#x22; target=&#x22;_blank&#x22;&#x3E;edubs Theme&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+        &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;YOUR_URL/course&#x22;&#x3E;Courses&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+        &#x3C;li class=&#x22;nav-item dropdown&#x22;&#x3E;
+          &#x3C;a class=&#x22;nav-link&#x22; href=&#x22;YOUR_URL&#x22; id=&#x22;navbarDropdown&#x22; role=&#x22;button&#x22; data-toggle=&#x22;dropdown&#x22; aria-haspopup=&#x22;true&#x22; aria-expanded=&#x22;false&#x22;&#x3E;Dropdown items&#x3C;/a&#x3E;
+          &#x3C;div class=&#x22;dropdown-menu dropdown-menu-light&#x22; aria-labelledby=&#x22;navbarDropdown&#x22;&#x3E;
+            &#x3C;h4  class=&#x22;dropdown-title&#x22;&#x3E;Premium Moodle Theme 2020&#x3C;/h4&#x3E;
+            &#x3C;a class=&#x22;dropdown-item&#x22; href=&#x22;YOUR_URL&#x22; target=&#x22;_blank&#x22;&#x3E;
+            &#x3C;div class=&#x22;d-inline-flex&#x22;&#x3E;
+                        &#x3C;div class=&#x22;mr-2&#x22;&#x3E;&#x3C;img src=&#x22;https://s3.envato.com/files/256976677/edubs-moodle-theme.png&#x22; class=&#x22;icon&#x22;&#x3E;&#x3C;/div&#x3E;
+                        &#x3C;div&#x3E;&#x3C;strong&#x3E;Moodle themes for beginners&#x3C;/strong&#x3E;&#x3C;br&#x3E;&#x3C;span&#x3E;Get this theme for just $80 + tax&#x3C;/span&#x3E;&#x3C;/div&#x3E;
+            &#x3C;/div&#x3E;
+            &#x3C;/a&#x3E;
+            &#x3C;div class=&#x22;dropdown-divider&#x22;&#x3E;&#x3C;/div&#x3E;
+                  &#x3C;h4  class=&#x22;dropdown-title&#x22;&#x3E;Need help?&#x3C;/h4&#x3E;
+                 &#x3C;a class=&#x22;dropdown-item&#x22; href=&#x22;YOUR_URL&#x22;&#x3E;Documentation&#x3C;/a&#x3E;
+                 &#x3C;a class=&#x22;dropdown-item&#x22; href=&#x22;YOUR_URL&#x22;&#x3E;Theme Support&#x3C;/a&#x3E;
+            &#x3C;/div&#x3E;
+        &#x3C;/li&#x3E;
+      &#x3C;/ul&#x3E;
+  &#x3C;/nav&#x3E;</code></pre><br />
+
+  <strong>With multiple submenus</strong>
+  <pre><code>                &#x3C;div id=&#x22;navbarNavDropdown&#x22;&#x3E;
+  &#x3C;ul class=&#x22;navbar-nav&#x22;&#x3E;
+      &#x3C;li class=&#x22;nav-item active&#x22;&#x3E;
+          &#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Home &#x3C;span class=&#x22;sr-only&#x22;&#x3E;(current)&#x3C;/span&#x3E;&#x3C;/a&#x3E;
+      &#x3C;/li&#x3E;
+      &#x3C;li class=&#x22;nav-item&#x22;&#x3E;
+          &#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Features&#x3C;/a&#x3E;
+      &#x3C;/li&#x3E;
+      &#x3C;li class=&#x22;nav-item&#x22;&#x3E;
+          &#x3C;a class=&#x22;nav-link&#x22; href=&#x22;#&#x22;&#x3E;Pricing&#x3C;/a&#x3E;
+      &#x3C;/li&#x3E;
+      &#x3C;li class=&#x22;nav-item dropdown&#x22;&#x3E;
+          &#x3C;a class=&#x22;nav-link dropdown-toggle&#x22; href=&#x22;#&#x22; id=&#x22;navbarDropdownMenuLink&#x22; data-toggle=&#x22;dropdown&#x22; aria-haspopup=&#x22;true&#x22; aria-expanded=&#x22;false&#x22;&#x3E;
+              Dropdown link
+          &#x3C;/a&#x3E;
+          &#x3C;ul class=&#x22;dropdown-menu&#x22; aria-labelledby=&#x22;navbarDropdownMenuLink&#x22;&#x3E;
+              &#x3C;li&#x3E;&#x3C;a class=&#x22;dropdown-item&#x22; href=&#x22;#&#x22;&#x3E;Action&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+              &#x3C;li&#x3E;&#x3C;a class=&#x22;dropdown-item&#x22; href=&#x22;#&#x22;&#x3E;Another action&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+              &#x3C;li&#x3E;&#x3C;a class=&#x22;dropdown-item dropdown-toggle&#x22; href=&#x22;#&#x22;&#x3E;Submenu&#x3C;/a&#x3E;
+                  &#x3C;ul class=&#x22;dropdown-menu&#x22;&#x3E;
+                      &#x3C;li&#x3E;&#x3C;a class=&#x22;dropdown-item&#x22; href=&#x22;#&#x22;&#x3E;Submenu action&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+                      &#x3C;li&#x3E;&#x3C;a class=&#x22;dropdown-item&#x22; href=&#x22;#&#x22;&#x3E;Another submenu action&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+
+
+                      &#x3C;li&#x3E;&#x3C;a class=&#x22;dropdown-item dropdown-toggle&#x22; href=&#x22;#&#x22;&#x3E;Subsubmenu&#x3C;/a&#x3E;
+                          &#x3C;ul class=&#x22;dropdown-menu&#x22;&#x3E;
+                              &#x3C;li&#x3E;&#x3C;a class=&#x22;dropdown-item&#x22; href=&#x22;#&#x22;&#x3E;Subsubmenu action aa&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+                              &#x3C;li&#x3E;&#x3C;a class=&#x22;dropdown-item&#x22; href=&#x22;#&#x22;&#x3E;Another subsubmenu action&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+                          &#x3C;/ul&#x3E;
+                      &#x3C;/li&#x3E;
+                      &#x3C;li&#x3E;&#x3C;a class=&#x22;dropdown-item dropdown-toggle&#x22; href=&#x22;#&#x22;&#x3E;Second subsubmenu&#x3C;/a&#x3E;
+                          &#x3C;ul class=&#x22;dropdown-menu&#x22;&#x3E;
+                              &#x3C;li&#x3E;&#x3C;a class=&#x22;dropdown-item&#x22; href=&#x22;#&#x22;&#x3E;Subsubmenu action bb&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+                              &#x3C;li&#x3E;&#x3C;a class=&#x22;dropdown-item&#x22; href=&#x22;#&#x22;&#x3E;Another subsubmenu action&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+                          &#x3C;/ul&#x3E;
+                      &#x3C;/li&#x3E;
+                  &#x3C;/ul&#x3E;
+              &#x3C;/li&#x3E;
+              &#x3C;li&#x3E;&#x3C;a class=&#x22;dropdown-item dropdown-toggle&#x22; href=&#x22;#&#x22;&#x3E;Submenu 2&#x3C;/a&#x3E;
+                  &#x3C;ul class=&#x22;dropdown-menu&#x22;&#x3E;
+                      &#x3C;li&#x3E;&#x3C;a class=&#x22;dropdown-item&#x22; href=&#x22;#&#x22;&#x3E;Submenu action 2&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+                      &#x3C;li&#x3E;&#x3C;a class=&#x22;dropdown-item&#x22; href=&#x22;#&#x22;&#x3E;Another submenu action 2&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+
+
+                      &#x3C;li&#x3E;&#x3C;a class=&#x22;dropdown-item dropdown-toggle&#x22; href=&#x22;#&#x22;&#x3E;Subsubmenu&#x3C;/a&#x3E;
+                          &#x3C;ul class=&#x22;dropdown-menu&#x22;&#x3E;
+                              &#x3C;li&#x3E;&#x3C;a class=&#x22;dropdown-item&#x22; href=&#x22;#&#x22;&#x3E;Subsubmenu action 1 3&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+                              &#x3C;li&#x3E;&#x3C;a class=&#x22;dropdown-item&#x22; href=&#x22;#&#x22;&#x3E;Another subsubmenu action 2 3&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+                          &#x3C;/ul&#x3E;
+                      &#x3C;/li&#x3E;
+                      &#x3C;li&#x3E;&#x3C;a class=&#x22;dropdown-item dropdown-toggle&#x22; href=&#x22;#&#x22;&#x3E;Second subsubmenu 3&#x3C;/a&#x3E;
+                          &#x3C;ul class=&#x22;dropdown-menu&#x22;&#x3E;
+                              &#x3C;li&#x3E;&#x3C;a class=&#x22;dropdown-item&#x22; href=&#x22;#&#x22;&#x3E;Subsubmenu action 3 &#x3C;/a&#x3E;&#x3C;/li&#x3E;
+                              &#x3C;li&#x3E;&#x3C;a class=&#x22;dropdown-item&#x22; href=&#x22;#&#x22;&#x3E;Another subsubmenu action 3&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+                          &#x3C;/ul&#x3E;
+                      &#x3C;/li&#x3E;
+                  &#x3C;/ul&#x3E;
+              &#x3C;/li&#x3E;
+          &#x3C;/ul&#x3E;
+      &#x3C;/li&#x3E;
+  &#x3C;/ul&#x3E;
+&#x3C;/div&#x3E;</code></pre>
+  <hr class="hr-bold" />';
+
+    $string['topbarstyle'] = 'Top Bar Style';
+    $string['topbarstyle_desc'] = '';
+    $string['customlogotopbar'] = '✓ Top Bar Logo';
+    $string['customlogotopbar_desc'] = '';
+    $string['mobiletopbarlogo'] = '✓ Mobile<br />Top Bar Logo';
+    $string['mobiletopbarlogo_desc'] = '';
+    /***
+     *
+     *   Settings - Custom Nav
+     *
+     ***/
+
+    $string['ShowCustomNav'] = '★ Custom Top Navigation #2';
+    $string['ShowCustomNav_desc'] = 'Select to trun on custom navigation on the top bar.<br /><img src="'.$siteurl.'/theme/edubs/doc/topbar-custom-nav.png" class="img-fluid rounded mt-3" />';
+
+    $string['CustomNavIcon'] = 'Custom Navigation Icon';
+    $string['CustomNavIcon_desc'] = '<br><strong>Code snippet: </strong><pre><code>&#x3C;i class=&#x22;fas fa-list-ul&#x22;&#x3E;&#x3C;/i&#x3E;&#x3C;span class=&#x22;c-custom-nav-btn--text&#x22;&#x3E;Menu&#x3C;/span&#x3E;</code></pre>You can change the icon of the custom navigation button.<br>More icons you can find here: <a href="https://fontawesome.com/icons">FontAwesome</a>';
+    $string['CustomNavHTML'] = 'Custom Navigation HTML';
+    $string['CustomNavHTML_desc'] = '<strong>Code snippet: </strong> <pre><code>&lt;ul class=&quot;c-custom-nav-container&quot;&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;fas fa-box-open&quot;&gt;&lt;/i&gt;&lt;span class=&quot;nav-label&quot;&gt;Courses list&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;fas fa-flag-checkered&quot;&gt;&lt;/i&gt;&lt;span class=&quot;nav-label&quot;&gt;Courses list&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;fab fa-slack&quot;&gt;&lt;/i&gt;&lt;span class=&quot;nav-label&quot;&gt;Courses list&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;i class=&quot;far fa-calendar-alt&quot;&gt;&lt;/i&gt;&lt;span class=&quot;nav-label&quot;&gt;Courses list&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre><br>More icons you can find here: <a href="https://fontawesome.com/icons">FontAwesome</a>';
+    $string['ExtraCustomNavHTML'] = 'Extra Custom Navigation HTML';
+    $string['ExtraCustomNavHTML_desc'] = 'You can add custom text simple string or html
+    <br><strong>Code snippet: </strong> <pre><code>&lt;h4 class=&quot;c-custom-nav-extra-title&quot;&gt;External resources &lt;i class=&quot;fas fa-external-link-square-alt&quot;&gt;&lt;/i&gt;&lt;/h4&gt;
+&lt;ul class=&quot;c-custom-nav-extra-container&quot;&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;nav-label&quot;&gt;Get this theme&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;nav-label&quot;&gt;Get this theme&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;&lt;span class=&quot;nav-label&quot;&gt;Get this theme&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre><br>More icons you can find here: <a href="https://fontawesome.com/icons">FontAwesome</a>';
+
+
+    /***
+     *
+     *   Settings - Logotypes on the Front Page
+     *
+     ***/
+    $string['logossettings'] = 'Logotypes';
+    $string['FPLogos'] = '✓ Turn on';
+    $string['FPLogos_desc'] = '';
+
+    $string['ShowFPLogosIntro'] = '<small>Block Logotypes</small><br />✓ Show intro';
+    $string['ShowFPLogosIntro_desc'] = '';
+
+    $string['FPLogosSubHeading'] = '<small>Block Logotypes</small><br />Section Subheading';
+    $string['FPLogosSubHeading_desc'] = '';
+
+    $string['FPLogosHeading'] = '<small>Block Logotypes</small><br />Section Title';
+    $string['FPLogosHeading_desc'] = '';
+
+    $string['FPLogosText'] = '<small>Block Logotypes</small><br />Section Description';
+    $string['FPLogosText_desc'] = '';
+
+    $string['logosperrow'] = 'Logotypes per row';
+    $string['logosperrow_desc'] = 'Default: 6 per row';
+
+    $string['FPLogosProperties'] = '<small>Block Logotypes</small><br />Intro Block<br />Properties<br /><small>for developers</small>';
+    $string['FPLogosProperties_desc'] = '<div class="badge badge-danger">Please, don\'t change it if you don\'t know CSS/Bootstrap</div><br />Code snippet: <pre>col-sm-11 col-md-8 col-lg-6 m-auto text-center</pre>';
+
+    $string['logoscount'] = 'Number of logotypes';
+    $string['logoscount_desc'] = '<div class="alert alert-sm alert-warning"><strong><a href="#page-footer">Save to apply changes ► </a><br></strong> Select how many logotypes you want to add then click SAVE to load the input fields.</div>';
+
+    $string['logosimage'] = ' | Logo<br /><small>280 × 150</small>';
+    $string['logosimage_desc'] = '<div class="badge badge-warning">Logotype image is required</div>';
+
+    $string['logosurl'] = ' | <strong>URL</strong><br /><small>Logo</small>';
+    $string['logosurl_desc'] = 'If you want to have active logotypes just add a website URL.';
+
+    $string['logosname'] = ' | Title for Browsers (alt)<br /><small>Logo</small>';
+    $string['logosname_desc'] = 'Logotype title for better SEO - this title will be visable only for web browsers.<br /><br /><br /><hr class="hr-bold" />';
+
+    $string['FPLogosFooterContent'] = '<small>Block Logotypes</small><br />Footer Content';
+    $string['FPLogosFooterContent_desc'] = '.';
+
+    $string['logosslider'] = 'Slider view';
+    $string['logosslider_desc'] = '';
+
+    $string['logosslidesperrow'] = 'Slides per row';
+    $string['logosslidesperrow_desc'] = 'max: 4<br /><hr class="hr-bold" />';
+
+
+    /***
+     *
+     *   Settings - Footer
+     *
+     ***/
+    $string['footersettings'] = 'Footer';
+    $string['footercustomnav'] = 'Custom Navigation';
+    $string['footercustomnav_desc'] = '<strong>First switch to HTML view.</strong><img src="https://moodle-themes.rosea.io/alpha/theme-assets/htmlview.png" class="mt-2 mb-4" width="300" /><br /> You can add multi-column navigation or whatever else you want. <br /><img src="'.$siteurl.'/theme/edubs/doc/footer-customnav.png" class="img-fluid rounded mt-3 mb-4" /><br /><strong>Example:</strong><pre><code>&#x3C;div class=&#x22;c-footer-nav row text-sm-center text-md-left&#x22;&#x3E;
+            &#x3C;div class=&#x22;col-sm-12 col-md-6 col-lg mb-sm-4 mb-lg-0&#x22;&#x3E;
+                &#x3C;h4 class=&#x22;c-footer-list-item-header&#x22;&#x3E;Company&#x3C;/h4&#x3E;
+                &#x3C;ul class=&#x22;c-footer-list&#x22;&#x3E;
+                    &#x3C;li&#x3E;
+                        &#x3C;a href=&#x22;#&#x22;&#x3E;About Us&#x3C;/a&#x3E;
+                    &#x3C;/li&#x3E;
+                    &#x3C;li&#x3E;
+                        &#x3C;a href=&#x22;#&#x22;&#x3E;Blog&#x3C;/a&#x3E;
+                    &#x3C;/li&#x3E;
+                    &#x3C;li&#x3E;
+                        &#x3C;a href=&#x22;#&#x22;&#x3E;FAQ&#x3C;/a&#x3E;
+                    &#x3C;/li&#x3E;
+                    &#x3C;li&#x3E;
+                        &#x3C;a href=&#x22;#&#x22;&#x3E;Contact&#x3C;/a&#x3E;
+                    &#x3C;/li&#x3E;
+                    &#x3C;li&#x3E;
+                        &#x3C;a href=&#x22;#&#x22;&#x3E;Help&#x3C;/a&#x3E;
+                    &#x3C;/li&#x3E;
+                &#x3C;/ul&#x3E;
+            &#x3C;/div&#x3E;
+            &#x3C;div class=&#x22;col-sm-12 col-md-6 col-lg mb-sm-4 mb-lg-0&#x22;&#x3E;
+                &#x3C;h4 class=&#x22;c-footer-list-item-header&#x22;&#x3E;Products&#x3C;/h4&#x3E;
+                &#x3C;ul class=&#x22;c-footer-list&#x22;&#x3E;
+                    &#x3C;li&#x3E;
+                        &#x3C;a href=&#x22;#&#x22;&#x3E;Parents&#x3C;/a&#x3E;
+                    &#x3C;/li&#x3E;
+                    &#x3C;li&#x3E;
+                        &#x3C;a href=&#x22;#&#x22;&#x3E;Schools&#x3C;/a&#x3E;
+                    &#x3C;/li&#x3E;
+                    &#x3C;li&#x3E;
+                        &#x3C;a href=&#x22;#&#x22;&#x3E;Partners&#x3C;/a&#x3E;
+                    &#x3C;/li&#x3E;
+                &#x3C;/ul&#x3E;
+            &#x3C;/div&#x3E;
+            &#x3C;div class=&#x22;col-sm-12 col-md-6 col-lg mb-sm-4 mb-lg-0&#x22;&#x3E;
+                &#x3C;h4 class=&#x22;c-footer-list-item-header&#x22;&#x3E;Legal&#x3C;/h4&#x3E;
+                &#x3C;ul class=&#x22;c-footer-list&#x22;&#x3E;
+                    &#x3C;li&#x3E;
+                        &#x3C;a href=&#x22;#&#x22;&#x3E;Privacy Policy&#x3C;/a&#x3E;
+                    &#x3C;/li&#x3E;
+                    &#x3C;li&#x3E;
+                        &#x3C;a href=&#x22;#&#x22;&#x3E;Terms of Service&#x3C;/a&#x3E;
+                    &#x3C;/li&#x3E;
+                &#x3C;/ul&#x3E;
+            &#x3C;/div&#x3E;
+            &#x3C;div class=&#x22;col-sm-12 col-md-6 col-lg mb-sm-4 mb-lg-0&#x22;&#x3E;
+                &#x3C;h4 class=&#x22;c-footer-list-item-header&#x22;&#x3E;Office&#x3C;/h4&#x3E;
+                &#x3C;ul class=&#x22;c-footer-list&#x22;&#x3E;
+                    &#x3C;li&#x3E;
+                        &#x3C;p&#x3E;
+                            Victoria Garden City, Lagos
+                        &#x3C;/p&#x3E;
+                    &#x3C;/li&#x3E;
+                    &#x3C;li&#x3E;
+                        1234 Fruitvale Avenue, Oakland,
+                        Califonia, USA.
+                    &#x3C;/li&#x3E;
+                &#x3C;/ul&#x3E;
+            &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;</code></pre>';
+    $string['showsociallist'] = 'Display footer social list';
+    $string['showsociallist_desc'] = 'Check this field to show up social icons list.<br /><img src="'.$siteurl.'/theme/edubs/doc/footer-social.png" class="img-fluid rounded mt-3" />';
+    $string['website'] = 'Website Title';
+    $string['website_desc'] = 'Main company Website Title';
+    $string['cwebsiteurl'] = 'Website URL';
+    $string['cwebsiteurl_desc'] = 'Main company Website';
+    $string['CustomFooterText'] = 'Custom Footer Text';
+    $string['CustomFooterText_desc'] = 'You can add custom footer content with html tags.<br /><img src="'.$siteurl.'/theme/edubs/doc/footer-text.png" class="img-fluid rounded mt-3" />';
+    $string['copyrightText'] = 'Copyright Text';
+    $string['copyrightText_desc'] = 'Add copyright text e.g All rights reserved or leave this field empty.';
+    $string['mobile'] = 'Mobile';
+    $string['mobile_desc'] = 'Enter Mobile Number';
+    $string['mail'] = 'E-Mail';
+    $string['mail_desc'] = 'Enter E-Mail ID';
+    $string['facebook'] = 'Facebook URL';
+    $string['facebook_desc'] = 'Enter the URL of your Facebook. (i.e http://www.facebook.com/moodlehq)';
+    $string['customsocialicon'] = 'More icons';
+    $string['customsocialicon_desc'] = '<br>More icons you can find here: <a href="https://fontawesome.com/icons">FontAwesome</a>.
+    <br><strong>Code snippet: </strong> <pre><code>&#x3C;li class=&#x22;list-inline-item&#x22;&#x3E;
+&#x9;&#x3C;a href=&#x22;http://YOUR-URL)&#x22; target=&#x22;_blank&#x22;&#x3E;
+&#x9;&#x9;&#x3C;i class=&#x22;fab fa-github&#x22;&#x3E;&#x3C;/i&#x3E;
+&#x9;&#x3C;/a&#x3E;
+&#x3C;/li&#x3E;
+&#x3C;li class=&#x22;list-inline-item&#x22;&#x3E;
+&#x9;&#x3C;a href=&#x22;http://YOUR-URL)&#x22; target=&#x22;_blank&#x22;&#x3E;
+&#x9;&#x9;&#x3C;i class=&#x22;fab fa-whatsapp&#x22;&#x3E;&#x3C;/i&#x3E;
+&#x9;&#x3C;/a&#x3E;
+&#x3C;/li&#x3E;</code></pre>';
+    $string['twitter'] = 'Twitter URL';
+    $string['twitter_desc'] = 'Enter the URL of your twitter. (i.e http://www.twitter.com/moodlehq)';
+    $string['googleplus'] = 'Google Plus URL';
+    $string['googleplus_desc'] = 'Enter the URL of your Google Plus. (i.e http://www.googleplus.com/moodlehq)';
+    $string['linkedin'] = 'Linkedin URL';
+    $string['linkedin_desc'] = 'Enter the URL of your Linkedin. (i.e http://www.linkedin.com/moodlehq)';
+    $string['youtube'] = 'Youtube URL';
+    $string['youtube_desc'] = 'Enter the URL of your Youtube. (i.e https://www.youtube.com/user/moodlehq)';
+    $string['instagram'] = 'Instagram URL';
+    $string['instagram_desc'] = 'Enter the URL of your Instagram. (i.e https://www.instagram.com/moodlehq)';
+    $string['CustomAlert'] = 'Custom Alert';
+    $string['CustomAlert_desc'] = 'Turn on custom alert. Show up once per session. You can use it as cookie alert. <br /><img src="'.$siteurl.'/theme/edubs/doc/customalert.png" class="img-fluid rounded mt-3" alt="Custom Alert" />';
+    $string['CustomAlertContent'] = 'Custom alert content';
+    $string['CustomAlertContent_desc'] = 'Content inside the custom alert.';
+    $string['CustomAlertButton'] = 'Custom Alert Button<br /><small>Icon or Text</small>';
+    $string['CustomAlertButton_desc'] = '<strong>Button with label</strong><br /><pre><code>&#x3C;span class=&#x22;px-2&#x22;&#x3E;Accept&#x3C;/span&#x3E;</code></pre><br /><strong>Icon</strong><pre><code>&#x3C;i class=&#x22;fas fa-times&#x22; &#x3E;&#x3C;/i&#x3E;</code></pre>';
+
+
+    $string['CustomModal'] = 'Custom Modal';
+    $string['CustomModal_desc'] = 'Turn on custom Modal Window.';
+    $string['CustomModalContent'] = 'Custom Modal Window<br />Content';
+    $string['CustomModalContent_desc'] = '';
+    $string['CustomModalContentHTML'] = 'Custom Modal Window<br />HTML Content';
+    $string['CustomModalContentHTML_desc'] = '';
+
+    $string['footerbg'] = 'Footer<br /><small>Background Color</small>';
+    $string['footerbg_desc'] = '';
+
+    $string['footertextcolor'] = 'Footer<br /><small>Text Color</small>';
+    $string['footertextcolor_desc'] = '';
+
+    $string['footernavigationheading'] = 'Footer Navigation<br /><small>Heading Color</small>';
+    $string['footernavigationheading_desc'] = '';
+
+    $string['footernavigationlinkcolor'] = 'Footer Navigation <br /><small>Link Color</small>';
+    $string['footernavigationlinkcolor_desc'] = '';
+
+    $string['footernavigationlinkcolorhover'] = 'Footer Navigation<br /><small>Link Color</small><br /><small>On Hover</small>';
+    $string['footernavigationlinkcolorhover_desc'] = '';
+
+    $string['footernavigationborder'] = 'Footer<br /><small>Border Color</small>';
+    $string['footernavigationborder_desc'] = '';
+
+
+
+    $string['CustomWebFontSH'] = 'Use custom Web Font (self-hosted)';
+    $string['CustomWebFontSH_desc'] = '';
+
+    $string['customfontlightname'] = 'Custom Font Name (light)';
+    $string['customfontlightname_desc'] = '';
+    $string['customfontlighteot'] = 'light (*.eot)';
+    $string['customfontlighteot_desc'] = '';
+    $string['customfontlightwoff'] = 'light (*.woff)';
+    $string['customfontlightwoff_desc'] = '';
+    $string['customfontlightwoff2'] = 'light (*.woff2)';
+    $string['customfontlightwoff2_desc'] = '';
+    $string['customfontlightttf'] = 'light (*.ttf)';
+    $string['customfontlightttf_desc'] = '';
+    $string['customfontlightsvg'] = 'light (*.svg)';
+    $string['customfontlightsvg_desc'] = '';
+
+    $string['customfontregularname'] = 'Custom Font Name (regular)';
+    $string['customfontregularname_desc'] = '';
+    $string['customfontregulareot'] = 'regular (*.eot)';
+    $string['customfontregulareot_desc'] = '';
+    $string['customfontregularwoff'] = 'regular (*.woff)';
+    $string['customfontregularwoff_desc'] = '';
+    $string['customfontregularwoff2'] = 'regular (*.woff2)';
+    $string['customfontregularwoff2_desc'] = '';
+    $string['customfontregularttf'] = 'regular (*.ttf)';
+    $string['customfontregularttf_desc'] = '';
+    $string['customfontregularsvg'] = 'regular (*.svg)';
+    $string['customfontregularsvg_desc'] = '';
+
+    $string['customfontmediumname'] = 'Custom Font Name (medium)';
+    $string['customfontmediumname_desc'] = '';
+    $string['customfontmediumeot'] = 'medium (*.eot)';
+    $string['customfontmediumeot_desc'] = '';
+    $string['customfontmediumwoff'] = 'medium (*.woff)';
+    $string['customfontmediumwoff_desc'] = '';
+    $string['customfontmediumwoff2'] = 'medium (*.woff2)';
+    $string['customfontmediumwoff2_desc'] = '';
+    $string['customfontmediumttf'] = 'medium (*.ttf)';
+    $string['customfontmediumttf_desc'] = '';
+    $string['customfontmediumsvg'] = 'medium (*.svg)';
+    $string['customfontmediumsvg_desc'] = '';
+
+    $string['customfontboldname'] = 'Custom Font Name (bold)';
+    $string['customfontboldname_desc'] = '';
+    $string['customfontboldeot'] = 'bold (*.eot)';
+    $string['customfontboldeot_desc'] = '';
+    $string['customfontboldwoff'] = 'bold (*.woff)';
+    $string['customfontboldwoff_desc'] = '';
+    $string['customfontboldwoff2'] = 'bold (*.woff2)';
+    $string['customfontboldwoff2_desc'] = '';
+    $string['customfontboldttf'] = 'bold (*.ttf)';
+    $string['customfontboldttf_desc'] = '';
+    $string['customfontboldsvg'] = 'bold (*.svg)';
+    $string['customfontboldsvg_desc'] = '';
+
+
+    $string['slotblock1'] = 'Block #1';
+    $string['slotblock1_desc'] = '';
+
+    $string['slotblock2'] = 'Block #2';
+    $string['slotblock2_desc'] = '';
+
+    $string['slotblock3'] = 'Block #3';
+    $string['slotblock3_desc'] = '';
+
+    $string['slotblock4'] = 'Block #4';
+    $string['slotblock4_desc'] = '';
+
+    $string['slotblock6'] = 'Categories Block';
+    $string['slotblock6_desc'] = '';
+
+    $string['slotblock7'] = 'Block Logotypes';
+    $string['slotblock7_desc'] = '';
+
+    $string['slotblock5'] = 'Block Team';
+    $string['slotblock5_desc'] = '';
+
+    $string['slotblock8'] = 'Main Moodle Block';
+    $string['slotblock8_desc'] = 'E.g Available courses, Course categories and more default blocks.<br /><br />';
+
+    $string['slotblock9'] = 'Hero Image';
+    $string['slotblock9_desc'] = '';
+
+    $string['slotblock10'] = 'Block FAQ';
+    $string['slotblock10_desc'] = '';
+
+    $string['slotblock11'] = 'Block #11<br /><small>Course List</small>';
+    $string['slotblock11_desc'] = '';
+
+    $string['slotblock12'] = 'Testimonials';
+    $string['slotblock12_desc'] = '';
+
+    $string['slotblock13'] = 'Hero Slider';
+    $string['slotblock13_desc'] = '';
+
+    $string['slotblock14'] = 'Hero Video';
+    $string['slotblock14_desc'] = '';
+
+    $string['showfpblock1hr'] = 'Show Block #1<br />Bottom separator';
+    $string['showfpblock1hr_desc'] = '';
+
+    $string['showfpblock2hr'] = 'Show Block #2<br />Bottom separator';
+    $string['showfpblock2hr_desc'] = '';
+
+    $string['showfpblock4hr'] = 'Show Block #4<br />Bottom separator';
+    $string['showfpblock4hr_desc'] = '';
+
+    $string['showfpblock6hr'] = 'Show Block #5 - Categories Block<br />Bottom separator';
+    $string['showfpblock6hr_desc'] = '';
+
+    $string['showfpblock7hr'] = 'Show Block Logotypes<br />Bottom separator';
+    $string['showfpblock7hr_desc'] = '';
+
+    $string['showfpblockteamhr'] = 'Show Block Team<br />Bottom separator';
+    $string['showfpblockteamhr_desc'] = '';
+
+    $string['showfpblock8hr'] = 'Show Main Moodle Block<br />Bottom separator';
+    $string['showfpblock8hr_desc'] = '';
+
+    $string['showfpblock10hr'] = 'Show FAQ<br />Bottom separator';
+    $string['showfpblock10hr_desc'] = '';
+
+    $string['showfpblock11hr'] = 'Show Course list<br />Bottom separator';
+    $string['showfpblock11hr_desc'] = '<br />';
+
+    $string['showfpblock12hr'] = 'Show Testimonials<br />Bottom separator';
+    $string['showfpblock12hr_desc'] = '<br />';
+
+    $string['showfpblock12hr'] = 'Show Testimonials<br />Bottom separator';
+    $string['showfpblock12hr_desc'] = '';
+
+    $string['hintro'] = '<div class="d-block text-center"><br /><br /><b>Edubs Moodle Theme</b><br /><br/>';
+    $string['hintro_desc'] = '<div class="col-sm-12 col-md-8 my-sm-2 my-md-5 mx-auto"><a class="btn btn-secondary mb-1" href="https://docs.edubs.rosea.io" target="_blank"><i class="fas fa-book mr-2"></i>  Documentation</a>
+    <a class="mx-2 mb-1 btn btn-secondary" href="https://themeforest.net/item/edubs-moodle-template/22579922/support" target="_blank"><i class="far fa-life-ring mr-2"></i>  Theme Support</a></div><hr /></div>';
+
+
+
+
+    $string['white'] = 'White';
+    $string['white_desc'] = '';
+
+    $string['black'] = 'Black';
+    $string['black_desc'] = '';
+
+    $string['gray100'] = 'Gray 100';
+    $string['gray100_desc'] = '';
+
+    $string['gray200'] = 'Gray 200';
+    $string['gray200_desc'] = '';
+
+    $string['gray300'] = 'Gray 300';
+    $string['gray300_desc'] = '';
+
+    $string['gray400'] = 'Gray 400';
+    $string['gray400_desc'] = '';
+
+    $string['gray500'] = 'Gray 500';
+    $string['gray500_desc'] = '';
+
+    $string['gray600'] = 'Gray 600';
+    $string['gray600_desc'] = '';
+
+    $string['gray700'] = 'Gray 700';
+    $string['gray700_desc'] = '';
+
+    $string['gray800'] = 'Gray 800';
+    $string['gray800_desc'] = '';
+
+    $string['gray900'] = 'Gray 900';
+    $string['gray900_desc'] = '';
+
+
+
+    $string['themecolor1'] = 'Theme Color 1';
+    $string['themecolor1_desc'] = '';
+
+    $string['themecolor2'] = 'Theme Color 2';
+    $string['themecolor2_desc'] = '';
+
+    $string['themecolor3'] = 'Theme Color 3';
+    $string['themecolor3_desc'] = '';
+
+    $string['themecolor4'] = 'Theme Color 4';
+    $string['themecolor4_desc'] = '';
+
+    $string['themecolor5'] = 'Theme Color 5';
+    $string['themecolor5_desc'] = '';
+
+    $string['themecolor6'] = 'Theme Color 6';
+    $string['themecolor6_desc'] = '';
+
+    $string['themecolor7'] = 'Theme Color 7';
+    $string['themecolor7_desc'] = '';
+
+    $string['themecolor8'] = 'Theme Color 8';
+    $string['themecolor8_desc'] = '';
+
+    $string['themecolor9'] = 'Theme Color 9';
+    $string['themecolor9_desc'] = '';
+
+
+
+
+    $string['btnborderwidth'] = 'Button Border Width<br /><small>For all buttons and input fields</small>';
+    $string['btnborderwidth_desc'] = '<strong>Default:</strong> 1px';
+
+    $string['btnborderradius'] = 'Button Radius<br /><small>For all buttons and input fields</small>';
+    $string['btnborderradius_desc'] = '<strong>Default:</strong> 5px. <strong>Fully-rounded:</strong> 25px';
+
+    $string['btnprimarybg'] = '<small>Button Primary</small><br />Background';
+    $string['btnprimarybg_desc'] = '';
+
+    $string['btnprimarybghover'] = '<small>Button Primary</small><br />Background<br />(hover)';
+    $string['btnprimarybghover_desc'] = '';
+
+    $string['btnprimaryborder'] = '<small>Button Primary</small><br />Border Color';
+    $string['btnprimaryborder_desc'] = '';
+
+    $string['btnprimaryborderhover'] = '<small>Button Primary</small><br />Border Color<br />(hover)';
+    $string['btnprimaryborderhover_desc'] = '';
+
+    $string['btnprimarytext'] = '<small>Button Primary</small><br />Text Color';
+    $string['btnprimarytext_desc'] = '';
+
+    $string['btnprimarytexthover'] = '<small>Button Primary</small><br />Text Color<br />(hover)';
+    $string['btnprimarytexthover_desc'] = '';
+
+    $string['btnprimaryshadow'] = '<small>Button Primary</small><br />Shadow Color';
+    $string['btnprimaryshadow_desc'] = '';
+
+
+
+
+    $string['btnsecondarybg'] = '<small>Button Secondary</small><br />Background';
+    $string['btnsecondarybg_desc'] = '';
+
+    $string['btnsecondarybghover'] = '<small>Button Secondary</small><br />Background<br />(hover)';
+    $string['btnsecondarybghover_desc'] = '';
+
+    $string['btnsecondaryborder'] = '<small>Button Secondary</small><br />Border Color';
+    $string['btnsecondaryborder_desc'] = '';
+
+    $string['btnsecondaryborderhover'] = '<small>Button Secondary</small><br />Border Color<br />(hover)';
+    $string['btnsecondaryborderhover_desc'] = '';
+
+    $string['btnsecondarytext'] = '<small>Button Secondary</small><br />Text Color';
+    $string['btnsecondarytext_desc'] = '';
+
+    $string['btnsecondarytexthover'] = '<small>Button Secondary</small><br />Text Color<br />(hover)';
+    $string['btnsecondarytexthover_desc'] = '';
+
+    $string['btnsecondaryshadow'] = '<small>Button Secondary</small><br />Shadow Color';
+    $string['btnsecondaryshadow_desc'] = '';
+
+
+
+
+    $string['btnresetbg'] = '<small>Button Reset</small><br />Background';
+    $string['btnresetbg_desc'] = '';
+
+    $string['btnresetbghover'] = '<small>Button Reset</small><br />Background<br />(hover)';
+    $string['btnresetbghover_desc'] = '';
+
+    $string['btnresetborder'] = '<small>Button Reset</small><br />Border Color';
+    $string['btnresetborder_desc'] = '';
+
+    $string['btnresetborderhover'] = '<small>Button Reset</small><br />Border Color<br />(hover)';
+    $string['btnresetborderhover_desc'] = '';
+
+    $string['btnresettext'] = '<small>Button Reset</small><br />Text Color';
+    $string['btnresettext_desc'] = '';
+
+    $string['btnresettexthover'] = '<small>Button Reset</small><br />Text Color<br />(hover)';
+    $string['btnresettexthover_desc'] = '';
+
+    $string['btnresetshadow'] = '<small>Button Reset</small><br />Shadow Color';
+    $string['btnresetshadow_desc'] = '';
+
+
+
+
+    $string['btnspecialbg'] = '<small>Button Special</small><br />Background';
+    $string['btnspecialbg_desc'] = '';
+
+    $string['btnspecialbghover'] = '<small>Button Special</small><br />Background<br />(hover)';
+    $string['btnspecialbghover_desc'] = '';
+
+    $string['btnspecialborder'] = '<small>Button Special</small><br />Border Color';
+    $string['btnspecialborder_desc'] = '';
+
+    $string['btnspecialborderhover'] = '<small>Button Special</small><br />Border Color<br />(hover)';
+    $string['btnspecialborderhover_desc'] = '';
+
+    $string['btnspecialtext'] = '<small>Button Special</small><br />Text Color';
+    $string['btnspecialtext_desc'] = '';
+
+    $string['btnspecialtexthover'] = '<small>Button Special</small><br />Text Color<br />(hover)';
+    $string['btnspecialtexthover_desc'] = '';
+
+    $string['btnspecialshadow'] = '<small>Button Special</small><br />Shadow Color';
+    $string['btnspecialshadow_desc'] = '';
+
+
+
+
+    $string['dropdownbg'] = 'Dropdown<br />Background Color';
+    $string['dropdownbg_desc'] = '';
+
+    $string['dropdowntext'] = 'Dropdown<br />Text';
+    $string['dropdowntext_desc'] = '';
+
+    $string['dropdowndividerbg'] = 'Dropdown<br />Divider';
+    $string['dropdowndividerbg_desc'] = '';
+
+    $string['dropdownlinkcolor'] = 'Dropdown<br />Link Color';
+    $string['dropdownlinkcolor_desc'] = '';
+
+    $string['dropdownlinkhovercolor'] = 'Dropdown<br />Link Color (on hover)';
+    $string['dropdownlinkhovercolor_desc'] = '';
+
+    $string['dropdownlinkhoverbg'] = 'Dropdown<br />Link Background (on hover)';
+    $string['dropdownlinkhoverbg_desc'] = '';
+
+    $string['dropdownlinkactivecolor'] = 'Dropdown<br />Link Color (active)';
+    $string['dropdownlinkactivecolor_desc'] = '';
+
+    $string['dropdownlinkactivebg'] = 'Dropdown<br />Link Background (active)';
+    $string['dropdownlinkactivebg_desc'] = '';
+
+    $string['dropdownheadercolor'] = 'Dropdown<br />Header Color';
+    $string['dropdownheadercolor_desc'] = '';
+
+    $string['dropdownshadow'] = 'Dropdown<br />Shadow Color';
+    $string['dropdownshadow_desc'] = '';
+
+
+
+    $string['bodybg'] = 'Body Background Color';
+    $string['bodybg_desc'] = '';
+
+    $string['bodycolor'] = 'Body Text Color';
+    $string['bodycolor_desc'] = '';
+
+    $string['bodycolorsecondary'] = 'Body Text Color (secondary, lighter)';
+    $string['bodycolorsecondary_desc'] = '';
+
+    $string['bodycolorlight'] = 'Body Text Color (lightest)';
+    $string['bodycolorlight_desc'] = '';
+
+    $string['linkcolor'] = 'Link Color';
+    $string['linkcolor_desc'] = '';
+
+    $string['linkhovercolor'] = 'Link Color (on hover)';
+    $string['linkhovercolor_desc'] = '';
+
+    $string['bordercolor'] = 'Border Color<br /><small>(global, e.g: hr, box borders etc)</small>';
+    $string['bordercolor_desc'] = '';
+
+
+    //Cards
+    $string['cardtext'] = 'Card Text';
+    $string['cardtext_desc'] = '';
+
+    $string['cardbg'] = 'Card Background';
+    $string['cardbg_desc'] = '';
+
+    $string['cardtitle'] = 'Card Title';
+    $string['cardtitle_desc'] = '';
+
+    $string['cardtext'] = 'Card Text';
+    $string['cardtext_desc'] = '';
+
+
+
+
+
+
+    $string['drawerbg'] = 'Sidebar Background';
+    $string['drawerbg_desc'] = '';
+
+    $string['drawernavboxbg'] = 'Navigation Box Background';
+    $string['drawernavboxbg_desc'] = '';
+
+    $string['drawernavboxshadow'] = 'Navigation Box Shadow';
+    $string['drawernavboxshadow_desc'] = '';
+
+    $string['drawernavitemicon'] = 'Navigation Item Icon';
+    $string['drawernavitemicon_desc'] = '';
+
+    $string['drawernavitemiconactive'] = 'Navigation Item Icon (active)';
+    $string['drawernavitemiconactive_desc'] = '';
+
+    $string['drawernavitemiconhover'] = 'Navigation Item Icon (hover)';
+    $string['drawernavitemiconhover_desc'] = '';
+
+    $string['drawernavitemtextcolor'] = 'Navigation Item Color';
+    $string['drawernavitemtextcolor_desc'] = '';
+
+    $string['drawernavitemtextcoloractive'] = 'Navigation Item Color (active)';
+    $string['drawernavitemtextcoloractive_desc'] = '';
+
+    $string['drawernavitemtextcolorhover'] = 'Navigation Item Color (hover)';
+    $string['drawernavitemtextcolorhover_desc'] = '';
+
+    $string['drawernavitemactive'] = 'Navigation Item Background (active)';
+    $string['drawernavitemactive_desc'] = '';
+
+    $string['drawernavitemhover'] = 'Navigation Item Background (hover)';
+    $string['drawernavitemhover_desc'] = '';
+
+    $string['drawernavitemiconopacity'] = 'Navigation Item Icon Color (opacity)';
+    $string['drawernavitemiconopacity_desc'] = 'From: 0.0 to 1';
+
+    $string['drawerheading'] = 'Sidebar Heading';
+    $string['drawerheading_desc'] = '';
+
+    $string['drawertext'] = 'Sidebar Text';
+    $string['drawertext_desc'] = '';
+
+    $string['drawerlink'] = 'Sidebar Link';
+    $string['drawerlink_desc'] = '';
+
+    $string['drawerlinkhover'] = 'Sidebar Link Hover';
+    $string['drawerlinkhover_desc'] = '';
+
+    $string['drawerlinkhoverbg'] = 'Sidebar Link Hover Background';
+    $string['drawerlinkhoverbg_desc'] = '';
+
+    $string['drawerhr'] = 'Sidebar Border/Separator';
+    $string['drawerhr_desc'] = '';
+
+    $string['drawerwidth'] = 'Drawer Width';
+    $string['drawerwidth_desc'] = '';
+
+    $string['drawernaviconfontsize'] = 'Drawer Navigation Font Size';
+    $string['drawernaviconfontsize_desc'] = '';
+
+    $string['drawernaviconsize'] = 'Drawer Navigation Icon Size';
+    $string['drawernaviconsize_desc'] = '';
+
+    $string['drawernaviconwidth'] = 'Drawer Navigation Icon Width';
+    $string['drawernaviconwidth_desc'] = '';
+
+
+    $string['caleventcategorycolor'] = '<small>Calendar Event </small><br />Category Color';
+    $string['caleventcategorycolor_desc'] = '';
+
+    $string['caleventgroupecolor'] = '<small>Calendar Event </small><br />Groupe Color';
+    $string['caleventgroupecolor_desc'] = '';
+
+    $string['caleventglobalcolor'] = '<small>Calendar Event </small><br />Global Color';
+    $string['caleventglobalcolor_desc'] = '';
+
+    $string['caleventusercolor'] = '<small>Calendar Event </small><br />User Color';
+    $string['caleventusercolor_desc'] = '';
+
+    $string['caleventcoursecolor'] = '<small>Calendar Event </small><br />Course Color';
+    $string['caleventcoursecolor_desc'] = '';
+
+
+
+    //Course Card
+    $string['cardimgheight'] = 'Course Card<br />Image Height';
+    $string['cardimgheight_desc'] = '<span class="badge badge-secondary"><strong>Example:</strong> 220px</span><br /><br />How to translate <strong>"Get access"</strong>? <a href="http://docs.edubs.rosea.io/docs/translations/" target="_blank" class="badge badge-link badge-light">Documentation →</a>';
+
+    $string['coursecarddescheight'] = 'Course Card<br />Description<br />Content Height';
+    $string['coursecarddescheight_desc'] = '<span class="badge badge-secondary"><strong>Example:</strong> 160px</span>';
+
+    $string['borderradius'] = '<small>Global</small><br />UI Elements Radius';
+    $string['borderradius_desc'] = '<span class="badge badge-secondary"><strong>Example:</strong> 5px</span>';
+
+    $string['gridbreakpointlg'] = '<small>Breakpoint</small><br />Desktop';
+    $string['gridbreakpointlg_desc'] = '<span class="badge badge-secondary"><strong>Example:</strong> 1400px</span>';
+
+    $string['gridbreakpointmd'] = '<small>Breakpoint</small><br />Tablet';
+    $string['gridbreakpointmd_desc'] = '<span class="badge badge-secondary"><strong>Example:</strong> 1024px</span>';
+
+    $string['gridbreakpointsm'] = '<small>Breakpoint</small><br />Mobile';
+    $string['gridbreakpointsm_desc'] = '<span class="badge badge-secondary"><strong>Example:</strong> 767px</span>';
+
+    $string['fontsizelg'] = '<small>Body</small><br />Font size<br />(large)';
+    $string['fontsizelg_desc'] = '<span class="badge badge-secondary"><strong>Example:</strong> 0.875rem</span>';
+
+    $string['fontsizebase'] = '<small>Body</small><br />Font size<br />(base)';
+    $string['fontsizebase_desc'] = '<span class="badge badge-secondary"><strong>Example:</strong> 1rem</span>';
+
+    $string['fontsizesm'] = '<small>Body</small><br />Font size<br />small)';
+    $string['fontsizesm_desc'] = '<span class="badge badge-secondary"><strong>Example:</strong> 0.875rem</span>';
+
+    $string['fontsizexs'] = '<small>Body</small><br />Font size<br />(extra small)';
+    $string['fontsizexs_desc'] = '<span class="badge badge-secondary"><strong>Example:</strong> 0.75rem</span>';
+
+    $string['h2fontsize'] = 'Heading (h2)';
+    $string['h2fontsize_desc'] = '<span class="badge badge-secondary"><strong>Example:</strong> 1.75rem</span>';
+
+    $string['h3fontsize'] = 'Heading (h3)';
+    $string['h3fontsize_desc'] = '<span class="badge badge-secondary"><strong>Example:</strong> 1.5rem</span>';
+
+    $string['h4fontsize'] = 'Heading (h4)';
+    $string['h4fontsize_desc'] = '<span class="badge badge-secondary"><strong>Example:</strong> 1.12.15rem</span>';
+
+    $string['h5fontsize'] = 'Heading (h5)';
+    $string['h5fontsize_desc'] = '<span class="badge badge-secondary"><strong>Example:</strong> 1.05rem</span>';
+
+    $string['h6fontsize'] = 'Heading (h6)';
+    $string['h6fontsize_desc'] = '<span class="badge badge-secondary"><strong>Example:</strong> 0.875rem</span>';
+
+    /***
+     *
+     *   HTML Block 10
+     *
+     ***/
+    $string['block10settings'] = 'FAQ';
+    $string['hfpblock10'] = '<br />FAQ';
+    $string['hfpblock10_desc'] = '<strong>FAQ block</strong>. You can add up to 60 questions and answers.<br /><br /><img src="'.$siteurl.'/theme/edubs/doc/edubs-settings-block10.png" class="img-fluid rounded mt-4" />';
+
+    $string['fpblock10'] = '✓ Turn on';
+    $string['fpblock10_desc'] = '';
+
+    $string['showfpblock10intro'] = '✓ Show intro';
+    $string['showfpblock10intro_desc'] = 'Turn on Show intro contains section title and introduction text.';
+
+    $string['fpblock10title'] = 'Section Title';
+    $string['fpblock10title_desc'] = 'Add section introduction title.';
+
+    $string['fpblock10content'] = 'Description';
+    $string['fpblock10content_desc'] = 'Section description.';
+
+    $string['h2fpblock10'] = '<hr /><br />List of questions';
+    $string['h2fpblock10_desc'] = 'You can add up to 60 FAQ fields.';
+
+    $string['fpblock10count'] = 'Number of FAQ blocks';
+    $string['fpblock10count_desc'] = 'Up to 60 questions. <br /><div class="alert alert-warning"><strong><a href="#page-footer">Save to apply changes ► </a><br /></strong> Select how many items you want to add then click SAVE to load the input fields.</div>';
+
+    $string['fpblock10question'] = ' | Question';
+    $string['fpblock10question_desc'] = '';
+
+    $string['fpblock10answer'] = ' | Answer';
+    $string['fpblock10answer_desc'] = 'Content<br /><br /><br /><hr class="hr-bold" />';
+
+    $string['block10footercontent'] = '<small>Block FAQ</small><br />Footer Content';
+    $string['block10footercontent_desc'] = '.';
+
+    $string['fpblock10introproperties'] = '<small>Block #10</small><br />Intro Block<br />Properties<br /><small>for developers</small>';
+    $string['fpblock10introproperties_desc'] = '<div class="badge badge-danger">Please, don\'t change it if you don\'t know CSS/Bootstrap</div><br />Code snippet: <pre>col-sm-11 col-md-8 col-lg-6 m-auto text-center</pre>';
+
+
+
+
+    /***
+     *
+     *   HTML Block 11
+     *
+     ***/
+    $string['block11settings'] = 'Course List';
+    $string['hfpblock11'] = '<br />Course List';
+    $string['hfpblock11_desc'] = 'Custom Course List on the front page. Up to 200 courses.<br /><img src="'.$siteurl.'/theme/edubs/doc/edubs-settings-block11.jpg" class="img-fluid rounded mt-4" />';
+
+    $string['fpblock11'] = '✓ Turn on';
+    $string['fpblock11_desc'] = '';
+
+    $string['showfpblock11intro'] = '✓ Show intro';
+    $string['showfpblock11intro_desc'] = 'Turn on Show intro contains section title and introduction text.';
+
+    $string['fpblock11title'] = 'Section title';
+    $string['fpblock11title_desc'] = 'Add section introduction title.';
+
+    $string['fpblock11content'] = 'Content';
+    $string['fpblock11content_desc'] = 'Add section introduction content.';
+
+    $string['h2fpblock11'] = '<hr /><br />List of courses';
+    $string['h2fpblock11_desc'] = 'You can add up to 60 items.';
+
+    $string['fpblock11count'] = 'Number of courses';
+    $string['fpblock11count_desc'] = '<div class="alert alert-warning"><strong><a href="#page-footer">Save to apply changes ► </a><br /></strong> Select how many courses you want to add then click SAVE to load the input fields.</div>';
+
+    $string['fpblock11badge'] = ' | Badges<br /><small>on the top</small>';
+    $string['fpblock11badge_desc'] = 'Code snippet:<br />
+    <pre><code>
+    &#x3C;span class=&#x22;c-course-card-badge&#x22;&#x3E;3 years (BFA)&#x3C;/span&#x3E;
+    &#x3C;span class=&#x22;c-course-card-badge-special&#x22;&#x3E;Art&#x3C;/span&#x3E;</code></pre><br />';
+
+    $string['fpblock11url'] = ' | URL';
+    $string['fpblock11url_desc'] = 'with https:// or http://';
+
+    $string['fpblock11coursetitle'] = ' | Title';
+    $string['fpblock11coursetitle_desc'] = '';
+
+    $string['fpblock11image'] = ' | Course Image<br /><small>Image size: 810 × 780 px</small>';
+    $string['fpblock11image_desc'] = '';
+
+    $string['fpblock11desc'] = ' | Content<br /><small>on the bottom</small>';
+    $string['fpblock11desc_desc'] = 'Example: <br />
+    <pre><code>
+    &#x3C;p&#x3E;Sample content.&#x3C;/p&#x3E;
+    &#x3C;div class=&#x22;c-course-author&#x22;&#x3E;Eve Berners-Lee&#x3C;/div&#x3E;
+    &#x3C;div class=&#x22;c-course-icons&#x22;&#x3E;
+    &#x3C;i class=&#x22;fas fa-star&#x22;&#x3E;&#x3C;/i&#x3E;&#x3C;i class=&#x22;fas fa-star&#x22;&#x3E;&#x3C;/i&#x3E;&#x3C;i class=&#x22;fas fa-star&#x22;&#x3E;&#x3C;/i&#x3E;
+    &#x3C;/div&#x3E;</code></pre><br /><br /><br /><hr class="hr-bold" />
+    <br />
+    <strong>Sample code with course description fixed height:</strong>
+    <pre><code>&#x3C;div class=&#x22;c-course-card-desc-content&#x22;&#x3E;
+    Learn how to validate product ideas by identifying an audience, sourcing participants, conducting user interviews, and analyzing the results. With the interviews complete, you now need to organize and analyze your findings, so you can come up with clear insights to direct the next stage of your design work.
+&#x3C;/div&#x3E;</code></pre>
+    ';
+
+    $string['block11footercontent'] = '<small>Block Courses List</small><br />Footer Content';
+    $string['block11footercontent_desc'] = '.';
+
+    $string['fphtmlblock11introclass'] = '<small>Block #11</small><br />Intro Block<br />Properties<br /><small>for developers</small>';
+    $string['fphtmlblock11introclass_desc'] = '<div class="badge badge-danger">Please, don\'t change it if you don\'t know CSS/Bootstrap</div><br />Code snippet: <pre>col-sm-11 col-md-8 col-lg-6 m-auto text-center</pre>';
+
+    $string['showfpblock11subsection'] = '| Show Subsection<br />instead Course Card';
+    $string['showfpblock11subsection_desc'] = '.';
+
+    $string['fpblock11subsectioncontent'] = '| Subsection Content';
+    $string['fpblock11subsectioncontent_desc'] = 'Code snippet:
+    <pre><code>
+    &#x3C;hr class=&#x22;hr-small&#x22; /&#x3E;
+    &#x3C;div class=&#x22;col-8 my-4 mx-auto text-center&#x22;&#x3E;
+        &#x3C;div class=&#x22;lead mb-3&#x22;&#x22;&#x3E;Subtitle&#x3C;/div&#x3E;
+        &#x3C;h3 class=&#x22;c-special-box-title mt-0&#x22;&#x3E;Title&#x3C;/h3&#x3E;
+    &#x3C;/div&#x3E;</code></pre>';
+
+
+    $string['fpblock11slider'] = ' Slider view';
+    $string['fpblock11slider_desc'] = '';
+
+    $string['fpblock11slidesperrow'] = 'Slides per row';
+    $string['fpblock11slidesperrow_desc'] = 'Recommended: 1, 2, 3, max: 4<br /><hr class="hr-bold" />';
+
+    /***
+     *
+     *   HTML Block 12
+     *
+     ***/
+    $string['block12settings'] = 'Testimonials';
+    $string['hfpblock12'] = '<br />Testimonials';
+    $string['hfpblock12_desc'] = '<strong>Testimonials</strong>. Testimonials on the front page. Up to 60.<br /><img src="'.$siteurl.'/theme/edubs/doc/edubs-settings-block12.png" class="img-fluid rounded mt-4" />';
+
+    $string['fpblock12'] = '✓ Turn on';
+    $string['fpblock12_desc'] = '';
+
+    $string['showfpblock12intro'] = '✓ Show intro';
+    $string['showfpblock12intro_desc'] = 'Turn on Show intro contains section title and introduction text.';
+
+    $string['fpblock12title'] = 'Section title';
+    $string['fpblock12title_desc'] = 'Add section introduction title.';
+
+    $string['fpblock12content'] = 'Content';
+    $string['fpblock12content_desc'] = 'Add section introduction content.';
+
+    $string['fpblock12showavatar'] = 'Show Author Avatar';
+    $string['fpblock12showavatar_desc'] = '';
+
+    $string['h2fpblock12'] = '<hr /><br />List of testimonials';
+    $string['h2fpblock12_desc'] = 'You can add up to 60 items.';
+
+    $string['fpblock12count'] = 'Number of testimonials';
+    $string['fpblock12count_desc'] = '<div class="alert alert-warning"><strong><a href="#page-footer">Save to apply changes ► </a><br /></strong> Select how many courses you want to add then click SAVE to load the input fields.</div>';
+
+    $string['fpblock12html'] = ' | HTML Content';
+    $string['fpblock12html_desc'] = 'Example:
+    <pre><code>
+&#x3C;div class=&#x22;c-testimonials-icons &#x22;&#x3E;
+    &#x3C;i class=&#x22;fas fa-star&#x22;&#x3E;&#x3C;/i&#x3E;
+    &#x3C;i class=&#x22;fas fa-star&#x22;&#x3E;&#x3C;/i&#x3E;
+    &#x3C;i class=&#x22;fas fa-star&#x22;&#x3E;&#x3C;/i&#x3E;
+    &#x3C;i class=&#x22;fas fa-star&#x22;&#x3E;&#x3C;/i&#x3E;
+    &#x3C;i class=&#x22;fas fa-star-half&#x22;&#x3E;&#x3C;/i&#x3E;
+&#x3C;/div&#x3E;
+    </code></pre>';
+
+    $string['fpblock12first'] = ' | Content';
+    $string['fpblock12first_desc'] = 'If you want to add hyperlink to text just use html code below:<br /><pre><code>&#x3C;a href=&#x22;YOUR URL&#x22;&#x3E;Link Label&#x3C;/a&#x3E;</code></pre><br />';
+
+    $string['fpblock12second'] = ' | Author';
+    $string['fpblock12second_desc'] = 'If you want to add hyperlink to text just use html code below:<br /><pre><code>&#x3C;a href=&#x22;YOUR URL&#x22;&#x3E;Link Label&#x3C;/a&#x3E;</code></pre><br />';
+
+    $string['fpblock12image'] = ' | Image/Avatar';
+    $string['fpblock12image_desc'] = 'Size: 60x60px';
+
+    $string['fpblock12third'] = ' | Additional Text';
+    $string['fpblock12third_desc'] = 'If you want to add hyperlink to text just use html code below:<br /><pre><code>&#x3C;a href=&#x22;YOUR URL&#x22;&#x3E;Link Label&#x3C;/a&#x3E;</code></pre><br /><br /><br /><hr class="hr-bold" />';
+
+    $string['block12footercontent'] = '<small>Block Testimonials</small><br />Footer Content';
+    $string['block12footercontent_desc'] = '.';
+
+    $string['fpblock12introclass'] = '<small>Block #12</small><br />Intro Block<br />Properties<br /><small>for developers</small>';
+    $string['fpblock12introclass_desc'] = '<div class="badge badge-danger">Please, don\'t change it if you don\'t know CSS/Bootstrap</div><br />Code snippet: <pre>col-sm-11 col-md-8 col-lg-6 m-auto text-center</pre>';
+
+    $string['fpblock12grid'] = ' Grid view';
+    $string['fpblock12griddesc'] = '<br /><hr class="hr-bold" />';
+
+    $string['fpblock12slidesperrow'] = 'Slides per row';
+    $string['fpblock12slidesperrowdesc'] = 'Recommended: 1, 2, 3, max: 4';
+
+
+    //HTML
+    $string['additionalheadhtml'] = '<span class="badge badge-danger mx-0 mb-2">Only for developers</span><br />Head HTML';
+    $string['additionalheadhtml_desc'] = 'Before the closing &#x3C;/head&#x3E; tag';
+    $string['additionalfooterhtml'] = '<span class="badge badge-danger mx-0 mb-2">Only for developers</span><br />Footer HTML';
+    $string['additionalfooterhtml_desc'] = 'Before the closing &#x3C;/body&#x3E; tag';
+
+
+    $string['privacy:metadata:preference:draweropennav'] = 'The user\'s preference for hiding or showing the drawer menu navigation.';
+    $string['privacy:drawernavclosed'] = 'The current preference for the navigation drawer is closed.';
+    $string['privacy:drawernavopen'] = 'The current preference for the navigation drawer is open.';
+
+
+    $string['backtotop'] = 'Back to top';
+    $string['showhintcoursehiddensetting'] = 'Show hint in hidden courses';
+    $string['showhintcoursehiddensetting_desc'] = 'With this setting a hint will appear in the course header as long as the visibility of the course is hidden. This helps to identify the visibility state of a course at a glance without the need for looking at the course settings.';
+    $string['showhintcoursehiddensettingslink'] = 'You can change the visibility in the <a href="{$a->url}">course settings</a>.';
+    $string['showhintcoursehiddengeneral'] = 'This course is currently <strong>hidden</strong>. Only enrolled teachers can access this course when hidden.';
+
+    $string['showhintcourseguestaccesssetting'] = 'Show hint for guest access';
+    $string['showhintcourseguestaccesssetting_desc'] = 'With this setting a hint will appear in the course header when a user is accessing it with the guest access feature. If the course provides an active self enrolment, a link to that page is also presented to the user.';
+    $string['showhintcourseguestaccessgeneral'] = 'You are currently viewing this course as <strong>{$a->role}</strong>.';
+    $string['showhintcourseguestaccesslink'] = 'To have full access to the course, you can <a href="{$a->url}">self enrol into this course</a>.';
+
+    // ...Switch role information.
+    $string['switchedroleto'] = 'You are viewing this course currently with the role:';
+
+    $string['boostfumblingnav'] = 'Boost navigation fumbling';
+    $string['boostfumblingnav_desc'] = 'This option will remove edubs in-build course section. <br /> <a href="https://moodle.org/plugins/local_boostnavigation" target="_blank">Download Boost navigation fumbling →</a>';
+
+    $string['displaynavdrawerfp'] = 'Display Navigation Sidebar<br />on the front page';
+    $string['displaynavdrawerfp_desc'] = 'This option will display navigation sidebar on the front page.';
+
+    $string['teachers'] = 'Teachers';
+
+
+    $string['welcome'] = 'Welcome Back ';
+    $string['sign'] = '!';

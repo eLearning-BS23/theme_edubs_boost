@@ -1,0 +1,42 @@
+//form
+
+.mform .form-inline .form-control,
+.mform .form-inline .custom-select {
+    border-radius: $border-radius;
+}
+
+.editor_atto_toolbar {
+    border-radius: $border-radius;
+}
+
+div.editor_atto_toolbar {
+    background-color: $primary-edubs !important;
+}
+
+div.editor_atto_toolbar button {
+    border-radius: $border-radius;
+    margin: 2px;
+    border: 1px solid #e1eaf9;
+    background-color: white;
+    padding: 10px;
+}
+
+div.editor_atto_toolbar div.atto_group {
+    background-color: $primary-edubs;
+    border: none;
+}
+
+.availability-inner,
+.availability-plugincontrols {
+    border-radius: $primary-edubs;
+}
+
+.form-control {
+    border-radius: 10px;
+}
+
+
+.fheader {
+    font-weight: bold;
+}
+

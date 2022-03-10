@@ -1,0 +1,33 @@
+//block
+.card {
+    border-radius: $border-radius;
+}
+
+// .completion-info {
+//     display: flex;
+//     justify-content: right;
+//     align-items: center;
+// }
+
+.dropdown-menu-right {
+    background-color: $primary-edubs;
+    color: white;
+    transition: all;
+    border-radius: $border-radius;
+}
+.editing .section .activity:hover,
+.editing .section .activity.action-menu-shown {
+    background-color: rgba(183, 230, 241, 0.986);
+}
+
+.editor_atto_toolbar {
+    margin-bottom: 30px;
+}
+.editor_atto_content.form-control {
+    border: 1px solid black;
+}
+
+.action-menu-toggle-1:hover {
+    background-color: $primary-edubs;
+    border-radius: $border-radius;
+}

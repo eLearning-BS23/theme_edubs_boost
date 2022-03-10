@@ -1,0 +1,41 @@
+//active navbar
+.list-group-item .list-group-item-action .active_tree_node .activestyle {
+    color: black;
+}
+
+#nav-drawer .list-group-item-action:hover {
+    color: #0052cc;
+    border: none;
+}
+#nav-drawer .list-group-item-action.active {
+    background-color: #fff;
+    color: #0052cc;
+    border: none;
+}
+
+// navbar-2
+
+.nav-bar-2
+    .usermenu
+    .action-menu
+    .menubar
+    .action-menu-trigger
+    .dropdown
+    a
+    .userbutton
+    .usertext {
+    display: none;
+}
+.nav-tabs li:nth-child(odd) a {
+    background-image: linear-gradient(#e1eaf9, white);
+}
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-item.show .nav-link {
+    border: 2px solid transparent;
+    border-color: blue;
+    border-bottom-color: white;
+}
+
+.nav-link.active:focus, .list-group-item-action.active:focus {
+    box-shadow: none;
+}

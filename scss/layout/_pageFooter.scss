@@ -1,0 +1,73 @@
+//FOOTER
+
+#page-footer {
+    background-color: $primary-edubs !important;
+    color: black;
+    text-align: center;
+}
+#page-footer a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+// #page-footer a.icon {
+//     background-color: black;
+// }
+
+#page-footer a:hover {
+    text-decoration: underline;
+    color: #0a4b84;
+}
+
+.copy {
+    color: black;
+    font-weight: 500;
+    font-size: 18px;
+}
+.s-footer {
+    margin-top: 40px;
+    border-radius: $border-radius;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+#theme_switch_link a,
+.usertour a,
+.tool_dataprivacy a,
+.purgecaches a,
+.s-footer .helplink a,
+.chart-table-expand a,
+.moreless-actions a,
+.continuebutton a,
+.addtagcoll a,
+#siteconfiglink a {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+}
+
+.helplink svg,
+.helplink img {
+    position: relative;
+    margin: -3px 20px 0 0;
+}
+
+#page-admin-grade-edit-letter-index #region-main .mdl-align a {
+    display: table;
+    margin-bottom: 2rem;
+}
+
+.moreless-actions {
+    display: inline-flex;
+    left: 25%;
+    position: relative;
+}
+
+.youtube-icon {
+    height: 10px;
+    width: 10px;
+}
+
+.copy-right {
+    padding-left: 2%;
+}

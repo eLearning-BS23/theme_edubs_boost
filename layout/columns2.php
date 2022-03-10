@@ -44,24 +44,24 @@ if ($navdraweropen) {
     $extraclasses[] = 'drawer-open-left';
 }
 
-////Top bar style
-//$topbarstyle = theme_edubs_get_setting('topbarstyle');
-//$pluginsettings = get_config("theme_edubs");
-//if( $topbarstyle == "topbarstyle-1") { $topbarstyle1 = $topbarstyle; } else { $topbarstyle1 = false; }
-//if( $topbarstyle == "topbarstyle-2") { $topbarstyle2 = $topbarstyle; } else { $topbarstyle2 = false; }
-//if( $topbarstyle == "topbarstyle-3") { $topbarstyle3 = $topbarstyle; } else { $topbarstyle3 = false; }
-//if( $topbarstyle == "topbarstyle-4") { $topbarstyle4 = $topbarstyle; } else { $topbarstyle4 = false; }
-//if( $topbarstyle == "topbarstyle-5") { $topbarstyle5 = $topbarstyle; } else { $topbarstyle5 = false; }
-//if( $topbarstyle == "topbarstyle-6") { $topbarstyle6 = $topbarstyle; } else { $topbarstyle6 = false; }
-//if( $topbarstyle == "topbarstyle-7") { $topbarstyle7 = $topbarstyle; } else { $topbarstyle7 = false; }
+//Top bar style
+$topbarstyle = theme_edubs_get_setting('topbarstyle');
+$pluginsettings = get_config("theme_edubs");
+if( $topbarstyle == "topbarstyle-1") { $topbarstyle1 = $topbarstyle; } else { $topbarstyle1 = false; }
+if( $topbarstyle == "topbarstyle-2") { $topbarstyle2 = $topbarstyle; } else { $topbarstyle2 = false; }
+if( $topbarstyle == "topbarstyle-3") { $topbarstyle3 = $topbarstyle; } else { $topbarstyle3 = false; }
+if( $topbarstyle == "topbarstyle-4") { $topbarstyle4 = $topbarstyle; } else { $topbarstyle4 = false; }
+if( $topbarstyle == "topbarstyle-5") { $topbarstyle5 = $topbarstyle; } else { $topbarstyle5 = false; }
+if( $topbarstyle == "topbarstyle-6") { $topbarstyle6 = $topbarstyle; } else { $topbarstyle6 = false; }
+if( $topbarstyle == "topbarstyle-7") { $topbarstyle7 = $topbarstyle; } else { $topbarstyle7 = false; }
 //end
 
 $bodyattributes = $OUTPUT->body_attributes($extraclasses);
 $blockshtml = $OUTPUT->blocks('side-pre');
-$blockshtml2 = $OUTPUT->blocks('sidebar');
-$blockshtml3 = $OUTPUT->blocks('maintopwidgets');
-$blockshtml4 = $OUTPUT->blocks('mainfwidgets');
-$blockshtml5 = $OUTPUT->blocks('sidebar-top');
+//$blockshtml2 = $OUTPUT->blocks('sidebar');
+//$blockshtml3 = $OUTPUT->blocks('maintopwidgets');
+//$blockshtml4 = $OUTPUT->blocks('mainfwidgets');
+//$blockshtml5 = $OUTPUT->blocks('sidebar-top');
 $hasblocks = strpos($blockshtml, 'data-block=') !== false;
 $siteurl = $CFG->wwwroot;
 
@@ -82,15 +82,7 @@ $templatecontext = [
     'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
     'output' => $OUTPUT,
     'sidepreblocks' => $blockshtml,
-    'sidebarblocks' => $blockshtml2,
-    'maintopwidgets' => $blockshtml3,
-    'mainfwidgets' => $blockshtml4,
-    'sidebartopblocks' => $blockshtml5,
     'hasblocks' => $hasblocks,
-    'hasmaintopwidgets' => !empty($blockshtml3),
-    'hasmainfwidgets' => !empty($blockshtml4),
-    'hassidebarblocks' => !empty($blockshtml2),
-    'hassidebartopblocks' => !empty($blockshtml5),
     'bodyattributes' => $bodyattributes,
     'navdraweropen' => $navdraweropen,
     'regionmainsettingsmenu' => $regionmainsettingsmenu,

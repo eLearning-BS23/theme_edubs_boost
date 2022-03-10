@@ -45,11 +45,6 @@
                         </div>
                     {{/contextheader}}
 
-                    {{#settingsmenu}}
-                        <div class="context-header-settings-menu">
-                            {{{settingsmenu}}}
-                        </div>
-                    {{/settingsmenu}}
                     <div class="header-actions-container flex-shrink-0" data-region="header-actions-container">
                         {{#headeractions}}
                             <div class="header-action ml-2">{{{.}}}</div>
@@ -62,16 +57,26 @@
                             {{{navbar}}}
                         </div>
                     {{/hasnavbar}}
-                    <div class="margin-top">
-                        {{{pageheadingbutton}}}
-                    </div>
+
                     <div id="course-header">
                         {{{courseheader}}}
                     </div>
                 </div>
             </div>
         </div>
+
+        {{#settingsmenu}}
+            <div class="context-header-settings-menu" id="settings-icon">
+                {{{settingsmenu}}}
+            </div>
+        {{/settingsmenu}}
+        <div class="margin-top customize-button">
+            {{{pageheadingbutton}}}
+        </div>
+
+
     </div>
+
     {{{ output.standard_after_main_region_html }}}
     {{> theme_edubs/nav-drawer }}
 </header>

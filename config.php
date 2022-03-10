@@ -57,13 +57,6 @@ $THEME->layouts = [
         'regions' => array('side-pre', 'sidebar', 'sidebar-top', 'maintopwidgets', 'mainfwidgets'),
         'defaultregion' => 'side-pre',
     ),
-    // The site home page.
-//    'frontpage' => array(
-//        'file' => 'frontpage.php',
-//        'regions' => array('side-pre', 'sidebar', 'sidebar-top', 'maintopwidgets', 'mainfwidgets'),
-//        'defaultregion' => 'side-pre',
-//        'options' => array('nonavbar' => true),
-//    ),
 
     // Server administration scripts.
     'admin' => array(
