@@ -14,13 +14,26 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
+/**
+ * Edubs theme.
+ *
+ * @package    theme_edubs
+ * @copyright  2022 Brain Station 23 Ltd.
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+
 // This line protects the file from being accessed by a URL directly.
 defined('MOODLE_INTERNAL') || die();
 
+// This is the version of the plugin.
 $plugin->version = '2022022400';
+
+// This is the version of Moodle this plugin requires.
 $plugin->requires = '2016070700';
+
+// This is the component name of the plugin - it always starts with 'theme_'
+// for themes and should be the same as the name of the folder.
 $plugin->component = 'theme_edubs';
 
-$plugin->dependencies = [
-    'theme_boost' => '2016102100'
-];
+// This is a list of plugins, this plugin depends on (and their versions).
+$plugin->dependencies = array('theme_boost' => 2021051100);
