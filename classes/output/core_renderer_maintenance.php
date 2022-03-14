@@ -19,7 +19,7 @@
  * Overriden core maintenance renderer.
  *
  * @package    theme_edubs
- * @copyright  2016 Frédéric Massart - FMCorz.net
+ * @copyright  2022 Brain Station 23 Ltd.
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 

@@ -14,4 +14,13 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
+
+/**
+ * Edubs theme.
+ *
+ * @package    theme_edubs
+ * @copyright  2022 Brain Station 23 Ltd.
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+
 require_once('renderers/blog_renderer.php');

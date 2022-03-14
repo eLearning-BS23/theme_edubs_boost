@@ -14,15 +14,16 @@
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
+/**
+ * Edubs theme.
+ *
+ * @package    theme_edubs
+ * @copyright  2022 Brain Station 23 Ltd.
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+
 defined('MOODLE_INTERNAL') || die();
 
-/**
- * A login page layout for the edubs theme.
- *
- * @package   theme_edubs
- * @copyright 2018 - 2019 Marcin Czaja
- * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
- */
 
 $bodyattributes = $OUTPUT->body_attributes();
 $loginalignment = theme_edubs_get_setting('loginalignment');

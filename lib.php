@@ -15,10 +15,10 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Theme functions.
+ * Edubs theme functions.
  *
  * @package    theme_edubs
- * @copyright  2018 Marcin Czaja - Rosea Themes
+ * @copyright  2022 Brain Station 23 Ltd.
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 

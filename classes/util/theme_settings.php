@@ -15,12 +15,13 @@
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 
 /**
- * Mustache helper to load a theme configuration.
+ * Edubs theme.
  *
  * @package    theme_edubs
- * @copyright  2018 - 2020 Marcin Czaja - Rosea Themes
+ * @copyright  2022 Brain Station 23 Ltd.
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
+
 
 namespace theme_edubs\util;
 
