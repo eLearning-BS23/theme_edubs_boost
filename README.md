@@ -32,7 +32,7 @@ Top bar section allows to customize the top navigation bar of your Moodle LMS. I
 Footer section allows to customize the footer section of the MOodle LMS. You can add social media icons and external links to the footer items.
 
 ## Author
-- [Brain Station 23 Ltd.](https://brainstation-23.com)show backgroud
+- [Brain Station 23 Ltd.](https://brainstation-23.com)
 
 ## License
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
