@@ -18,7 +18,7 @@ You can download zip file and install or you can put file under theme as edubs.
 ## Theme Settings
 ### Go to 
 ```
-  Dashboard->Site Administration->Plugins->Payment Gateways->sslcommerz settings
+  Dashboard->Site Administration->Appearance->Themes->Edubs
 ```
 ### Log in page
 Log in page section allows to add backgroung image in the log in page. First enable the "show background image". Then add the backgroung image. The recommenended size is 1920*1080px.
