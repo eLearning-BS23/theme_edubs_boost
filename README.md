@@ -26,7 +26,7 @@ Top bar section allows to customize the top navigation bar of your Moodle LMS. I
 
 # Footer
 Footer section allows to customize the footer section of the MOodle LMS. You can add social media icons and external links to the footer items. 
-There is a custom navigation text box at the very top of the footer section. You can also add website title , URL, mobile number, email address and also a footer text in the footer section. There is a field for copyright text and social media URLs.
+There is a custom navigation text box at the very top of the footer section. You can add website title , URL, mobile number, email address and also a footer text in the footer section. You can also add copyright text and social media URLs in the respective fields.
 ![image_2022_03_15T08_16_35_851Z](https://user-images.githubusercontent.com/97436713/158335341-76d8fa4c-b3f3-4974-91e5-a61711aa03d0.png)
 ![image_2022_03_15T08_15_58_223Z](https://user-images.githubusercontent.com/97436713/158335384-1f4cac9b-548c-4444-ab08-344a95f30132.png)
 ![image_2022_03_15T08_15_20_146Z](https://user-images.githubusercontent.com/97436713/158335440-ca3afb15-9d58-4ac9-b1e7-b44d32fd081e.png)
