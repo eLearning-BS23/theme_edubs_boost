@@ -9,6 +9,8 @@ The user-friendly design of Edubs reduces barriers to online learning, allowing 
 
 3. Log in page sections allows to add backgroung image in the very first log in page.
 4. Top bar section has 3 different styles to customize the page.
+
+
 ![image_2022_03_15T05_50_21_773Z](https://user-images.githubusercontent.com/97436713/158323306-7233ebd1-5321-4b36-b7e8-c4bb68297aa3.png)
 
 5. In footer section social media icon and external links can be added in footer.
@@ -19,5 +21,16 @@ The user-friendly design of Edubs reduces barriers to online learning, allowing 
 You can install this plugin from [Moodle plugins directory](https://moodle.org/plugins) or can download from [Github](https://github.com/eLearning-BS23/theme_edubs_boost).
 
 You can download zip file and install or you can put file under theme as edubs.
+
+## Author
+- [Brain Station 23 Ltd.](https://brainstation-23.com)
+
+## License
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License along with this program. If not, see [GNU License](http://www.gnu.org/licenses/).
+
 
 
