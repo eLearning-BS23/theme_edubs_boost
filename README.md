@@ -14,4 +14,10 @@ The user-friendly design of Edubs reduces barriers to online learning, allowing 
 5. In footer section social media icon and external links can be added in footer.
 ![image_2022_03_15T05_49_54_689Z](https://user-images.githubusercontent.com/97436713/158323347-5e79f7ff-76c2-4bb5-a98b-e6f2234fa77e.png)
 
+## Configuration
+
+You can install this plugin from [Moodle plugins directory](https://moodle.org/plugins) or can download from [Github](https://github.com/eLearning-BS23/theme_edubs_boost).
+
+You can download zip file and install or you can put file under theme as edubs.
+
 
