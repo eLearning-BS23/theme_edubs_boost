@@ -15,16 +15,20 @@ You can install this plugin from [Moodle plugins directory](https://moodle.org/p
 
 You can download zip file and install or you can put file under theme as edubs.
 
-# Log in page
-Log in page is the landing page of your Moodle LMS. Lon in page section allows to add backgroung image in the log in page. First enable the "show background image". Then add the backgroung image. The recommenended size is 1920*1080px.
+## Theme Settings
+### Go to 
+```
+  Dashboard->Site Administration->Plugins->Payment Gateways->sslcommerz settings
+```
+### Log in page
+Log in page section allows to add backgroung image in the log in page. First enable the "show background image". Then add the backgroung image. The recommenended size is 1920*1080px.
 ![image_2022_03_15T05_51_24_473Z](https://user-images.githubusercontent.com/97436713/158323213-a45ae023-e4de-4527-95b6-dd74efbf62a3.png)
 
-# Top bar
+### Top bar
 Top bar section allows to customize the top navigation bar of your Moodle LMS. It has 6 different styles to customize the look of your LMS. Style 1 is set as by default.
 ![image_2022_03_15T08_14_54_533Z](https://user-images.githubusercontent.com/97436713/158335293-862cdea7-e359-46be-82ea-0caebaf12094.png)
 
-
-# Footer
+### Footer
 Footer section allows to customize the footer section of the MOodle LMS. You can add social media icons and external links to the footer items. 
 There is a custom navigation text box at the very top of the footer section. You can add website title , URL, mobile number, email address and also a footer text in the footer section. You can also add copyright text and social media URLs in the respective fields.
 ![image_2022_03_15T08_16_35_851Z](https://user-images.githubusercontent.com/97436713/158335341-76d8fa4c-b3f3-4974-91e5-a61711aa03d0.png)
