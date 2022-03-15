@@ -20,12 +20,16 @@ Log in page is the landing page of your Moodle LMS. Lon in page section allows t
 ![image_2022_03_15T05_51_24_473Z](https://user-images.githubusercontent.com/97436713/158323213-a45ae023-e4de-4527-95b6-dd74efbf62a3.png)
 
 # Top bar
-Top bar section allows to customize the top navigation bar of your Moodle LMS. It has 6 different styles to customize the look of your LMS.
-![image_2022_03_15T05_50_21_773Z](https://user-images.githubusercontent.com/97436713/158323306-7233ebd1-5321-4b36-b7e8-c4bb68297aa3.png)
+Top bar section allows to customize the top navigation bar of your Moodle LMS. It has 6 different styles to customize the look of your LMS. Style 1 is set as by default.
+![image_2022_03_15T08_14_54_533Z](https://user-images.githubusercontent.com/97436713/158335293-862cdea7-e359-46be-82ea-0caebaf12094.png)
 
 
 # Footer
-Footer section allows to customize the footer section of the MOodle LMS. You can add social media icons and external links to the footer items.
+Footer section allows to customize the footer section of the MOodle LMS. You can add social media icons and external links to the footer items. 
+There is a custom navigation text box at the very top of the footer section. You can also add website title , URL, mobile number, email address and also a footer text in the footer section. There is a field for copyright text and social media URLs.
+![image_2022_03_15T08_16_35_851Z](https://user-images.githubusercontent.com/97436713/158335341-76d8fa4c-b3f3-4974-91e5-a61711aa03d0.png)
+![image_2022_03_15T08_15_58_223Z](https://user-images.githubusercontent.com/97436713/158335384-1f4cac9b-548c-4444-ab08-344a95f30132.png)
+![image_2022_03_15T08_15_20_146Z](https://user-images.githubusercontent.com/97436713/158335440-ca3afb15-9d58-4ac9-b1e7-b44d32fd081e.png)
 
 ## Author
 - [Brain Station 23 Ltd.](https://brainstation-23.com)
