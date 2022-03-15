@@ -22,8 +22,17 @@ You can install this plugin from [Moodle plugins directory](https://moodle.org/p
 
 You can download zip file and install or you can put file under theme as edubs.
 
+# Log in page
+Log in page is the landing page of your Moodle LMS. Lon in page section allows to add backgroung image in the log in page. First enable the "show background image". Then add the backgroung image. The recommenended size is 1920*1080px.
+
+# Top bar
+Top bar section allows to customize the top navigation bar of your Moodle LMS. It has 6 different styles to customize the look of your LMS.
+
+# Footer
+Footer section allows to customize the footer section of the MOodle LMS. You can add social media icons and external links to the footer items.
+
 ## Author
-- [Brain Station 23 Ltd.](https://brainstation-23.com)
+- [Brain Station 23 Ltd.](https://brainstation-23.com)show backgroud
 
 ## License
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
